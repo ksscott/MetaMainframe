@@ -20,7 +20,8 @@ public class Pick implements Comparable<Pick> {
 	
 	@Override
 	public int compareTo(Pick o) {
-		return score.compareTo(o.score);
+		// "higher" scores come "first" -> (.70, .65, .55, ...)
+		return o.score.compareTo(score);
 	}
 
 	@Override

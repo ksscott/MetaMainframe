@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Calculator {
 
@@ -18,40 +19,41 @@ public class Calculator {
 	}
 	
 	public Double score(Hero hero, Roster enemyTeam, Collection<Hero> pool) {
-		double score = 0.0;
-		int numFoes = enemyTeam.getFinalSize();
-		List<Hero> picked = enemyTeam.getPicked();
-		for (Hero enemy : picked) {
-			score += score(hero, enemy);
-		}
-		List<Pick> bestCounters = bestCounters(hero, numFoes - picked.size(), pool);
-		for (Pick pick : bestCounters) {
-			score += score(hero, pick.getCandidate());
-		}
-		score /= numFoes;
-		return new Double(score);
+		Roster futureEnemyRoster = 
+				new Roster(enemyTeam).fill(bestCounters(hero, pool.size(), pool));
+		
+		return futureEnemyRoster.getPicked().stream()
+				.mapToDouble((enemy) -> score(hero, enemy))
+				.sum()
+				/ (double) futureEnemyRoster.getFinalSize();
 	}
 	
 	public Double score(Roster us, Roster them, Collection<Hero> pool) {
-		double score = 0.0;
-		for (Hero hero : us.getPicked()) {
-			score += score(hero, them, pool);
-		}
-		score /= us.size();
-		return score;
+		Roster futureEnemyRoster = 
+				new Roster(them).fill(bestCounters(us, pool.size(), pool));
+		
+		return us.getPicked()
+				.stream()
+				.mapToDouble((hero) -> score(hero, them, pool))
+				.sum()
+				/ (double) us.size();
+		
+//		double score = 0.0;
+//		for (Hero hero : us.getPicked()) {
+//			score += score(hero, them, pool);
+//		}
+//		score /= (double) us.size();
+//		return score;
 	}
 	
 	/**
 	 * @return list of all possible hero picks, decreasing in strength
 	 */
 	public List<Pick> optimalNextPicks(Roster enemyRoster, Collection<Hero> pool) {
-		ArrayList<Pick> optimalPicks = new ArrayList<Pick>();
-		for (Hero h : pool) {
-			optimalPicks.add(new Pick(h, score(h, enemyRoster, pool)));
-		}
-		Collections.sort(optimalPicks);
-		Collections.reverse(optimalPicks);
-		return optimalPicks;
+		return pool.stream()
+				.map((hero) -> new Pick(hero, score(hero, enemyRoster, pool)))
+				.sorted()
+				.collect(Collectors.toList());
 	}
 	
 	/**
@@ -69,20 +71,26 @@ public class Calculator {
 			bestBans.add(new Pick(ban, futureHeroScore));
 		}
 		Collections.sort(bestBans);
-		Collections.reverse(bestBans);
 		return bestBans;
 	}
 
 	/**
-	 * @return list of N best counters, decreasing in strength
+	 * @return list of N best counters to a hero, decreasing in strength
 	 */
 	private List<Pick> bestCounters(Hero hero, int nBest, Collection<Hero> pool) {
-		ArrayList<Pick> bestCounters = new ArrayList<Pick>();
-		for (Hero h : pool) {
-			bestCounters.add(new Pick(h, score(hero, h)));
-		}
-		Collections.sort(bestCounters);
-		Collections.reverse(bestCounters);
-		return bestCounters.subList(0, nBest);
+		return pool.stream()
+				.map((counter) -> new Pick(counter, score(counter, hero)))
+				.sorted()
+				.collect(Collectors.toList()).subList(0, nBest);
+	}
+	
+	/**
+	 * @return list of N best counters to a roster, decreasing in strength
+	 */
+	private List<Pick> bestCounters(Roster roster, int nBest, Collection<Hero> pool) {
+		return pool.stream()
+				.map((counter) -> new Pick(counter, score(counter, roster, pool)))
+				.sorted()
+				.collect(Collectors.toList());
 	}
 }

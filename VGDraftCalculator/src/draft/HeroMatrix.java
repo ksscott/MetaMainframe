@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
-import static draft.Hero.*;
-
 public class HeroMatrix {
 
 	private HashMap<Hero, HashMap<Hero,Double>> chances;

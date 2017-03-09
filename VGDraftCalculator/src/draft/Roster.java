@@ -33,6 +33,17 @@ public class Roster implements Iterable<Hero> {
 		return this;
 	}
 	
+	/**
+	 * Adds heroes from the given list in order until this roster is full
+	 */
+	public Roster fill(List<Pick> recruits) {
+		for (Pick pick : recruits) {
+			if (size() < finalSize)
+				add(pick.getCandidate());
+		}
+		return this;
+	}
+	
 	public int size() {
 		return picked.size();
 	}
