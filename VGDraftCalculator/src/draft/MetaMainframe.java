@@ -26,9 +26,15 @@ public class MetaMainframe {
 			if (input.equals("quit"))
 				return;
 			Hero hero = null;
-			if (!input.equals("none")) {
+			if (input.equals("best")) {
+				hero = optimalNextPicks.get(0).getCandidate();
+			} else if (input.equals("worst")) {
+				hero = optimalNextPicks.get(optimalNextPicks.size() - 1).getCandidate();
+			} else if (input.equals("none")) {
+				// leave null to skip
+			} else {
 				hero = Hero.fromCode(input);
-			} // else leave null to skip
+			}
 			
 			sesh.pickOrBan(hero);
 			picked++;
