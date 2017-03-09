@@ -34,7 +34,7 @@ public class Calculator {
 		
 		return us.getPicked()
 				.stream()
-				.mapToDouble((hero) -> score(hero, them, pool))
+				.mapToDouble((hero) -> score(hero, futureEnemyRoster, pool))
 				.sum()
 				/ (double) us.size();
 		
