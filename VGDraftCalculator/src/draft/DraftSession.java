@@ -46,7 +46,7 @@ public class DraftSession {
 		List<Hero> pool = currentPool();
 		if (blue.isEmpty()) {
 			// draft hasn't started; assume blue gets best hero
-			Hero firstPick = scorer.optimalNextPicks(red, pool).get(0).getCandidate();
+			Hero firstPick = suggestPicks().get(0).getCandidate();
 			return scorer.score(new Roster(blue).add(firstPick), red, pool);
 		} else {
 			return scorer.score(blue, red, pool);
@@ -105,28 +105,29 @@ public class DraftSession {
 		List<Phase> remainingPhases = singleBanPhases.subList(index, singleBanPhases.size());
 		return remainingPhases;
 	}
+	
+	private Roster pickingTeam() {
+		return currentPhase().isBlue() ? blue : red;
+	}
+	
+	private Roster enemyTeam() {
+		return currentPhase().isBlue() ? red : blue;
+	}
 
 	private List<Pick> suggestPicks() {
-		Roster enemyTeam = currentPhase().isBlue() ? red : blue;
-		
-		return scorer.optimalNextPicks(enemyTeam, currentPool());
+		return scorer.optimalNextPicks(pickingTeam(), enemyTeam(), currentPool());
 	}
 
 	/**
 	 * The other team is about to pick. Let's ban away their current best option.
 	 */
 	private List<Pick> suggestDefensiveBans() {
-		// (we are the "enemy")
-		Roster enemyTeam = currentPhase().isBlue() ? blue : red;
-		
 		// best picks against us => best bans for us
-		return scorer.optimalNextPicks(enemyTeam, currentPool());
+		return scorer.optimalNextPicks(enemyTeam(), pickingTeam(), currentPool());
 	}
 
 	private List<Pick> suggestOffensiveBans() {
-		Roster enemyTeam = currentPhase().isBlue() ? red : blue;
-		
-		return scorer.optimalOffensiveBan(enemyTeam, currentPool());
+		return scorer.optimalOffensiveBan(pickingTeam(), enemyTeam(), currentPool());
 	}
 
 	enum Phase {

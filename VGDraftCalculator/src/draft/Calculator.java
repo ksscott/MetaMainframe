@@ -49,9 +49,10 @@ public class Calculator {
 	/**
 	 * @return list of all possible hero picks, decreasing in strength
 	 */
-	public List<Pick> optimalNextPicks(Roster enemyRoster, Collection<Hero> pool) {
+	public List<Pick> optimalNextPicks(Roster pickingTeam, Roster enemyRoster, Collection<Hero> pool) {
 		return pool.stream()
-				.map((hero) -> new Pick(hero, score(hero, enemyRoster, pool)))
+				// score our roster's strength assuming we pick the hero:
+				.map((hero) -> new Pick(hero, score(new Roster(pickingTeam).add(hero), enemyRoster, pool)))
 				.sorted()
 				.collect(Collectors.toList());
 	}
@@ -60,13 +61,13 @@ public class Calculator {
 	 * @param enemyTeam
 	 * @return
 	 */
-	public List<Pick> optimalOffensiveBan(Roster enemyTeam, List<Hero> pool) {
+	public List<Pick> optimalOffensiveBan(Roster banningTeam, Roster enemyTeam, List<Hero> pool) {
 		List<Pick> bestBans = new ArrayList<>();
 		
 		for (Hero ban : pool) {
 			List<Hero> possiblePool = new ArrayList<>(pool);
 			possiblePool.remove(ban); // "if we ban this..."
-			List<Pick> picks = optimalNextPicks(enemyTeam, possiblePool);
+			List<Pick> picks = optimalNextPicks(banningTeam, enemyTeam, possiblePool);
 			Double futureHeroScore = picks.get(1).getScore(); // "...then our next hero is this good"
 			bestBans.add(new Pick(ban, futureHeroScore));
 		}
