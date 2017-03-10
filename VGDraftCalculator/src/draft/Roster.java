@@ -1,29 +1,36 @@
 package draft;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class Roster implements Iterable<Hero> {
 
 	private int finalSize;
-	private List<Hero> picked;
+	private Set<Hero> picked;
 	
-	public Roster(int finalSize, List<Hero> picked) {
+	public Roster(int finalSize) {
 		this.finalSize = finalSize;
-		this.picked = picked;
+		this.picked = new HashSet<Hero>();
 	}
 	
 	public Roster(Roster cloned) {
 		this.finalSize = cloned.finalSize;
-		this.picked = new ArrayList<Hero>(cloned.picked);
+		this.picked = new HashSet<Hero>(cloned.picked);
 	}
 	
-	public int getFinalSize() {
+	public Roster whatIf(Hero hero) {
+		Roster newRoster = new Roster(this);
+		newRoster.add(hero);
+		return newRoster;
+	}
+	
+	public int fullSize() {
 		return finalSize;
 	}
 	
-	public List<Hero> getPicked() {
+	public Set<Hero> getPicked() {
 		return picked;
 	}
 	

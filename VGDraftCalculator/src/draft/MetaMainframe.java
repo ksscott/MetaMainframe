@@ -5,13 +5,14 @@ import java.util.Scanner;
 
 public class MetaMainframe {
 
-	private static DraftSession sesh = new DraftSession(new HeroMatrix());
+	private static Format format = Format.SINGLE_BAN;
+	private static DraftSession sesh = new DraftSession(format, new HeroMatrix());
 	private static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		int picked = 0;
 		System.out.println("======== Vainglory Meta Mainframe ========");
-		while (picked < DraftSession.singleBanPhases.size()) {
+		while (picked < format.size()) {
 			System.out.println(String.format("Current odds blue wins: %.3f", sesh.currentOddsForBlue()));
 			
 			List<Pick> optimalNextPicks = sesh.suggestions();
