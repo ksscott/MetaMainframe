@@ -1,9 +1,11 @@
 package draft;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class DraftSession {
 
@@ -29,29 +31,43 @@ public class DraftSession {
 	
 	public Double currentOddsForBlue() {
 //		return suggestions().get(0).getScore();
-		Set<Hero> pool = currentPool();
 		if (blue.isEmpty()) {
 			// draft hasn't started; assume blue gets best hero
 			Hero firstPick = scorer.optimalNextPicks(pickingTeam(), enemyTeam(), currentPool()).get(0).getCandidate();
-			return scorer.score(new Roster(blue).add(firstPick), red, pool);
+			return scorer.score(blue.whatIf(firstPick), red, currentPool());
 		} else {
-			return scorer.score(blue, red, pool);
+			return scorer.score(blue, red, currentPool());
 		}
 	}
 
 	public List<Pick> suggestions() {
 		// I'd really like to get this working:
-//		return scorer.options(pickingTeam(), enemyTeam(), currentPool(), phases, phaseNumber);
+//		return scorer.options(new Matchup(pickingTeam(), enemyTeam(), scorer), currentPool(), phases, phaseNumber);
 		
+		List<Pick> suggestions;
 		switch (phases.strategy(phaseNumber)) {
 		case PICK:
 		default:
-			return scorer.optimalNextPicks(pickingTeam(), enemyTeam(), currentPool());
+			suggestions = scorer.optimalNextPicks(pickingTeam(), enemyTeam(), currentPool());
+			break;
 		case DEFENSIVE_BAN:
-			return scorer.optimalNextPicks(enemyTeam(), pickingTeam(), currentPool());
+			suggestions = scorer.optimalNextPicks(enemyTeam(), pickingTeam(), currentPool());
+			break;
 		case OFFENSIVE_BAN:
-			return scorer.optimalOffensiveBan(pickingTeam(), enemyTeam(), currentPool());
+			suggestions = scorer.optimalOffensiveBan(pickingTeam(), enemyTeam(), currentPool());
+			break;
 		}
+		if (!phases.get(phaseNumber).isBlue()) {
+			// adjust score to show blue's odds
+			suggestions = suggestions.stream()
+					.map((pick) -> {
+						return new Pick(pick.getCandidate(), 1 - pick.getScore());
+					})
+					.sorted()
+					.collect(Collectors.toList());
+			Collections.reverse(suggestions);
+		}
+		return suggestions;
 	}
 	
 	/**

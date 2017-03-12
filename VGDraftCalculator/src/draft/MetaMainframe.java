@@ -23,7 +23,8 @@ public class MetaMainframe {
 			
 			System.out.println("Choose next hero for " + sesh.currentPhase().name() + ":");
 			
-			String input = scanner.next();
+			String input = "best";
+//			String input = scanner.next();
 			if (input.equals("quit"))
 				return;
 			Hero hero = null;
@@ -34,7 +35,7 @@ public class MetaMainframe {
 			} else if (input.equals("none")) {
 				// leave null to skip
 			} else {
-				hero = Hero.fromCode(input);
+				hero = Hero.fromName(input);
 			}
 			
 			sesh.pickOrBan(hero);

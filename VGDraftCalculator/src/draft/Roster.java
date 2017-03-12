@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class Roster implements Iterable<Hero> {
+public class Roster implements Iterable<Hero>,Cloneable {
 
 	private int finalSize;
 	private Set<Hero> picked;
@@ -15,21 +15,37 @@ public class Roster implements Iterable<Hero> {
 		this.picked = new HashSet<Hero>();
 	}
 	
-	public Roster(Roster cloned) {
-		this.finalSize = cloned.finalSize;
-		this.picked = new HashSet<Hero>(cloned.picked);
+	@Override
+	public Roster clone() {
+		Roster clone = new Roster(finalSize);
+		clone.picked = new HashSet<Hero>(picked);
+//		System.out.println("CLONE " + picked + " => " + clone.picked);
+		return clone;
 	}
 	
 	public Roster whatIf(Hero hero) {
-		Roster newRoster = new Roster(this);
-		newRoster.add(hero);
-		return newRoster;
+		Roster hypothetical = this.clone();
+		hypothetical.add(hero);
+//		System.out.println(toString() + " => whatIf(" + hero + ") => " + hypothetical.toString());
+		return hypothetical;
 	}
 	
+	public int size() {
+		return picked.size();
+	}
+
 	public int fullSize() {
 		return finalSize;
 	}
 	
+	public boolean isEmpty() {
+		return picked.isEmpty();
+	}
+
+	public boolean isFull() {
+		return picked.size() == finalSize;
+	}
+
 	public Set<Hero> getPicked() {
 		return picked;
 	}
@@ -37,6 +53,8 @@ public class Roster implements Iterable<Hero> {
 	public Roster add(Hero newHero) {
 		if (picked.size() < finalSize)
 			picked.add(newHero);
+		else
+			throw new IllegalStateException("Roster is already full. (Nice try, though!) " + toString());
 		return this;
 	}
 	
@@ -45,22 +63,22 @@ public class Roster implements Iterable<Hero> {
 	 */
 	public Roster fill(List<Pick> recruits) {
 		for (Pick pick : recruits) {
-			if (size() < finalSize)
+			if (!isFull())
 				add(pick.getCandidate());
 		}
 		return this;
 	}
 	
-	public int size() {
-		return picked.size();
-	}
-
-	public boolean isEmpty() {
-		return picked.isEmpty();
-	}
-
 	@Override
 	public Iterator<Hero> iterator() {
 		return picked.iterator();
+	}
+	
+	@Override
+	public String toString() {
+		String heroes = "";
+		for (Hero hero : picked)
+			heroes += hero + " ";
+		return "Roster: { " + heroes + "}";
 	}
 }

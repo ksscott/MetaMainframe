@@ -21,8 +21,9 @@ public class Calculator {
 	}
 	
 	public Double score(Hero hero, Roster enemyTeam, Collection<Hero> pool) {
-		Roster futureEnemyRoster = 
-				new Roster(enemyTeam).fill(bestCounters(hero, pool.size(), pool));
+		Roster futureEnemyRoster = enemyTeam;
+		if (!futureEnemyRoster.isFull())
+			futureEnemyRoster = enemyTeam.clone().fill(bestCounters(hero, pool.size(), pool));
 		
 		return futureEnemyRoster.getPicked().stream()
 				.mapToDouble((enemy) -> score(hero, enemy))
@@ -32,10 +33,30 @@ public class Calculator {
 	
 	/**
 	 * assumes rosters and format are properly in sync
+	 * 
+	 * NOTE: intended to be identical to other "options" method, but more efficient
+	 */
+	public List<Pick> options(Matchup matchup, Collection<Hero> pool, Format format, int phase) {
+//		System.out.println("Listing options for Phase " + phase + ": " + format.get(phase == format.size() ? format.size() - 1 : phase));
+		return pool.stream().map((hero) -> {
+			if (matchup.isFull())
+				return new Pick(hero, matchup.oddsForBlue());
+			
+			Matchup newMatchup = matchup;
+			if (format.get(phase).isPick())
+				newMatchup = newMatchup.whatIf(hero, format.get(phase).isBlue());
+			return options(newMatchup, subPool(pool, hero), format, phase+1).get(0);
+		})
+		.sorted()
+		.collect(Collectors.toList());
+	}
+	
+	/**
+	 * assumes rosters and format are properly in sync
 	 */
 	public List<Pick> options(Roster blue, Roster red, Collection<Hero> pool, Format format, int phase) {
 		return pool.stream().map((hero) -> {
-			if (blue.size() == blue.fullSize() && red.size() == red.fullSize())
+			if (blue.isFull() && red.isFull())
 				return new Pick(hero, score(blue, red));
 			
 			Roster newBlue = blue;
@@ -67,8 +88,8 @@ public class Calculator {
 	}
 	
 	public Double score(Roster us, Roster them, Set<Hero> pool) {
-		List<Pick> bestCounters = bestCounters(us, them, pool.size(), pool);
-		Roster futureEnemyRoster = new Roster(them).fill(bestCounters);
+		List<Pick> bestCounters = bestCounters(us, them, them.fullSize() - them.size(), pool);
+		Roster futureEnemyRoster = them.clone().fill(bestCounters);
 		
 		// looks dumb, but can't write to pool and newNewPool must be final
 		Set<Hero> newPool = pool;
@@ -94,6 +115,7 @@ public class Calculator {
 	 * @return list of all possible hero picks, decreasing in strength
 	 */
 	public List<Pick> optimalNextPicks(Roster pickingTeam, Roster enemyRoster, Collection<Hero> pool) {
+//		System.out.println("Calculating optimal picks for situation: " + pickingTeam + " vs " + enemyRoster);
 		return pool.stream()
 				// score our roster's strength assuming we pick the hero:
 				.map((hero) -> new Pick(hero, 
