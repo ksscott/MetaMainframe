@@ -23,8 +23,8 @@ public class MetaMainframe {
 			
 			System.out.println("Choose next hero for " + sesh.currentPhase().name() + ":");
 			
-			String input = "best";
-//			String input = scanner.next();
+//			String input = "best";
+			String input = scanner.next();
 			if (input.equals("quit"))
 				return;
 			Hero hero = null;
