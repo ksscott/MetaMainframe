@@ -2,34 +2,37 @@ package draft;
 
 public enum Hero {
 
-	ADAGIO("Adagio", "adagio"),
-	ALPHA("Alpha", "alpha"),
-	ARDAN("Ardan", "ardan"),
-	BARON("Baron", "baron"),
-	BLACKFEATHER("Blackfeather", "blackfeather"),
-	CATHERINE("Catherine", "catherine"),
-	CELESTE("Celeste", "celeste"),
-	FLICKER("Flicker", "flicker"),
-	FORTRESS("Fortress", "fortress"),
-	GWEN("Gwen", "gwen"),
-	IDRIS("Idris", "idris"),
-	JOULE("Joule", "joule"),
-	KESTREL("Kestrel", "kestrel"),
-	KOSHKA("Koshka", "koshka"),
-	KRUL("Krul", "krul"),
-	LANCE("Lance", "lance"),
-	LYRA("Lyra", "lyra"),
-	OZO("Ozo", "ozo"),
-	PHINN("Phinn", "phinn"),
-	REIM("Reim", "reim"),
-	RINGO("Ringo", "ringo"),
-	RONA("Rona", "rona"),
-	SAMUEL("Samuel", "samuel"),
-	SAW("SAW", "saw"),
-	SKAARF("Skaarf", "skaarf"),
-	SKYE("Skye", "skye"),
-	TAKA("Taka", "taka"),
-	VOX("Vox", "vox");
+	ADAGIO("Adagio", "*Adagio*"),
+	ALPHA("Alpha", "*Alpha*"),
+	ARDAN("Ardan", "*Ardan*"),
+	BARON("Baron", "*Baron"),
+	BLACKFEATHER("Blackfeather", "*Blackfeather*"),
+	CATHERINE("Catherine", "*Catherine*"),
+	CELESTE("Celeste", "*Celeste*"),
+	FLICKER("Flicker", "*Flicker*"),
+	FORTRESS("Fortress", "*Fortress*"),
+	GLAIVE("Glaive", "*Glaive*"),
+	GRUMPJAW("Grumpjaw", "*Grumpjaw*"),
+	GWEN("Gwen", "*Gwen*"),
+	IDRIS("Idris", "*Idris*"),
+	JOULE("Joule", "*Joule*"),
+	KESTREL("Kestrel", "*Kestrel*"),
+	KOSHKA("Koshka", "*Koshka*"),
+	KRUL("Krul", "Hero009"),
+	LANCE("Lance", "*Lance*"),
+	LYRA("Lyra", "*Lyra*"),
+	OZO("Ozo", "*Ozo*"),
+	PETAL("Petal", "*Petal*"),
+	PHINN("Phinn", "*Phinn*"),
+	REIM("Reim", "*Reim*"),
+	RINGO("Ringo", "*Ringo*"),
+	RONA("Rona", "Hero016"),
+	SAMUEL("Samuel", "*Samuel*"),
+	SAW("SAW", "*SAW*"),
+	SKAARF("Skaarf", "*Skaarf*"),
+	SKYE("Skye", "*Skye*"),
+	TAKA("Taka", "*Sayoc*"),
+	VOX("Vox", "*Vox*");
 	
 	private final String name;
 	private final String code;
@@ -55,4 +58,11 @@ public enum Hero {
 		throw new IllegalArgumentException("Not a hero code: " + code);
 	}
 	
+	public static Hero fromName(String name) {
+		for (Hero h : Hero.values()) {
+			if (h.name.equalsIgnoreCase(name))
+				return h;
+		}
+		throw new IllegalArgumentException("Not a hero name: " + name);
+	}
 }
