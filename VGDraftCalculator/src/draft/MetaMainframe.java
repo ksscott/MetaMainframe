@@ -12,13 +12,14 @@ import org.xml.sax.SAXException;
 public class MetaMainframe {
 
 	private static final Format FORMAT = Format.SINGLE_BAN;
-	private static final String FILE_PATH = "VG8Matrix.xml";
+	private static final String VS_FILE_PATH = "VG8Matrix.xml";
+	private static final String SYNERGY_FILE_PATH = "VG8SynergyMatrix.xml";
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		HeroMatrix matrix;
 		try {
-			matrix = MatrixLoader.load(new File(FILE_PATH));
+			matrix = MatrixLoader.load(new File(VS_FILE_PATH), new File(SYNERGY_FILE_PATH));
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 			System.out.println("File load failed! Continue with random data? (y/n)");

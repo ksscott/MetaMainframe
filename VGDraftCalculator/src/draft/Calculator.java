@@ -17,7 +17,11 @@ public class Calculator {
 	}
 	
 	public Double score(Hero hero, Hero adversary) {
-		return meta.get(hero, adversary);
+		return meta.get(hero, adversary, false);
+	}
+	
+	public Double synergy(Hero hero, Hero partner) {
+		return meta.get(hero, partner, true);
 	}
 	
 	public Double score(Hero hero, Roster enemyTeam, Collection<Hero> pool) {
@@ -27,8 +31,8 @@ public class Calculator {
 		
 		return futureEnemyRoster.getPicked().stream()
 				.mapToDouble((enemy) -> score(hero, enemy))
-				.sum()
-				/ (double) futureEnemyRoster.fullSize();
+				.average()
+				.getAsDouble();
 	}
 	
 	/**
@@ -75,6 +79,7 @@ public class Calculator {
 	
 	/**
 	 * intended for full rosters only // TODO
+	 * does not fill rosters
 	 */
 	public Double score(Roster us, Roster them) {
 		double score = 0.0;
@@ -83,8 +88,41 @@ public class Calculator {
 				score += score(hero, enemy);
 			}
 		}
-		score /= (us.size() * them.size());
+		score /= (double) (us.size() * them.size());
 		return score;
+	}
+	
+	/**
+	 * does not fill rosters
+	 * // TODO could add special weighting for a fight or a synergy
+	 */
+	public Double scorePlusSynergy(Roster us, Roster them) {
+		double fights = (double) (us.size() + them.size());
+		Double score = score(us, them);
+		
+		double usPairs = (double) (us.size() * (us.size() - 1));
+		Double usSynergy = synergy(us);
+		
+		double themPairs = (double) (them.size() * (them.size() - 1));
+		Double themSynergy = synergy(them);
+		
+		return ((fights*score) + (usPairs*usSynergy) + (themPairs*themSynergy)) 
+				/ ((double) (fights + usPairs + themPairs));
+	}
+	
+	public Double synergy(Roster team) {
+		if (team.size() <= 1)
+			new Double(.5);
+		
+		double synergy = 0.0;
+		for (Hero hero : team.getPicked()) {
+			for (Hero partner : team.getPicked()) {
+				if (hero != partner)
+					synergy += synergy(hero, partner); // TODO optimize by removing double access
+			}
+		}
+		synergy /= (team.size() * (team.size() - 1)); // nP2 should be the number of reads we did
+		return synergy;
 	}
 	
 	public Double score(Roster us, Roster them, Set<Hero> pool) {
@@ -100,8 +138,8 @@ public class Calculator {
 		return us.getPicked()
 				.stream()
 				.mapToDouble((hero) -> score(hero, futureEnemyRoster, newNewPool))
-				.sum()
-				/ (double) us.size();
+				.average()
+				.getAsDouble();
 		
 //		double score = 0.0;
 //		for (Hero hero : us.getPicked()) {
