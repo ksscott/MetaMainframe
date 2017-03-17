@@ -101,13 +101,22 @@ public class Calculator {
 		Double score = score(us, them);
 		
 		double usPairs = (double) (us.size() * (us.size() - 1));
-		Double usSynergy = synergy(us);
-		
 		double themPairs = (double) (them.size() * (them.size() - 1));
-		Double themSynergy = synergy(them);
+		Double usSynergy = synergyWar(us, them);
 		
-		return ((fights*score) + (usPairs*usSynergy) + (themPairs*themSynergy)) 
+		return ((fights*score) + ((usPairs+themPairs)*usSynergy)) 
 				/ ((double) (fights + usPairs + themPairs));
+	}
+	
+	/**
+	 * @return probability that we win assuming either we win or they do
+	 */
+	private Double synergyWar(Roster us, Roster them) {
+		Double usSyn = synergy(us);
+		Double themSyn = synergy(them);
+		
+		return new Double((usSyn * (1 - themSyn)) 
+				/ (usSyn * (1 - themSyn) + (themSyn) * (1 - usSyn)));
 	}
 	
 	public Double synergy(Roster team) {
