@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 public class DraftSession implements Cloneable {
 
 	private Format phases;
-//	private Calculator scorer;
 	private Set<Hero> banned;
 	private Roster blue;
 	private Roster red;
@@ -22,7 +21,6 @@ public class DraftSession implements Cloneable {
 		this.red = new Roster(phases.redRoster());
 		this.banned = new HashSet<>();
 		this.phaseNumber = 0;
-//		this.scorer = new Calculator(matrix);
 	}
 	
 	public DraftSession whatIf(Hero hero) {
@@ -46,49 +44,6 @@ public class DraftSession implements Cloneable {
 	public boolean isFull() {
 		return phaseNumber >= phases.size();
 	}
-	
-//	public Double currentOddsForBlue() {
-////		return suggestions().get(0).getScore();
-//		if (blue.isEmpty()) {
-//			// draft hasn't started; assume blue gets best hero
-//			Hero firstPick = scorer.optimalNextPicks(pickingTeam(), enemyTeam(), currentPool()).get(0).getCandidate();
-//			return scorer.scoreAndFill(blue.whatIf(firstPick), red, currentPool());
-//		} else {
-////			return scorer.scoreAndFill(blue, red, currentPool());
-//			return scorer.scorePlusSynergy(blue, red);
-//		}
-//	}
-
-//	public List<Pick> suggestions() {
-		// I'd really like to get this working:
-//		return scorer.options(new Matchup(pickingTeam(), enemyTeam(), scorer), currentPool(), phases, phaseNumber);
-//		return scorer.pruningAlgorithm(blue, red, currentPool(), phases, phaseNumber);
-		
-//		List<Pick> suggestions;
-//		switch (phases.strategy(phaseNumber)) {
-//		case PICK:
-//		default:
-//			suggestions = scorer.optimalNextPicks(pickingTeam(), enemyTeam(), currentPool());
-//			break;
-//		case DEFENSIVE_BAN:
-//			suggestions = scorer.optimalNextPicks(enemyTeam(), pickingTeam(), currentPool());
-//			break;
-//		case OFFENSIVE_BAN:
-//			suggestions = scorer.optimalOffensiveBan(pickingTeam(), enemyTeam(), currentPool());
-//			break;
-//		}
-//		if (!phases.get(phaseNumber).isBlue()) {
-//			// adjust score to show blue's odds
-//			suggestions = suggestions.stream()
-//					.map((pick) -> {
-//						return new Pick(pick.getCandidate(), 1 - pick.getScore());
-//					})
-//					.sorted()
-//					.collect(Collectors.toList());
-//			Collections.reverse(suggestions);
-//		}
-//		return suggestions;
-//	}
 	
 	/**
 	 * Pass {@code null} to skip a hero (e.g., skip a ban).
@@ -144,20 +99,4 @@ public class DraftSession implements Cloneable {
 		clone.phaseNumber = this.phaseNumber;
 		return clone;
 	}
-
-//	private List<Pick> suggestPicks() {
-//		return scorer.optimalNextPicks(pickingTeam(), enemyTeam(), currentPool());
-//	}
-//
-//	/**
-//	 * The other team is about to pick. Let's ban away their current best option.
-//	 */
-//	private List<Pick> suggestDefensiveBans() {
-//		// best picks against us => best bans for us
-//		return scorer.optimalNextPicks(enemyTeam(), pickingTeam(), currentPool());
-//	}
-//
-//	private List<Pick> suggestOffensiveBans() {
-//		return scorer.optimalOffensiveBan(pickingTeam(), enemyTeam(), currentPool());
-//	}
 }

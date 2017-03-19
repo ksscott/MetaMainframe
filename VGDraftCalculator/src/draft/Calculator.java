@@ -233,25 +233,6 @@ public class Calculator {
 		}
 		
 		return scorePlusSynergy(futureAllies, futureEnemyRoster);
-		
-//		// looks dumb, but can't write to pool and newNewPool must be final
-//		Set<Hero> newPool = pool;
-//		for (Pick pick : bestCounters)
-//			newPool = subPool(newPool, pick.getCandidate());
-//		Set<Hero> newNewPool = new HashSet<Hero>(newPool);
-		
-//		return us.getPicked()
-//				.stream()
-//				.mapToDouble((hero) -> scorePlusSynergy(us.whatIf(hero), futureEnemyRoster))
-//				.average()
-//				.getAsDouble();
-		
-//		double score = 0.0;
-//		for (Hero hero : us.getPicked()) {
-//			score += score(hero, them, pool);
-//		}
-//		score /= (double) us.size();
-//		return score;
 	}
 	
 	/**
@@ -306,38 +287,6 @@ public class Calculator {
 		}
 		return sesh;
 	}
-	
-//	public List<Pick> greedySuggest(Matchup matchup, Set<Hero> pool, Format format, int phase) {
-//		return pool.stream()
-//				.map(hero -> greedyScore(matchup, pool, format, phase+1))
-//				.sorted()
-//				.collect(Collectors.toList());
-//	}
-//	
-//	public Pick greedyScore(Matchup matchup, Set<Hero> pool, Format format, int phase) {
-//		Set<Hero> runningPool = pool;
-//		// fill out the roster with the best path:
-//		for (int i = phase; i < format.size(); i++) {
-//			boolean isBlue = format.get(i).isBlue();
-//			Roster pickingTeam = isBlue ? matchup.getBlue() : matchup.getRed();
-//			Roster enemyTeam = isBlue ? matchup.getRed() : matchup.getBlue();
-//			Hero candidate;
-//			switch (format.strategy(i)) {
-//				default:
-//				case PICK:
-//					candidate = greedyPick(pickingTeam, enemyTeam, runningPool).getCandidate();
-//					matchup.pick(candidate, isBlue);
-//					break;
-//				case OFFENSIVE_BAN:
-////					break; // TODO support offensive ban
-//				case DEFENSIVE_BAN:
-//					candidate = greedyPick(enemyTeam, pickingTeam, runningPool).getCandidate();
-//					break;
-//			}
-//			runningPool = subPool(runningPool, candidate);
-//		}
-//		return new Pick(scorePlusSynergy(matchup.getBlue(), matchup.getRed()));
-//	}
 	
 	private Pick greedyPick(Roster us, Roster them, Set<Hero> pool) {
 		return pool.stream()
@@ -398,11 +347,6 @@ public class Calculator {
 		counters.retainAll(pool);
 		
 		return counters;
-		
-//		return pool.stream()
-//				.map((counter) -> new Pick(counter, score(counter, hero)))
-//				.sorted()
-//				.collect(Collectors.toList()).subList(0, nBest);
 	}
 	
 	/**
@@ -453,9 +397,6 @@ public class Calculator {
 			}
 			
 			public Hero getLastPick() { return lastPick; }
-	//		public Roster getBlue() { return blue; }
-	//		public Roster getRed() { return red; }
-	//		public Set<Hero> getPool() { return pool; }
 			public DraftSession getState() { return state; }
 			public ArrayList<TreeNode> bestPicks() {
 				Collections.sort(children);
@@ -464,7 +405,6 @@ public class Calculator {
 			
 			public void addChild(TreeNode child) {
 				children.add(child);
-	//			Collections.sort(children); // inefficient
 			}
 			
 			public boolean isFull() {
