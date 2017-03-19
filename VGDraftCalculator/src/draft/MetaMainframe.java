@@ -69,7 +69,7 @@ public class MetaMainframe {
 			sesh.pickOrBan(hero);
 		}
 		System.out.println(String.format("Final odds blue wins: %.3f", 
-				scorer.scorePlusSynergy(sesh.getBlue(), sesh.getRed())));
+				scorer.currentOddsForBlue(sesh)));
 		scanner.close();
 	}
 	

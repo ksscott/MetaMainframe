@@ -30,25 +30,12 @@ public class Roster implements Iterable<Hero>,Cloneable {
 		return hypothetical;
 	}
 	
-	public int size() {
-		return picked.size();
-	}
-
-	public int fullSize() {
-		return finalSize;
-	}
-	
-	public boolean isEmpty() {
-		return picked.isEmpty();
-	}
-
-	public boolean isFull() {
-		return picked.size() == finalSize;
-	}
-
-	public Set<Hero> getPicked() {
-		return picked;
-	}
+	public int size() { return picked.size(); }
+	public int fullSize() { return finalSize; }
+	public int room() { return fullSize() - size(); }
+	public boolean isEmpty() { return picked.isEmpty(); }
+	public boolean isFull() { return room() == 0; }
+	public Set<Hero> getPicked() { return picked; }
 	
 	public Roster add(Hero newHero) {
 		if (picked.size() < finalSize)
