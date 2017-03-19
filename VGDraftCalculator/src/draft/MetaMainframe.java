@@ -49,8 +49,8 @@ public class MetaMainframe {
 			
 			
 			// PARSE INPUTS
-			String input = "best"; // for debugging
-//			String input = scanner.next();
+//			String input = "best"; // for debugging
+			String input = scanner.next();
 			if (input.equals("quit")) {
 				scanner.close();
 				return;
