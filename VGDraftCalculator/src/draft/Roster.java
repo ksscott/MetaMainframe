@@ -63,8 +63,9 @@ public class Roster implements Iterable<Hero>,Cloneable {
 	 */
 	public Roster fill(List<Pick> recruits) {
 		for (Pick pick : recruits) {
-			if (!isFull())
-				add(pick.getCandidate());
+			if (isFull())
+				break;
+			add(pick.getCandidate());
 		}
 		return this;
 	}
