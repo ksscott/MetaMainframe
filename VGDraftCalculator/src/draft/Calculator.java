@@ -1,12 +1,15 @@
 package draft;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import static draft.Strategy.*;
 
 public class Calculator {
 
@@ -20,19 +23,95 @@ public class Calculator {
 		return meta.get(hero, adversary, false);
 	}
 	
-	public Double synergy(Hero hero, Hero partner) {
+	private Double score(Hero hero, Roster enemyTeam) {
+		if (enemyTeam.size() < 1)
+			return new Double(.5);
+		
+		double score = 0.0;
+		for (Hero enemy : enemyTeam)
+			score += score(hero, enemy);
+		return score / (double) enemyTeam.size();
+	}
+	
+	private Double synergy(Hero hero, Hero partner) {
 		return meta.get(hero, partner, true);
 	}
 	
-	public Double score(Hero hero, Roster enemyTeam, Collection<Hero> pool) {
-		Roster futureEnemyRoster = enemyTeam;
-		if (!futureEnemyRoster.isFull())
-			futureEnemyRoster = enemyTeam.clone().fill(bestCounters(hero, pool.size(), pool));
+	private Double synergy(Hero hero, Roster team) {
+		if (team.size() < 1)
+			return new Double(.5);
 		
-		return futureEnemyRoster.getPicked().stream()
-				.mapToDouble((enemy) -> score(hero, enemy))
-				.average()
-				.getAsDouble();
+		double synergy = 0.0;
+		for (Hero partner : team.getPicked())
+			synergy += synergy(hero, partner);
+		return synergy / (double) team.size();
+	}
+	
+	private Double synergy(Roster team) {
+		if (team.size() <= 1)
+			new Double(.5);
+		
+		double synergy = 0.0;
+		for (Hero hero : team.getPicked()) {
+			for (Hero partner : team.getPicked()) {
+				if (hero != partner)
+					synergy += synergy(hero, partner); // TODO optimize by removing double access
+			}
+		}
+		synergy /= (double) (team.size() * (team.size() - 1)); // nP2 should be the number of reads we did
+		return synergy;
+	}
+	
+	public List<Pick> suggestions(DraftSession session) {
+		return pruningAlgorithm(session);
+	}
+	
+	/**
+	 * A tree-search algorithm. Attempts to coarsely evaluate all options 
+	 * and then dive deeply into promising ones.
+	 */
+	public List<Pick> pruningAlgorithm(DraftSession session) {
+		TreeNode current = new TreeNode(null, session);
+		
+		// fill out tree:
+		iterate(current);
+		
+		List<Pick> picks = current.bestPicks().stream()
+				.map(node -> new Pick(node.getLastPick(), node.odds()))
+				.sorted()
+				.collect(Collectors.toList());
+		if (!session.currentPhase().isBlue())
+			Collections.reverse(picks);
+		return picks;
+	}
+	
+	public void iterate(TreeNode current) {
+		if (current.isFull())
+			return; // all done!
+		
+		ArrayList<TreeNode> optimalAvenues = new ArrayList<>();
+		
+		DraftSession state = current.getState();
+		for (Hero hero : state.currentPool()) {
+			TreeNode node = new TreeNode(hero, state.whatIf(hero));
+			current.addChild(node);
+			optimalAvenues.add(node);
+		}
+		
+		Collections.sort(optimalAvenues);
+		optimalAvenues = current.bestPicks();
+		
+		int first = state.getFormat().size();
+		int phase = state.currentPhaseNo();
+		int avenuesToExplore = (first - phase) * 2 / 3;
+		
+		for (int i = 0; i < optimalAvenues.size(); i++) {
+			TreeNode avenue = optimalAvenues.get(i);
+			if (i < avenuesToExplore)
+				iterate(avenue);
+			else // greedy fill
+				avenue = new TreeNode(avenue.getLastPick(), greedyFill(avenue.getState()));
+		}
 	}
 	
 	/**
@@ -40,13 +119,13 @@ public class Calculator {
 	 * 
 	 * NOTE: intended to be identical to other "options" method, but more efficient
 	 */
-	public List<Pick> options(Matchup matchup, Collection<Hero> pool, Format format, int phase) {
+	public List<Pick> options(MatchupSpecial matchup, Set<Hero> pool, Format format, int phase) {
 //		System.out.println("Listing options for Phase " + phase + ": " + format.get(phase == format.size() ? format.size() - 1 : phase));
 		return pool.stream().map((hero) -> {
 			if (matchup.isFull())
 				return new Pick(hero, matchup.oddsForBlue());
 			
-			Matchup newMatchup = matchup;
+			MatchupSpecial newMatchup = matchup;
 			if (format.get(phase).isPick())
 				newMatchup = newMatchup.whatIf(hero, format.get(phase).isBlue());
 			return options(newMatchup, subPool(pool, hero), format, phase+1).get(0);
@@ -58,10 +137,10 @@ public class Calculator {
 	/**
 	 * assumes rosters and format are properly in sync
 	 */
-	public List<Pick> options(Roster blue, Roster red, Collection<Hero> pool, Format format, int phase) {
+	public List<Pick> options(Roster blue, Roster red, Set<Hero> pool, Format format, int phase) {
 		return pool.stream().map((hero) -> {
 			if (blue.isFull() && red.isFull())
-				return new Pick(hero, score(blue, red));
+				return new Pick(hero, scorePlusSynergy(blue, red));
 			
 			Roster newBlue = blue;
 			Roster newRed = red;
@@ -81,7 +160,7 @@ public class Calculator {
 	 * intended for full rosters only // TODO
 	 * does not fill rosters
 	 */
-	public Double score(Roster us, Roster them) {
+	private Double score(Roster us, Roster them) {
 		double score = 0.0;
 		for (Hero hero : us.getPicked()) {
 			for (Hero enemy : them.getPicked()) {
@@ -97,15 +176,20 @@ public class Calculator {
 	 * // TODO could add special weighting for a fight or a synergy
 	 */
 	public Double scorePlusSynergy(Roster us, Roster them) {
-		double fights = (double) (us.size() + them.size());
-		Double score = score(us, them);
+		if (us.isEmpty() || them.isEmpty())
+			return new Double(.5);
 		
+		Double score = score(us, them);
+		double fights = (double) (us.size() + them.size());
+		double fightWeight = fights; // can be adjusted
+		
+		Double usSynergy = synergyWar(us, them);
 		double usPairs = (double) (us.size() * (us.size() - 1));
 		double themPairs = (double) (them.size() * (them.size() - 1));
-		Double usSynergy = synergyWar(us, them);
+		double synergyWeight = usPairs+themPairs; // can be adjusted
 		
-		return ((fights*score) + ((usPairs+themPairs)*usSynergy)) 
-				/ ((double) (fights + usPairs + themPairs));
+		return ((fightWeight*score) + (synergyWeight*usSynergy)) 
+				/ ((double) (fightWeight + synergyWeight));
 	}
 	
 	/**
@@ -119,36 +203,48 @@ public class Calculator {
 				/ (usSyn * (1 - themSyn) + (themSyn) * (1 - usSyn)));
 	}
 	
-	public Double synergy(Roster team) {
-		if (team.size() <= 1)
-			new Double(.5);
+	private Double scoreAndFill(Hero hero, Roster enemyTeam, Set<Hero> pool) {
+		Roster futureEnemyRoster = enemyTeam;
+		if (!futureEnemyRoster.isFull())
+			futureEnemyRoster = enemyTeam.clone().fill(bestCounters(hero, enemyTeam.fullSize() - enemyTeam.size(), pool));
 		
-		double synergy = 0.0;
-		for (Hero hero : team.getPicked()) {
-			for (Hero partner : team.getPicked()) {
-				if (hero != partner)
-					synergy += synergy(hero, partner); // TODO optimize by removing double access
-			}
-		}
-		synergy /= (team.size() * (team.size() - 1)); // nP2 should be the number of reads we did
-		return synergy;
-	}
-	
-	public Double score(Roster us, Roster them, Set<Hero> pool) {
-		List<Pick> bestCounters = bestCounters(us, them, them.fullSize() - them.size(), pool);
-		Roster futureEnemyRoster = them.clone().fill(bestCounters);
-		
-		// looks dumb, but can't write to pool and newNewPool must be final
-		Set<Hero> newPool = pool;
-		for (Pick pick : bestCounters)
-			newPool = subPool(newPool, pick.getCandidate());
-		Set<Hero> newNewPool = new HashSet<Hero>(newPool);
-		
-		return us.getPicked()
-				.stream()
-				.mapToDouble((hero) -> score(hero, futureEnemyRoster, newNewPool))
+		return futureEnemyRoster.getPicked().stream()
+				.mapToDouble((enemy) -> score(hero, enemy))
 				.average()
 				.getAsDouble();
+	}
+
+	/**
+	 * currently sub-optimal. first fill our roster for synergy, then fill theirs for countering
+	 */
+	public Double scoreAndFill(Roster us, Roster them, Set<Hero> pool) {
+		// fill our roster with best synergies
+		Roster futureAllies = us;
+		if (!us.isFull()) {
+			List<Pick> bestPartners = bestPartners(us, us.fullSize() - us.size(), pool);
+			futureAllies = us.clone().fill(bestPartners);
+		}
+		
+		// fill enemy roster with best counters to our roster
+		Roster futureEnemyRoster = them;
+		if (!them.isFull()) {
+			List<Pick> bestCounters = bestCounters(futureAllies, them, them.fullSize() - them.size(), pool);
+			futureEnemyRoster = them.clone().fill(bestCounters);
+		}
+		
+		return scorePlusSynergy(futureAllies, futureEnemyRoster);
+		
+//		// looks dumb, but can't write to pool and newNewPool must be final
+//		Set<Hero> newPool = pool;
+//		for (Pick pick : bestCounters)
+//			newPool = subPool(newPool, pick.getCandidate());
+//		Set<Hero> newNewPool = new HashSet<Hero>(newPool);
+		
+//		return us.getPicked()
+//				.stream()
+//				.mapToDouble((hero) -> scorePlusSynergy(us.whatIf(hero), futureEnemyRoster))
+//				.average()
+//				.getAsDouble();
 		
 //		double score = 0.0;
 //		for (Hero hero : us.getPicked()) {
@@ -159,14 +255,108 @@ public class Calculator {
 	}
 	
 	/**
+	 * stateless
+	 */
+	public Map<String, Integer> coachMeSenpai (String draftFormat, final List<String> selected) {
+		Format format = Format.valueOf(draftFormat);
+		DraftSession session = new DraftSession(format);
+		for (String hero : selected) {
+			session.pickOrBan(Hero.fromName(hero));
+		}
+		Map<String, Integer> map = new HashMap<>();
+		List<Pick> picks = suggestions(session);
+		for (int i = 0; i < picks.size(); i++) {
+			int rating = 0;
+			double topXPercent = (i+1) / (double) picks.size();
+			if (topXPercent < .1)
+				rating = 1;
+			else if (topXPercent < .25)
+				rating = 2;
+			else if (topXPercent > .85)
+				rating = 3;
+			map.put(picks.get(i).getCandidate().getName(), new Integer(rating));
+		}
+		return map;
+	}
+	
+	/**
+	 * Greedy algorithm. Assuming each possible pick, fill out the rest of the draft 
+	 * with the greediest picks ({@link #greedyPick(us, them, pool)}) and score the result. 
+	 */
+	public List<Pick> greedySuggest(DraftSession session) {
+		Set<Hero> pool = session.currentPool();
+		List<Pick> picks = pool.stream().map(hero -> {
+					DraftSession possible = greedyFill(session.whatIf(hero));
+					return new Pick(hero, scorePlusSynergy(possible.getBlue(), possible.getRed()));
+				})
+				.sorted()
+				.collect(Collectors.toList());
+		if (!session.currentPhase().isBlue())
+			Collections.reverse(picks);
+		return picks;
+	}
+	
+	private DraftSession greedyFill(DraftSession sesh) {
+		while (!sesh.isFull()) {
+			// pick or defensive ban:
+			Roster teamWithNextPickPhase = sesh.getStrategy() == PICK ? sesh.pickingTeam() : sesh.enemyTeam();
+			Roster otherTeam = sesh.getStrategy() == PICK ? sesh.enemyTeam() : sesh.pickingTeam();
+			Pick pick = greedyPick(teamWithNextPickPhase, otherTeam, sesh.currentPool());
+			sesh.pickOrBan(pick.getCandidate());
+		}
+		return sesh;
+	}
+	
+//	public List<Pick> greedySuggest(Matchup matchup, Set<Hero> pool, Format format, int phase) {
+//		return pool.stream()
+//				.map(hero -> greedyScore(matchup, pool, format, phase+1))
+//				.sorted()
+//				.collect(Collectors.toList());
+//	}
+//	
+//	public Pick greedyScore(Matchup matchup, Set<Hero> pool, Format format, int phase) {
+//		Set<Hero> runningPool = pool;
+//		// fill out the roster with the best path:
+//		for (int i = phase; i < format.size(); i++) {
+//			boolean isBlue = format.get(i).isBlue();
+//			Roster pickingTeam = isBlue ? matchup.getBlue() : matchup.getRed();
+//			Roster enemyTeam = isBlue ? matchup.getRed() : matchup.getBlue();
+//			Hero candidate;
+//			switch (format.strategy(i)) {
+//				default:
+//				case PICK:
+//					candidate = greedyPick(pickingTeam, enemyTeam, runningPool).getCandidate();
+//					matchup.pick(candidate, isBlue);
+//					break;
+//				case OFFENSIVE_BAN:
+////					break; // TODO support offensive ban
+//				case DEFENSIVE_BAN:
+//					candidate = greedyPick(enemyTeam, pickingTeam, runningPool).getCandidate();
+//					break;
+//			}
+//			runningPool = subPool(runningPool, candidate);
+//		}
+//		return new Pick(scorePlusSynergy(matchup.getBlue(), matchup.getRed()));
+//	}
+	
+	private Pick greedyPick(Roster us, Roster them, Set<Hero> pool) {
+		return pool.stream()
+				.map(hero -> new Pick(hero, (synergy(hero, us)*us.size() + score(hero, them)*them.size()) 
+											/ (double) (us.size() + them.size())))
+				.sorted()
+				.collect(Collectors.toList())
+				.get(0);
+	}
+	
+	/**
 	 * @return list of all possible hero picks, decreasing in strength
 	 */
-	public List<Pick> optimalNextPicks(Roster pickingTeam, Roster enemyRoster, Collection<Hero> pool) {
+	public List<Pick> optimalNextPicks(Roster pickingTeam, Roster enemyRoster, Set<Hero> pool) {
 //		System.out.println("Calculating optimal picks for situation: " + pickingTeam + " vs " + enemyRoster);
 		return pool.stream()
 				// score our roster's strength assuming we pick the hero:
-				.map((hero) -> new Pick(hero, 
-						score(pickingTeam.whatIf(hero), enemyRoster, subPool(pool, hero))))
+				.map(hero -> new Pick(hero, 
+						scoreAndFill(pickingTeam.whatIf(hero), enemyRoster, subPool(pool, hero))))
 				.sorted()
 				.collect(Collectors.toList());
 	}
@@ -188,7 +378,7 @@ public class Calculator {
 		return bestBans;
 	}
 
-	private Set<Hero> subPool(Collection<Hero> pool, Hero toRemove) {
+	private Set<Hero> subPool(Set<Hero> pool, Hero toRemove) {
 		Set<Hero> subPool = new HashSet<Hero>(pool);
 		subPool.remove(toRemove);
 		return subPool;
@@ -197,21 +387,94 @@ public class Calculator {
 	/**
 	 * @return list of N best counters to a hero, decreasing in strength
 	 */
-	private List<Pick> bestCounters(Hero hero, int nBest, Collection<Hero> pool) {
-		return pool.stream()
-				.map((counter) -> new Pick(counter, score(counter, hero)))
-				.sorted()
-				.collect(Collectors.toList()).subList(0, nBest);
+	private List<Pick> bestCounters(Hero hero, int nBest, Set<Hero> pool) {
+		// list ordered decreasing by hero's strength against other heroes
+		List<Pick> counters = meta.get(hero, false).subList(0, nBest);
+		
+		// reverse to prioritize other heroes' strength against the given hero
+		Collections.reverse(counters);
+		
+		// remove heroes not in the current pool
+		counters.retainAll(pool);
+		
+		return counters;
+		
+//		return pool.stream()
+//				.map((counter) -> new Pick(counter, score(counter, hero)))
+//				.sorted()
+//				.collect(Collectors.toList()).subList(0, nBest);
 	}
 	
 	/**
 	 * @return list of N best counters to a roster, decreasing in strength
 	 */
-	private List<Pick> bestCounters(Roster countered, Roster countering, int nBest, Collection<Hero> pool) {
+	private List<Pick> bestCounters(Roster countered, Roster countering, int nBest, Set<Hero> pool) {
 		// TODO use countering roster in calculation
 		return pool.stream()
-				.map((counter) -> new Pick(counter, score(counter, countered, subPool(pool, counter))))
+				.map(counter -> new Pick(counter, scoreAndFill(counter, countered, subPool(pool, counter))))
 				.sorted()
 				.collect(Collectors.toList());
 	}
+	
+	private List<Pick> bestPartners(Hero hero, int nBest, Set<Hero> pool) {
+		List<Pick> partners = meta.get(hero, true).subList(0, nBest);
+		partners.retainAll(pool);
+		return partners;
+	}
+	
+	private List<Pick> bestPartners(Roster allies, int nBest, Set<Hero> pool) {
+		return pool.stream()
+				.map(partner -> new Pick(partner, synergy(allies.whatIf(partner))))
+				.sorted()
+				.collect(Collectors.toList())
+				.subList(0, nBest);
+	}
+
+	/**
+	 * Essentially a container for a particular {@link DraftSession} state. 
+	 * Used to build a tree for the pruning algorithm: {@link Calculator#pruningAlgorithm(DraftSession)}.
+	 */
+	private class TreeNode implements Comparable<TreeNode> {
+			private Hero lastPick;
+			private DraftSession state;
+			private Double currentOdds;
+			private ArrayList<TreeNode> children;
+			
+			public TreeNode(Hero lastPick, DraftSession state) {
+				this.lastPick = lastPick;
+				this.state = state;
+				this.currentOdds = scoreAndFill(state.getBlue(), state.getRed(), state.currentPool());
+				this.children = new ArrayList<>();
+			}
+			
+			public Double odds() {
+				return children.isEmpty() ? currentOdds 
+						: Math.max(currentOdds, bestPicks().get(0).odds());
+			}
+			
+			public Hero getLastPick() { return lastPick; }
+	//		public Roster getBlue() { return blue; }
+	//		public Roster getRed() { return red; }
+	//		public Set<Hero> getPool() { return pool; }
+			public DraftSession getState() { return state; }
+			public ArrayList<TreeNode> bestPicks() {
+				Collections.sort(children);
+				return children;
+			}
+			
+			public void addChild(TreeNode child) {
+				children.add(child);
+	//			Collections.sort(children); // inefficient
+			}
+			
+			public boolean isFull() {
+				return state.isFull();
+			}
+	
+			@Override
+			public int compareTo(TreeNode o) {
+				// "higher" scores come "first" -> (.70, .65, .55, ...)
+				return o.odds().compareTo(odds());
+			}
+		}
 }
