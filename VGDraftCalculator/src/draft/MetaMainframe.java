@@ -19,7 +19,7 @@ public class MetaMainframe {
 	static {
 		try {
 			matrix = MatrixLoader.load(new File(VS_FILE_PATH), new File(SYNERGY_FILE_PATH));
-		} catch (ParserConfigurationException | SAXException | IOException e) {
+		} catch (ParserConfigurationException | SAXException | IOException | IllegalArgumentException e) {
 			e.printStackTrace();
 			System.out.println("File load failed! Continuing with random simulated data.");
 			matrix = MatrixLoader.loadRandom();
@@ -44,26 +44,37 @@ public class MetaMainframe {
 			for (Pick p : optimalNextPicks)
 				advice += p + " ";
 			System.out.println(advice);
-			
-			System.out.println("Choose next hero for " + sesh.currentPhase().name() + ":");
-			
+
 			
 			// PARSE INPUTS
-//			String input = "best"; // for debugging
-			String input = scanner.next();
-			if (input.equals("quit")) {
-				scanner.close();
-				return;
-			}
 			Hero hero = null;
-			if (input.equals("best")) {
-				hero = optimalNextPicks.get(0).getCandidate();
-			} else if (input.equals("worst")) {
-				hero = optimalNextPicks.get(optimalNextPicks.size() - 1).getCandidate();
-			} else if (input.equals("none")) {
-				// leave null to skip
-			} else {
-				hero = Hero.fromName(input);
+			while (true) {
+				System.out.println("Choose next hero for " + sesh.currentPhase().name() + ":");
+				
+				// String input = "best"; // for debugging
+				String input = scanner.next();
+				if (input.equals("quit")) {
+					scanner.close();
+					return;
+				}
+				if (input.equals("best")) {
+					hero = optimalNextPicks.get(0).getCandidate();
+					break; // success
+				} else if (input.equals("worst")) {
+					hero = optimalNextPicks.get(optimalNextPicks.size() - 1).getCandidate();
+					break; // success
+				} else if (input.equals("none")) {
+					// leave null to skip
+					break; // success
+				} else {
+					try {
+						hero = Hero.fromName(input);
+					} catch (IllegalArgumentException e) {
+						System.out.println(e.getMessage());
+						continue; // try again
+					}
+					break; // success
+				}
 			}
 			
 			sesh.pickOrBan(hero);
