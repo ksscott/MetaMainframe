@@ -1,24 +1,24 @@
 package draft;
 
-public class Matchup implements Cloneable {
+public class MatchupSpecial implements Cloneable {
 
 	private Roster blue;
 	private Roster red;
 	private Calculator scorer;
 	double oddsForBlue = 0.0;
 	
-	public Matchup(Roster blue, Roster red, Calculator scorer) {
+	public MatchupSpecial(Roster blue, Roster red, Calculator scorer) {
 		this.blue = blue;
 		this.red = red;
 		this.scorer = scorer;
 	}
 	
 	@Override
-	public Matchup clone() {
-		return new Matchup (blue.clone(), red.clone(), scorer);
+	public MatchupSpecial clone() {
+		return new MatchupSpecial (blue.clone(), red.clone(), scorer);
 	}
 	
-	public Matchup whatIf(Hero pick, boolean bluePicked) {
+	public MatchupSpecial whatIf(Hero pick, boolean bluePicked) {
 		Roster newBlue = blue;
 		Roster newRed = red;
 		double newOddsForBlue = oddsForBlue;
@@ -44,7 +44,7 @@ public class Matchup implements Cloneable {
 			scoreAgainstEnemy /= divisor;
 			newOddsForBlue = (current + scoreAgainstEnemy) / newRed.size();
 		}
-		Matchup hypothetical = new Matchup(newBlue, newRed, scorer);
+		MatchupSpecial hypothetical = new MatchupSpecial(newBlue, newRed, scorer);
 		hypothetical.oddsForBlue = newOddsForBlue;
 		System.out.println(String.format("%.3f", oddsForBlue) + " " + newBlue + " vs. " + newRed);
 		return hypothetical;
