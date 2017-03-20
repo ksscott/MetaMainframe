@@ -118,6 +118,7 @@ public class Calculator {
 	 * Greedy algorithm. Assuming each possible pick, fill out the rest of the draft 
 	 * with the greediest picks ({@link #greedyPick(us, them, pool)}) and score the result. 
 	 */
+	@SuppressWarnings("unused")
 	private List<Pick> greedyAlgorithm(DraftSession session) {
 		Set<Hero> pool = session.currentPool();
 		List<Pick> picks = pool.stream().map(hero -> {
@@ -137,6 +138,7 @@ public class Calculator {
 	 * <p>
 	 * NOTE: assumes all parameters are properly in sync
 	 */
+	@SuppressWarnings("unused")
 	private List<Pick> bruteForce(Roster blue, Roster red, Set<Hero> pool, Format format, int phase) {
 		return pool.stream().map((hero) -> {
 			if (blue.isFull() && red.isFull())
@@ -159,6 +161,7 @@ public class Calculator {
 	/**
 	 * NOTE: intended to be identical to {@link #bruteForce(Roster, Roster, Set, Format, int)}, but more efficient
 	 */
+	@SuppressWarnings("unused")
 	private List<Pick> bruteForce(MatchupSpecial matchup, Set<Hero> pool, Format format, int phase) {
 		//		System.out.println("Listing options for Phase " + phase + ": " + format.get(phase == format.size() ? format.size() - 1 : phase));
 		return pool.stream().map((hero) -> {
@@ -374,6 +377,7 @@ public class Calculator {
 				.collect(Collectors.toList());
 	}
 	
+	@SuppressWarnings("unused")
 	private List<Pick> optimalOffensiveBan(Roster banningTeam, Roster enemyTeam, Set<Hero> pool) {
 		List<Pick> bestBans = new ArrayList<>();
 		
@@ -414,6 +418,7 @@ public class Calculator {
 				.collect(Collectors.toList());
 	}
 	
+	@SuppressWarnings("unused")
 	private List<Pick> bestPartners(Hero hero, int nBest, Set<Hero> pool) {
 		List<Pick> partners = meta.get(hero, true).subList(0, nBest);
 		partners.retainAll(pool);
