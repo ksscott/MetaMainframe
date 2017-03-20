@@ -1,7 +1,7 @@
 package draft;
 
-import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public class MetaMainframe {
 	private static HeroMatrix matrix;
 	static {
 		try {
-			matrix = MatrixLoader.load(new File(VS_FILE_PATH), new File(SYNERGY_FILE_PATH));
+			matrix = MatrixLoader.load(Paths.get(VS_FILE_PATH), Paths.get(SYNERGY_FILE_PATH));
 		} catch (ParserConfigurationException | SAXException | IOException | IllegalArgumentException e) {
 			e.printStackTrace();
 			System.out.println("File load failed! Continuing with random simulated data.");

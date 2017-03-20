@@ -1,7 +1,8 @@
 package draft;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -26,12 +27,17 @@ public class MatrixLoader {
 	 * @throws SAXException
 	 * @throws IOException
 	 */
-	public static HeroMatrix load(File vsXmlFile, File synergyXmlFile) throws ParserConfigurationException, SAXException, IOException {
+	public static HeroMatrix load(Path vsXmlFile, Path synergyXmlFile) throws ParserConfigurationException, SAXException, IOException {
 		
-		if (!vsXmlFile.exists())
-			throw new IllegalArgumentException("Invalid file input: " + vsXmlFile);
-		if (!synergyXmlFile.exists())
-			throw new IllegalArgumentException("Invalid file input: " + synergyXmlFile);
+//		InputStream vsFile = new FileInputStream(vsXmlFile.toString());
+		InputStream vsFile = MatrixLoader.class.getResourceAsStream(vsXmlFile.toString());
+//		InputStream synergyFile = new FileInputStream(synergyXmlFile.toString());
+		InputStream synergyFile = MatrixLoader.class.getResourceAsStream(synergyXmlFile.toString());
+		
+//		if (!vsXmlFile.exists())
+//			throw new IllegalArgumentException("File does not exist: " + vsFile);
+//		if (!synergyXmlFile.exists())
+//			throw new IllegalArgumentException("File does not exist: " + synergyFile);
 
 		HashMap<Hero, HashMap<Hero, Integer>> vsMap = new HashMap<>();
 		HashMap<Hero, HashMap<Hero, Integer>> synMap = new HashMap<>();
@@ -45,15 +51,15 @@ public class MatrixLoader {
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 		DocumentBuilder dBuilder2 = dbFactory.newDocumentBuilder();
-		Document vsDoc = dBuilder.parse(vsXmlFile);
-		Document synDoc = dBuilder2.parse(synergyXmlFile);
+		Document vsDoc = dBuilder.parse(vsFile);
+		Document synDoc = dBuilder2.parse(synergyFile);
 
 		// System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 
 		NodeList nList = vsDoc.getElementsByTagName("ROW");
 		NodeList nList2 = synDoc.getElementsByTagName("ROW");
 
-		System.out.println("Loading data from: " + vsXmlFile.getPath() + ", " + synergyXmlFile);
+		System.out.println("Loading data from: " + vsXmlFile.getFileName() + ", " + synergyXmlFile.getFileName());
 
 		for (int i = 0; i < nList.getLength(); i++) {
 
