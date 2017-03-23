@@ -1,2048 +1,2028 @@
-<DATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">heroName</Data></Cell>
+			<Cell><Data ss:Type="String">winswithRingo</Data></Cell>
+			<Cell><Data ss:Type="String">winswithKoshka</Data></Cell>
+			<Cell><Data ss:Type="String">winswithCatherine</Data></Cell>
+			<Cell><Data ss:Type="String">winswithSAW</Data></Cell>
+			<Cell><Data ss:Type="String">winswithAdagio</Data></Cell>
+			<Cell><Data ss:Type="String">winswithPetal</Data></Cell>
+			<Cell><Data ss:Type="String">winswithGlaive</Data></Cell>
+			<Cell><Data ss:Type="String">winswithKrul</Data></Cell>
+			<Cell><Data ss:Type="String">winswithJoule</Data></Cell>
+			<Cell><Data ss:Type="String">winswithTaka</Data></Cell>
+			<Cell><Data ss:Type="String">winswithSkaarf</Data></Cell>
+			<Cell><Data ss:Type="String">winswithArdan</Data></Cell>
+			<Cell><Data ss:Type="String">winswithCeleste</Data></Cell>
+			<Cell><Data ss:Type="String">winswithVox</Data></Cell>
+			<Cell><Data ss:Type="String">winswithFortress</Data></Cell>
+			<Cell><Data ss:Type="String">winswithRona</Data></Cell>
+			<Cell><Data ss:Type="String">winswithSkye</Data></Cell>
+			<Cell><Data ss:Type="String">winswithPhinn</Data></Cell>
+			<Cell><Data ss:Type="String">winswithBlackfeather</Data></Cell>
+			<Cell><Data ss:Type="String">winswithKestrel</Data></Cell>
+			<Cell><Data ss:Type="String">winswithReim</Data></Cell>
+			<Cell><Data ss:Type="String">winswithOzo</Data></Cell>
+			<Cell><Data ss:Type="String">winswithAlpha</Data></Cell>
+			<Cell><Data ss:Type="String">winswithLance</Data></Cell>
+			<Cell><Data ss:Type="String">winswithLyra</Data></Cell>
+			<Cell><Data ss:Type="String">winswithSamuel</Data></Cell>
+			<Cell><Data ss:Type="String">winswithBaron</Data></Cell>
+			<Cell><Data ss:Type="String">winswithGwen</Data></Cell>
+			<Cell><Data ss:Type="String">winswithFlicker</Data></Cell>
+			<Cell><Data ss:Type="String">winswithIdris</Data></Cell>
+			<Cell><Data ss:Type="String">winswithGrumpjaw</Data></Cell>
+			<Cell><Data ss:Type="String">playswithRingo</Data></Cell>
+			<Cell><Data ss:Type="String">playswithKoshka</Data></Cell>
+			<Cell><Data ss:Type="String">playswithCatherine</Data></Cell>
+			<Cell><Data ss:Type="String">playswithSAW</Data></Cell>
+			<Cell><Data ss:Type="String">playswithAdagio</Data></Cell>
+			<Cell><Data ss:Type="String">playswithPetal</Data></Cell>
+			<Cell><Data ss:Type="String">playswithGlaive</Data></Cell>
+			<Cell><Data ss:Type="String">playswithKrul</Data></Cell>
+			<Cell><Data ss:Type="String">playswithJoule</Data></Cell>
+			<Cell><Data ss:Type="String">playswithTaka</Data></Cell>
+			<Cell><Data ss:Type="String">playswithSkaarf</Data></Cell>
+			<Cell><Data ss:Type="String">playswithArdan</Data></Cell>
+			<Cell><Data ss:Type="String">playswithCeleste</Data></Cell>
+			<Cell><Data ss:Type="String">playswithVox</Data></Cell>
+			<Cell><Data ss:Type="String">playswithFortress</Data></Cell>
+			<Cell><Data ss:Type="String">withRona</Data></Cell>
+			<Cell><Data ss:Type="String">playswithSkye</Data></Cell>
+			<Cell><Data ss:Type="String">playswithPhinn</Data></Cell>
+			<Cell><Data ss:Type="String">playswithBlackfeather</Data></Cell>
+			<Cell><Data ss:Type="String">playswithKestrel</Data></Cell>
+			<Cell><Data ss:Type="String">playswithReim</Data></Cell>
+			<Cell><Data ss:Type="String">playswithOzo</Data></Cell>
+			<Cell><Data ss:Type="String">playswithAlpha</Data></Cell>
+			<Cell><Data ss:Type="String">playswithLance</Data></Cell>
+			<Cell><Data ss:Type="String">playswithLyra</Data></Cell>
+			<Cell><Data ss:Type="String">playswithSamuel</Data></Cell>
+			<Cell><Data ss:Type="String">playswithBaron</Data></Cell>
+			<Cell><Data ss:Type="String">playswithGwen</Data></Cell>
+			<Cell><Data ss:Type="String">playswithFlicker</Data></Cell>
+			<Cell><Data ss:Type="String">playswithIdris</Data></Cell>
+			<Cell><Data ss:Type="String">playswithGrumpjaw</Data></Cell>
+		</Row>
 
-	<ROW>
-		<heroName>Adagio</heroName>
-		<winswithRingo>56</winswithRingo>
-		<winswithKoshka>24</winswithKoshka>
-		<winswithCatherine>21</winswithCatherine>
-		<winswithSaw>14</winswithSaw>
-		<winswithAdagio>NULL</winswithAdagio>
-		<winswithPetal>13</winswithPetal>
-		<winswithGlaive>55</winswithGlaive>
-		<winswithJoule>26</winswithJoule>
-		<winswithKrul>15</winswithKrul>
-		<winswithTaka>34</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>31</winswithArdan>
-		<winswithCeleste>8</winswithCeleste>
-		<winswithVox>65</winswithVox>
-		<winswithFortress>16</winswithFortress>
-		<winswithRona>11</winswithRona>
-		<winswithSkye>18</winswithSkye>
-		<winswithPhinn>27</winswithPhinn>
-		<winswithBlackfeather>50</winswithBlackfeather>
-		<winswithKestrel>18</winswithKestrel>
-		<winswithReim>5</winswithReim>
-		<winswithOzo>9</winswithOzo>
-		<winswithAlpha>23</winswithAlpha>
-		<winswithLance>46</winswithLance>
-		<winswithLyra>25</winswithLyra>
-		<winswithSamuel>5</winswithSamuel>
-		<winswithBaron>10</winswithBaron>
-		<winswithGwen>20</winswithGwen>
-		<winswithFlicker>10</winswithFlicker>
-		<winswithIdris>14</winswithIdris>
-		<winswithGrumpjaw>20</winswithGrumpjaw>
-		<playswithRingo>111</playswithRingo>
-		<playswithKoshka>45</playswithKoshka>
-		<playswithCatherine>44</playswithCatherine>
-		<playswithSaw>27</playswithSaw>
-		<playswithAdagio>NULL</playswithAdagio>
-		<playswithPetal>26</playswithPetal>
-		<playswithGlaive>98</playswithGlaive>
-		<playswithJoule>40</playswithJoule>
-		<playswithKrul>32</playswithKrul>
-		<playswithTaka>79</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>69</playswithArdan>
-		<playswithCeleste>17</playswithCeleste>
-		<playswithVox>120</playswithVox>
-		<playswithFortress>27</playswithFortress>
-		<playswithRona>27</playswithRona>
-		<playswithSkye>39</playswithSkye>
-		<playswithPhinn>50</playswithPhinn>
-		<playswithBlackfeather>105</playswithBlackfeather>
-		<playswithKestrel>43</playswithKestrel>
-		<playswithReim>13</playswithReim>
-		<playswithOzo>18</playswithOzo>
-		<playswithAlpha>50</playswithAlpha>
-		<playswithLance>80</playswithLance>
-		<playswithLyra>58</playswithLyra>
-		<playswithSamuel>8</playswithSamuel>
-		<playswithBaron>16</playswithBaron>
-		<playswithGwen>42</playswithGwen>
-		<playswithFlicker>13</playswithFlicker>
-		<playswithIdris>34</playswithIdris>
-		<playswithGrumpjaw>20</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Alpha</heroName>
-		<winswithRingo>71</winswithRingo>
-		<winswithKoshka>NULL</winswithKoshka>
-		<winswithCatherine>18</winswithCatherine>
-		<winswithSaw>10</winswithSaw>
-		<winswithAdagio>23</winswithAdagio>
-		<winswithPetal>1</winswithPetal>
-		<winswithGlaive>4</winswithGlaive>
-		<winswithJoule>0</winswithJoule>
-		<winswithKrul>4</winswithKrul>
-		<winswithTaka>0</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>67</winswithArdan>
-		<winswithCeleste>2</winswithCeleste>
-		<winswithVox>103</winswithVox>
-		<winswithFortress>12</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>5</winswithSkye>
-		<winswithPhinn>38</winswithPhinn>
-		<winswithBlackfeather>5</winswithBlackfeather>
-		<winswithKestrel>9</winswithKestrel>
-		<winswithReim>0</winswithReim>
-		<winswithOzo>NULL</winswithOzo>
-		<winswithAlpha>NULL</winswithAlpha>
-		<winswithLance>69</winswithLance>
-		<winswithLyra>30</winswithLyra>
-		<winswithSamuel>0</winswithSamuel>
-		<winswithBaron>11</winswithBaron>
-		<winswithGwen>27</winswithGwen>
-		<winswithFlicker>1</winswithFlicker>
-		<winswithIdris>2</winswithIdris>
-		<winswithGrumpjaw>9</winswithGrumpjaw>
-		<playswithRingo>169</playswithRingo>
-		<playswithKoshka>NULL</playswithKoshka>
-		<playswithCatherine>45</playswithCatherine>
-		<playswithSaw>18</playswithSaw>
-		<playswithAdagio>50</playswithAdagio>
-		<playswithPetal>2</playswithPetal>
-		<playswithGlaive>11</playswithGlaive>
-		<playswithJoule>1</playswithJoule>
-		<playswithKrul>5</playswithKrul>
-		<playswithTaka>2</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>117</playswithArdan>
-		<playswithCeleste>6</playswithCeleste>
-		<playswithVox>195</playswithVox>
-		<playswithFortress>19</playswithFortress>
-		<playswithRona>1</playswithRona>
-		<playswithSkye>12</playswithSkye>
-		<playswithPhinn>81</playswithPhinn>
-		<playswithBlackfeather>11</playswithBlackfeather>
-		<playswithKestrel>20</playswithKestrel>
-		<playswithReim>1</playswithReim>
-		<playswithOzo>NULL</playswithOzo>
-		<playswithAlpha>NULL</playswithAlpha>
-		<playswithLance>136</playswithLance>
-		<playswithLyra>52</playswithLyra>
-		<playswithSamuel>2</playswithSamuel>
-		<playswithBaron>15</playswithBaron>
-		<playswithGwen>44</playswithGwen>
-		<playswithFlicker>5</playswithFlicker>
-		<playswithIdris>5</playswithIdris>
-		<playswithGrumpjaw>9</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Ardan</heroName>
-		<winswithRingo>144</winswithRingo>
-		<winswithKoshka>58</winswithKoshka>
-		<winswithCatherine>1</winswithCatherine>
-		<winswithSaw>15</winswithSaw>
-		<winswithAdagio>31</winswithAdagio>
-		<winswithPetal>41</winswithPetal>
-		<winswithGlaive>85</winswithGlaive>
-		<winswithJoule>23</winswithJoule>
-		<winswithKrul>25</winswithKrul>
-		<winswithTaka>82</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>NULL</winswithArdan>
-		<winswithCeleste>14</winswithCeleste>
-		<winswithVox>196</winswithVox>
-		<winswithFortress>23</winswithFortress>
-		<winswithRona>9</winswithRona>
-		<winswithSkye>40</winswithSkye>
-		<winswithPhinn>1</winswithPhinn>
-		<winswithBlackfeather>48</winswithBlackfeather>
-		<winswithKestrel>32</winswithKestrel>
-		<winswithReim>15</winswithReim>
-		<winswithOzo>15</winswithOzo>
-		<winswithAlpha>67</winswithAlpha>
-		<winswithLance>6</winswithLance>
-		<winswithLyra>1</winswithLyra>
-		<winswithSamuel>12</winswithSamuel>
-		<winswithBaron>23</winswithBaron>
-		<winswithGwen>36</winswithGwen>
-		<winswithFlicker>0</winswithFlicker>
-		<winswithIdris>14</winswithIdris>
-		<winswithGrumpjaw>13</winswithGrumpjaw>
-		<playswithRingo>281</playswithRingo>
-		<playswithKoshka>105</playswithKoshka>
-		<playswithCatherine>4</playswithCatherine>
-		<playswithSaw>36</playswithSaw>
-		<playswithAdagio>69</playswithAdagio>
-		<playswithPetal>70</playswithPetal>
-		<playswithGlaive>171</playswithGlaive>
-		<playswithJoule>44</playswithJoule>
-		<playswithKrul>52</playswithKrul>
-		<playswithTaka>163</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>NULL</playswithArdan>
-		<playswithCeleste>32</playswithCeleste>
-		<playswithVox>378</playswithVox>
-		<playswithFortress>39</playswithFortress>
-		<playswithRona>20</playswithRona>
-		<playswithSkye>94</playswithSkye>
-		<playswithPhinn>1</playswithPhinn>
-		<playswithBlackfeather>107</playswithBlackfeather>
-		<playswithKestrel>66</playswithKestrel>
-		<playswithReim>26</playswithReim>
-		<playswithOzo>28</playswithOzo>
-		<playswithAlpha>117</playswithAlpha>
-		<playswithLance>15</playswithLance>
-		<playswithLyra>5</playswithLyra>
-		<playswithSamuel>37</playswithSamuel>
-		<playswithBaron>42</playswithBaron>
-		<playswithGwen>74</playswithGwen>
-		<playswithFlicker>1</playswithFlicker>
-		<playswithIdris>35</playswithIdris>
-		<playswithGrumpjaw>13</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Baron</heroName>
-		<winswithRingo>0</winswithRingo>
-		<winswithKoshka>9</winswithKoshka>
-		<winswithCatherine>7</winswithCatherine>
-		<winswithSaw>NULL</winswithSaw>
-		<winswithAdagio>10</winswithAdagio>
-		<winswithPetal>11</winswithPetal>
-		<winswithGlaive>13</winswithGlaive>
-		<winswithJoule>1</winswithJoule>
-		<winswithKrul>2</winswithKrul>
-		<winswithTaka>13</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>23</winswithArdan>
-		<winswithCeleste>NULL</winswithCeleste>
-		<winswithVox>1</winswithVox>
-		<winswithFortress>4</winswithFortress>
-		<winswithRona>2</winswithRona>
-		<winswithSkye>4</winswithSkye>
-		<winswithPhinn>12</winswithPhinn>
-		<winswithBlackfeather>2</winswithBlackfeather>
-		<winswithKestrel>5</winswithKestrel>
-		<winswithReim>0</winswithReim>
-		<winswithOzo>8</winswithOzo>
-		<winswithAlpha>11</winswithAlpha>
-		<winswithLance>18</winswithLance>
-		<winswithLyra>15</winswithLyra>
-		<winswithSamuel>2</winswithSamuel>
-		<winswithBaron>NULL</winswithBaron>
-		<winswithGwen>NULL</winswithGwen>
-		<winswithFlicker>2</winswithFlicker>
-		<winswithIdris>1</winswithIdris>
-		<winswithGrumpjaw>4</winswithGrumpjaw>
-		<playswithRingo>1</playswithRingo>
-		<playswithKoshka>18</playswithKoshka>
-		<playswithCatherine>15</playswithCatherine>
-		<playswithSaw>NULL</playswithSaw>
-		<playswithAdagio>16</playswithAdagio>
-		<playswithPetal>14</playswithPetal>
-		<playswithGlaive>28</playswithGlaive>
-		<playswithJoule>4</playswithJoule>
-		<playswithKrul>5</playswithKrul>
-		<playswithTaka>22</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>42</playswithArdan>
-		<playswithCeleste>NULL</playswithCeleste>
-		<playswithVox>2</playswithVox>
-		<playswithFortress>8</playswithFortress>
-		<playswithRona>3</playswithRona>
-		<playswithSkye>14</playswithSkye>
-		<playswithPhinn>22</playswithPhinn>
-		<playswithBlackfeather>6</playswithBlackfeather>
-		<playswithKestrel>11</playswithKestrel>
-		<playswithReim>4</playswithReim>
-		<playswithOzo>10</playswithOzo>
-		<playswithAlpha>15</playswithAlpha>
-		<playswithLance>42</playswithLance>
-		<playswithLyra>20</playswithLyra>
-		<playswithSamuel>4</playswithSamuel>
-		<playswithBaron>NULL</playswithBaron>
-		<playswithGwen>NULL</playswithGwen>
-		<playswithFlicker>4</playswithFlicker>
-		<playswithIdris>1</playswithIdris>
-		<playswithGrumpjaw>4</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Blackfeather</heroName>
-		<winswithRingo>54</winswithRingo>
-		<winswithKoshka>9</winswithKoshka>
-		<winswithCatherine>36</winswithCatherine>
-		<winswithSaw>9</winswithSaw>
-		<winswithAdagio>50</winswithAdagio>
-		<winswithPetal>3</winswithPetal>
-		<winswithGlaive>14</winswithGlaive>
-		<winswithJoule>2</winswithJoule>
-		<winswithKrul>4</winswithKrul>
-		<winswithTaka>7</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>48</winswithArdan>
-		<winswithCeleste>3</winswithCeleste>
-		<winswithVox>49</winswithVox>
-		<winswithFortress>9</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>11</winswithSkye>
-		<winswithPhinn>44</winswithPhinn>
-		<winswithBlackfeather>NULL</winswithBlackfeather>
-		<winswithKestrel>11</winswithKestrel>
-		<winswithReim>3</winswithReim>
-		<winswithOzo>3</winswithOzo>
-		<winswithAlpha>5</winswithAlpha>
-		<winswithLance>46</winswithLance>
-		<winswithLyra>34</winswithLyra>
-		<winswithSamuel>2</winswithSamuel>
-		<winswithBaron>2</winswithBaron>
-		<winswithGwen>13</winswithGwen>
-		<winswithFlicker>4</winswithFlicker>
-		<winswithIdris>4</winswithIdris>
-		<winswithGrumpjaw>15</winswithGrumpjaw>
-		<playswithRingo>109</playswithRingo>
-		<playswithKoshka>17</playswithKoshka>
-		<playswithCatherine>64</playswithCatherine>
-		<playswithSaw>18</playswithSaw>
-		<playswithAdagio>105</playswithAdagio>
-		<playswithPetal>10</playswithPetal>
-		<playswithGlaive>27</playswithGlaive>
-		<playswithJoule>5</playswithJoule>
-		<playswithKrul>11</playswithKrul>
-		<playswithTaka>24</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>107</playswithArdan>
-		<playswithCeleste>12</playswithCeleste>
-		<playswithVox>94</playswithVox>
-		<playswithFortress>26</playswithFortress>
-		<playswithRona>2</playswithRona>
-		<playswithSkye>30</playswithSkye>
-		<playswithPhinn>81</playswithPhinn>
-		<playswithBlackfeather>NULL</playswithBlackfeather>
-		<playswithKestrel>23</playswithKestrel>
-		<playswithReim>4</playswithReim>
-		<playswithOzo>3</playswithOzo>
-		<playswithAlpha>11</playswithAlpha>
-		<playswithLance>108</playswithLance>
-		<playswithLyra>66</playswithLyra>
-		<playswithSamuel>10</playswithSamuel>
-		<playswithBaron>6</playswithBaron>
-		<playswithGwen>27</playswithGwen>
-		<playswithFlicker>11</playswithFlicker>
-		<playswithIdris>6</playswithIdris>
-		<playswithGrumpjaw>15</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Catherine</heroName>
-		<winswithRingo>101</winswithRingo>
-		<winswithKoshka>21</winswithKoshka>
-		<winswithCatherine>NULL</winswithCatherine>
-		<winswithSaw>19</winswithSaw>
-		<winswithAdagio>21</winswithAdagio>
-		<winswithPetal>26</winswithPetal>
-		<winswithGlaive>56</winswithGlaive>
-		<winswithJoule>13</winswithJoule>
-		<winswithKrul>25</winswithKrul>
-		<winswithTaka>46</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>1</winswithArdan>
-		<winswithCeleste>9</winswithCeleste>
-		<winswithVox>112</winswithVox>
-		<winswithFortress>19</winswithFortress>
-		<winswithRona>11</winswithRona>
-		<winswithSkye>35</winswithSkye>
-		<winswithPhinn>NULL</winswithPhinn>
-		<winswithBlackfeather>36</winswithBlackfeather>
-		<winswithKestrel>17</winswithKestrel>
-		<winswithReim>10</winswithReim>
-		<winswithOzo>5</winswithOzo>
-		<winswithAlpha>18</winswithAlpha>
-		<winswithLance>8</winswithLance>
-		<winswithLyra>6</winswithLyra>
-		<winswithSamuel>17</winswithSamuel>
-		<winswithBaron>7</winswithBaron>
-		<winswithGwen>37</winswithGwen>
-		<winswithFlicker>1</winswithFlicker>
-		<winswithIdris>15</winswithIdris>
-		<winswithGrumpjaw>20</winswithGrumpjaw>
-		<playswithRingo>197</playswithRingo>
-		<playswithKoshka>56</playswithKoshka>
-		<playswithCatherine>NULL</playswithCatherine>
-		<playswithSaw>37</playswithSaw>
-		<playswithAdagio>44</playswithAdagio>
-		<playswithPetal>44</playswithPetal>
-		<playswithGlaive>106</playswithGlaive>
-		<playswithJoule>28</playswithJoule>
-		<playswithKrul>52</playswithKrul>
-		<playswithTaka>99</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>4</playswithArdan>
-		<playswithCeleste>24</playswithCeleste>
-		<playswithVox>224</playswithVox>
-		<playswithFortress>28</playswithFortress>
-		<playswithRona>24</playswithRona>
-		<playswithSkye>67</playswithSkye>
-		<playswithPhinn>NULL</playswithPhinn>
-		<playswithBlackfeather>64</playswithBlackfeather>
-		<playswithKestrel>41</playswithKestrel>
-		<playswithReim>22</playswithReim>
-		<playswithOzo>14</playswithOzo>
-		<playswithAlpha>45</playswithAlpha>
-		<playswithLance>14</playswithLance>
-		<playswithLyra>13</playswithLyra>
-		<playswithSamuel>29</playswithSamuel>
-		<playswithBaron>15</playswithBaron>
-		<playswithGwen>64</playswithGwen>
-		<playswithFlicker>1</playswithFlicker>
-		<playswithIdris>24</playswithIdris>
-		<playswithGrumpjaw>20</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Celeste</heroName>
-		<winswithRingo>3</winswithRingo>
-		<winswithKoshka>NULL</winswithKoshka>
-		<winswithCatherine>9</winswithCatherine>
-		<winswithSaw>1</winswithSaw>
-		<winswithAdagio>8</winswithAdagio>
-		<winswithPetal>3</winswithPetal>
-		<winswithGlaive>12</winswithGlaive>
-		<winswithJoule>10</winswithJoule>
-		<winswithKrul>5</winswithKrul>
-		<winswithTaka>4</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>14</winswithArdan>
-		<winswithCeleste>NULL</winswithCeleste>
-		<winswithVox>4</winswithVox>
-		<winswithFortress>2</winswithFortress>
-		<winswithRona>5</winswithRona>
-		<winswithSkye>1</winswithSkye>
-		<winswithPhinn>4</winswithPhinn>
-		<winswithBlackfeather>3</winswithBlackfeather>
-		<winswithKestrel>5</winswithKestrel>
-		<winswithReim>1</winswithReim>
-		<winswithOzo>2</winswithOzo>
-		<winswithAlpha>2</winswithAlpha>
-		<winswithLance>19</winswithLance>
-		<winswithLyra>9</winswithLyra>
-		<winswithSamuel>0</winswithSamuel>
-		<winswithBaron>NULL</winswithBaron>
-		<winswithGwen>2</winswithGwen>
-		<winswithFlicker>1</winswithFlicker>
-		<winswithIdris>5</winswithIdris>
-		<winswithGrumpjaw>10</winswithGrumpjaw>
-		<playswithRingo>6</playswithRingo>
-		<playswithKoshka>NULL</playswithKoshka>
-		<playswithCatherine>24</playswithCatherine>
-		<playswithSaw>1</playswithSaw>
-		<playswithAdagio>17</playswithAdagio>
-		<playswithPetal>4</playswithPetal>
-		<playswithGlaive>24</playswithGlaive>
-		<playswithJoule>13</playswithJoule>
-		<playswithKrul>17</playswithKrul>
-		<playswithTaka>9</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>32</playswithArdan>
-		<playswithCeleste>NULL</playswithCeleste>
-		<playswithVox>12</playswithVox>
-		<playswithFortress>5</playswithFortress>
-		<playswithRona>14</playswithRona>
-		<playswithSkye>4</playswithSkye>
-		<playswithPhinn>11</playswithPhinn>
-		<playswithBlackfeather>12</playswithBlackfeather>
-		<playswithKestrel>6</playswithKestrel>
-		<playswithReim>2</playswithReim>
-		<playswithOzo>2</playswithOzo>
-		<playswithAlpha>6</playswithAlpha>
-		<playswithLance>37</playswithLance>
-		<playswithLyra>21</playswithLyra>
-		<playswithSamuel>1</playswithSamuel>
-		<playswithBaron>NULL</playswithBaron>
-		<playswithGwen>2</playswithGwen>
-		<playswithFlicker>3</playswithFlicker>
-		<playswithIdris>12</playswithIdris>
-		<playswithGrumpjaw>10</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Flicker</heroName>
-		<winswithRingo>11</winswithRingo>
-		<winswithKoshka>6</winswithKoshka>
-		<winswithCatherine>1</winswithCatherine>
-		<winswithSaw>8</winswithSaw>
-		<winswithAdagio>10</winswithAdagio>
-		<winswithPetal>3</winswithPetal>
-		<winswithGlaive>10</winswithGlaive>
-		<winswithJoule>4</winswithJoule>
-		<winswithKrul>3</winswithKrul>
-		<winswithTaka>8</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>0</winswithArdan>
-		<winswithCeleste>1</winswithCeleste>
-		<winswithVox>17</winswithVox>
-		<winswithFortress>3</winswithFortress>
-		<winswithRona>5</winswithRona>
-		<winswithSkye>3</winswithSkye>
-		<winswithPhinn>0</winswithPhinn>
-		<winswithBlackfeather>4</winswithBlackfeather>
-		<winswithKestrel>5</winswithKestrel>
-		<winswithReim>5</winswithReim>
-		<winswithOzo>NULL</winswithOzo>
-		<winswithAlpha>1</winswithAlpha>
-		<winswithLance>1</winswithLance>
-		<winswithLyra>0</winswithLyra>
-		<winswithSamuel>3</winswithSamuel>
-		<winswithBaron>2</winswithBaron>
-		<winswithGwen>4</winswithGwen>
-		<winswithFlicker>NULL</winswithFlicker>
-		<winswithIdris>3</winswithIdris>
-		<winswithGrumpjaw>2</winswithGrumpjaw>
-		<playswithRingo>25</playswithRingo>
-		<playswithKoshka>14</playswithKoshka>
-		<playswithCatherine>1</playswithCatherine>
-		<playswithSaw>10</playswithSaw>
-		<playswithAdagio>13</playswithAdagio>
-		<playswithPetal>5</playswithPetal>
-		<playswithGlaive>15</playswithGlaive>
-		<playswithJoule>7</playswithJoule>
-		<playswithKrul>6</playswithKrul>
-		<playswithTaka>17</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>1</playswithArdan>
-		<playswithCeleste>3</playswithCeleste>
-		<playswithVox>29</playswithVox>
-		<playswithFortress>5</playswithFortress>
-		<playswithRona>5</playswithRona>
-		<playswithSkye>6</playswithSkye>
-		<playswithPhinn>1</playswithPhinn>
-		<playswithBlackfeather>11</playswithBlackfeather>
-		<playswithKestrel>12</playswithKestrel>
-		<playswithReim>5</playswithReim>
-		<playswithOzo>NULL</playswithOzo>
-		<playswithAlpha>5</playswithAlpha>
-		<playswithLance>3</playswithLance>
-		<playswithLyra>3</playswithLyra>
-		<playswithSamuel>4</playswithSamuel>
-		<playswithBaron>4</playswithBaron>
-		<playswithGwen>9</playswithGwen>
-		<playswithFlicker>NULL</playswithFlicker>
-		<playswithIdris>7</playswithIdris>
-		<playswithGrumpjaw>2</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Fortress</heroName>
-		<winswithRingo>67</winswithRingo>
-		<winswithKoshka>24</winswithKoshka>
-		<winswithCatherine>19</winswithCatherine>
-		<winswithSaw>12</winswithSaw>
-		<winswithAdagio>16</winswithAdagio>
-		<winswithPetal>8</winswithPetal>
-		<winswithGlaive>15</winswithGlaive>
-		<winswithJoule>2</winswithJoule>
-		<winswithKrul>3</winswithKrul>
-		<winswithTaka>14</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>23</winswithArdan>
-		<winswithCeleste>2</winswithCeleste>
-		<winswithVox>75</winswithVox>
-		<winswithFortress>NULL</winswithFortress>
-		<winswithRona>3</winswithRona>
-		<winswithSkye>5</winswithSkye>
-		<winswithPhinn>13</winswithPhinn>
-		<winswithBlackfeather>9</winswithBlackfeather>
-		<winswithKestrel>4</winswithKestrel>
-		<winswithReim>5</winswithReim>
-		<winswithOzo>1</winswithOzo>
-		<winswithAlpha>12</winswithAlpha>
-		<winswithLance>24</winswithLance>
-		<winswithLyra>10</winswithLyra>
-		<winswithSamuel>2</winswithSamuel>
-		<winswithBaron>4</winswithBaron>
-		<winswithGwen>20</winswithGwen>
-		<winswithFlicker>3</winswithFlicker>
-		<winswithIdris>4</winswithIdris>
-		<winswithGrumpjaw>7</winswithGrumpjaw>
-		<playswithRingo>114</playswithRingo>
-		<playswithKoshka>36</playswithKoshka>
-		<playswithCatherine>28</playswithCatherine>
-		<playswithSaw>19</playswithSaw>
-		<playswithAdagio>27</playswithAdagio>
-		<playswithPetal>13</playswithPetal>
-		<playswithGlaive>24</playswithGlaive>
-		<playswithJoule>6</playswithJoule>
-		<playswithKrul>7</playswithKrul>
-		<playswithTaka>29</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>39</playswithArdan>
-		<playswithCeleste>5</playswithCeleste>
-		<playswithVox>118</playswithVox>
-		<playswithFortress>NULL</playswithFortress>
-		<playswithRona>5</playswithRona>
-		<playswithSkye>20</playswithSkye>
-		<playswithPhinn>22</playswithPhinn>
-		<playswithBlackfeather>26</playswithBlackfeather>
-		<playswithKestrel>10</playswithKestrel>
-		<playswithReim>8</playswithReim>
-		<playswithOzo>5</playswithOzo>
-		<playswithAlpha>19</playswithAlpha>
-		<playswithLance>34</playswithLance>
-		<playswithLyra>15</playswithLyra>
-		<playswithSamuel>2</playswithSamuel>
-		<playswithBaron>8</playswithBaron>
-		<playswithGwen>28</playswithGwen>
-		<playswithFlicker>5</playswithFlicker>
-		<playswithIdris>9</playswithIdris>
-		<playswithGrumpjaw>7</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Glaive</heroName>
-		<winswithRingo>127</winswithRingo>
-		<winswithKoshka>12</winswithKoshka>
-		<winswithCatherine>56</winswithCatherine>
-		<winswithSaw>14</winswithSaw>
-		<winswithAdagio>55</winswithAdagio>
-		<winswithPetal>7</winswithPetal>
-		<winswithGlaive>NULL</winswithGlaive>
-		<winswithJoule>5</winswithJoule>
-		<winswithKrul>8</winswithKrul>
-		<winswithTaka>10</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>85</winswithArdan>
-		<winswithCeleste>12</winswithCeleste>
-		<winswithVox>169</winswithVox>
-		<winswithFortress>15</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>23</winswithSkye>
-		<winswithPhinn>74</winswithPhinn>
-		<winswithBlackfeather>14</winswithBlackfeather>
-		<winswithKestrel>30</winswithKestrel>
-		<winswithReim>0</winswithReim>
-		<winswithOzo>1</winswithOzo>
-		<winswithAlpha>4</winswithAlpha>
-		<winswithLance>98</winswithLance>
-		<winswithLyra>57</winswithLyra>
-		<winswithSamuel>3</winswithSamuel>
-		<winswithBaron>13</winswithBaron>
-		<winswithGwen>28</winswithGwen>
-		<winswithFlicker>10</winswithFlicker>
-		<winswithIdris>5</winswithIdris>
-		<winswithGrumpjaw>12</winswithGrumpjaw>
-		<playswithRingo>245</playswithRingo>
-		<playswithKoshka>22</playswithKoshka>
-		<playswithCatherine>106</playswithCatherine>
-		<playswithSaw>22</playswithSaw>
-		<playswithAdagio>98</playswithAdagio>
-		<playswithPetal>8</playswithPetal>
-		<playswithGlaive>NULL</playswithGlaive>
-		<playswithJoule>13</playswithJoule>
-		<playswithKrul>16</playswithKrul>
-		<playswithTaka>26</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>171</playswithArdan>
-		<playswithCeleste>24</playswithCeleste>
-		<playswithVox>307</playswithVox>
-		<playswithFortress>24</playswithFortress>
-		<playswithRona>2</playswithRona>
-		<playswithSkye>48</playswithSkye>
-		<playswithPhinn>140</playswithPhinn>
-		<playswithBlackfeather>27</playswithBlackfeather>
-		<playswithKestrel>50</playswithKestrel>
-		<playswithReim>1</playswithReim>
-		<playswithOzo>3</playswithOzo>
-		<playswithAlpha>11</playswithAlpha>
-		<playswithLance>210</playswithLance>
-		<playswithLyra>93</playswithLyra>
-		<playswithSamuel>17</playswithSamuel>
-		<playswithBaron>28</playswithBaron>
-		<playswithGwen>55</playswithGwen>
-		<playswithFlicker>15</playswithFlicker>
-		<playswithIdris>10</playswithIdris>
-		<playswithGrumpjaw>12</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Grumpjaw</heroName>
-		<winswithRingo>11</winswithRingo>
-		<winswithKoshka>2</winswithKoshka>
-		<winswithCatherine>7</winswithCatherine>
-		<winswithSaw>2</winswithSaw>
-		<winswithAdagio>12</winswithAdagio>
-		<winswithPetal>2</winswithPetal>
-		<winswithGlaive>6</winswithGlaive>
-		<winswithJoule>5</winswithJoule>
-		<winswithKrul>1</winswithKrul>
-		<winswithTaka>5</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>4</winswithArdan>
-		<winswithCeleste>2</winswithCeleste>
-		<winswithVox>22</winswithVox>
-		<winswithFortress>5</winswithFortress>
-		<winswithRona>0</winswithRona>
-		<winswithSkye>1</winswithSkye>
-		<winswithPhinn>6</winswithPhinn>
-		<winswithBlackfeather>5</winswithBlackfeather>
-		<winswithKestrel>10</winswithKestrel>
-		<winswithReim>1</winswithReim>
-		<winswithOzo>0</winswithOzo>
-		<winswithAlpha>3</winswithAlpha>
-		<winswithLance>5</winswithLance>
-		<winswithLyra>6</winswithLyra>
-		<winswithSamuel>1</winswithSamuel>
-		<winswithBaron>2</winswithBaron>
-		<winswithGwen>3</winswithGwen>
-		<winswithFlicker>1</winswithFlicker>
-		<winswithIdris>1</winswithIdris>
-		<winswithGrumpjaw>NULL</winswithGrumpjaw>
-		<playswithRingo>37</playswithRingo>
-		<playswithKoshka>5</playswithKoshka>
-		<playswithCatherine>20</playswithCatherine>
-		<playswithSaw>6</playswithSaw>
-		<playswithAdagio>20</playswithAdagio>
-		<playswithPetal>2</playswithPetal>
-		<playswithGlaive>12</playswithGlaive>
-		<playswithJoule>7</playswithJoule>
-		<playswithKrul>7</playswithKrul>
-		<playswithTaka>11</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>13</playswithArdan>
-		<playswithCeleste>10</playswithCeleste>
-		<playswithVox>38</playswithVox>
-		<playswithFortress>7</playswithFortress>
-		<playswithRona>1</playswithRona>
-		<playswithSkye>7</playswithSkye>
-		<playswithPhinn>12</playswithPhinn>
-		<playswithBlackfeather>15</playswithBlackfeather>
-		<playswithKestrel>15</playswithKestrel>
-		<playswithReim>3</playswithReim>
-		<playswithOzo>1</playswithOzo>
-		<playswithAlpha>9</playswithAlpha>
-		<playswithLance>13</playswithLance>
-		<playswithLyra>11</playswithLyra>
-		<playswithSamuel>2</playswithSamuel>
-		<playswithBaron>4</playswithBaron>
-		<playswithGwen>5</playswithGwen>
-		<playswithFlicker>2</playswithFlicker>
-		<playswithIdris>6</playswithIdris>
-		<playswithGrumpjaw>NULL</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Gwen</heroName>
-		<winswithRingo>NULL</winswithRingo>
-		<winswithKoshka>29</winswithKoshka>
-		<winswithCatherine>37</winswithCatherine>
-		<winswithSaw>1</winswithSaw>
-		<winswithAdagio>20</winswithAdagio>
-		<winswithPetal>17</winswithPetal>
-		<winswithGlaive>28</winswithGlaive>
-		<winswithJoule>2</winswithJoule>
-		<winswithKrul>6</winswithKrul>
-		<winswithTaka>26</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>36</winswithArdan>
-		<winswithCeleste>2</winswithCeleste>
-		<winswithVox>1</winswithVox>
-		<winswithFortress>20</winswithFortress>
-		<winswithRona>0</winswithRona>
-		<winswithSkye>16</winswithSkye>
-		<winswithPhinn>23</winswithPhinn>
-		<winswithBlackfeather>13</winswithBlackfeather>
-		<winswithKestrel>7</winswithKestrel>
-		<winswithReim>6</winswithReim>
-		<winswithOzo>1</winswithOzo>
-		<winswithAlpha>27</winswithAlpha>
-		<winswithLance>36</winswithLance>
-		<winswithLyra>24</winswithLyra>
-		<winswithSamuel>9</winswithSamuel>
-		<winswithBaron>NULL</winswithBaron>
-		<winswithGwen>NULL</winswithGwen>
-		<winswithFlicker>4</winswithFlicker>
-		<winswithIdris>2</winswithIdris>
-		<winswithGrumpjaw>5</winswithGrumpjaw>
-		<playswithRingo>NULL</playswithRingo>
-		<playswithKoshka>51</playswithKoshka>
-		<playswithCatherine>64</playswithCatherine>
-		<playswithSaw>1</playswithSaw>
-		<playswithAdagio>42</playswithAdagio>
-		<playswithPetal>28</playswithPetal>
-		<playswithGlaive>55</playswithGlaive>
-		<playswithJoule>7</playswithJoule>
-		<playswithKrul>11</playswithKrul>
-		<playswithTaka>64</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>74</playswithArdan>
-		<playswithCeleste>2</playswithCeleste>
-		<playswithVox>1</playswithVox>
-		<playswithFortress>28</playswithFortress>
-		<playswithRona>2</playswithRona>
-		<playswithSkye>26</playswithSkye>
-		<playswithPhinn>43</playswithPhinn>
-		<playswithBlackfeather>27</playswithBlackfeather>
-		<playswithKestrel>18</playswithKestrel>
-		<playswithReim>13</playswithReim>
-		<playswithOzo>12</playswithOzo>
-		<playswithAlpha>44</playswithAlpha>
-		<playswithLance>82</playswithLance>
-		<playswithLyra>46</playswithLyra>
-		<playswithSamuel>19</playswithSamuel>
-		<playswithBaron>NULL</playswithBaron>
-		<playswithGwen>NULL</playswithGwen>
-		<playswithFlicker>9</playswithFlicker>
-		<playswithIdris>5</playswithIdris>
-		<playswithGrumpjaw>5</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Idris</heroName>
-		<winswithRingo>5</winswithRingo>
-		<winswithKoshka>5</winswithKoshka>
-		<winswithCatherine>15</winswithCatherine>
-		<winswithSaw>3</winswithSaw>
-		<winswithAdagio>14</winswithAdagio>
-		<winswithPetal>4</winswithPetal>
-		<winswithGlaive>5</winswithGlaive>
-		<winswithJoule>NULL</winswithJoule>
-		<winswithKrul>2</winswithKrul>
-		<winswithTaka>10</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>14</winswithArdan>
-		<winswithCeleste>5</winswithCeleste>
-		<winswithVox>4</winswithVox>
-		<winswithFortress>4</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>6</winswithSkye>
-		<winswithPhinn>6</winswithPhinn>
-		<winswithBlackfeather>4</winswithBlackfeather>
-		<winswithKestrel>6</winswithKestrel>
-		<winswithReim>2</winswithReim>
-		<winswithOzo>2</winswithOzo>
-		<winswithAlpha>2</winswithAlpha>
-		<winswithLance>13</winswithLance>
-		<winswithLyra>14</winswithLyra>
-		<winswithSamuel>6</winswithSamuel>
-		<winswithBaron>1</winswithBaron>
-		<winswithGwen>2</winswithGwen>
-		<winswithFlicker>3</winswithFlicker>
-		<winswithIdris>NULL</winswithIdris>
-		<winswithGrumpjaw>6</winswithGrumpjaw>
-		<playswithRingo>17</playswithRingo>
-		<playswithKoshka>9</playswithKoshka>
-		<playswithCatherine>24</playswithCatherine>
-		<playswithSaw>5</playswithSaw>
-		<playswithAdagio>34</playswithAdagio>
-		<playswithPetal>9</playswithPetal>
-		<playswithGlaive>10</playswithGlaive>
-		<playswithJoule>NULL</playswithJoule>
-		<playswithKrul>5</playswithKrul>
-		<playswithTaka>16</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>35</playswithArdan>
-		<playswithCeleste>12</playswithCeleste>
-		<playswithVox>9</playswithVox>
-		<playswithFortress>9</playswithFortress>
-		<playswithRona>4</playswithRona>
-		<playswithSkye>15</playswithSkye>
-		<playswithPhinn>21</playswithPhinn>
-		<playswithBlackfeather>6</playswithBlackfeather>
-		<playswithKestrel>12</playswithKestrel>
-		<playswithReim>2</playswithReim>
-		<playswithOzo>2</playswithOzo>
-		<playswithAlpha>5</playswithAlpha>
-		<playswithLance>34</playswithLance>
-		<playswithLyra>22</playswithLyra>
-		<playswithSamuel>8</playswithSamuel>
-		<playswithBaron>1</playswithBaron>
-		<playswithGwen>5</playswithGwen>
-		<playswithFlicker>7</playswithFlicker>
-		<playswithIdris>NULL</playswithIdris>
-		<playswithGrumpjaw>6</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Joule</heroName>
-		<winswithRingo>17</winswithRingo>
-		<winswithKoshka>3</winswithKoshka>
-		<winswithCatherine>25</winswithCatherine>
-		<winswithSaw>4</winswithSaw>
-		<winswithAdagio>15</winswithAdagio>
-		<winswithPetal>2</winswithPetal>
-		<winswithGlaive>8</winswithGlaive>
-		<winswithJoule>1</winswithJoule>
-		<winswithKrul>NULL</winswithKrul>
-		<winswithTaka>8</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>25</winswithArdan>
-		<winswithCeleste>5</winswithCeleste>
-		<winswithVox>12</winswithVox>
-		<winswithFortress>3</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>5</winswithSkye>
-		<winswithPhinn>15</winswithPhinn>
-		<winswithBlackfeather>4</winswithBlackfeather>
-		<winswithKestrel>3</winswithKestrel>
-		<winswithReim>1</winswithReim>
-		<winswithOzo>3</winswithOzo>
-		<winswithAlpha>4</winswithAlpha>
-		<winswithLance>15</winswithLance>
-		<winswithLyra>13</winswithLyra>
-		<winswithSamuel>10</winswithSamuel>
-		<winswithBaron>2</winswithBaron>
-		<winswithGwen>6</winswithGwen>
-		<winswithFlicker>3</winswithFlicker>
-		<winswithIdris>2</winswithIdris>
-		<winswithGrumpjaw>7</winswithGrumpjaw>
-		<playswithRingo>44</playswithRingo>
-		<playswithKoshka>8</playswithKoshka>
-		<playswithCatherine>52</playswithCatherine>
-		<playswithSaw>9</playswithSaw>
-		<playswithAdagio>32</playswithAdagio>
-		<playswithPetal>6</playswithPetal>
-		<playswithGlaive>16</playswithGlaive>
-		<playswithJoule>1</playswithJoule>
-		<playswithKrul>NULL</playswithKrul>
-		<playswithTaka>15</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>52</playswithArdan>
-		<playswithCeleste>17</playswithCeleste>
-		<playswithVox>22</playswithVox>
-		<playswithFortress>7</playswithFortress>
-		<playswithRona>2</playswithRona>
-		<playswithSkye>16</playswithSkye>
-		<playswithPhinn>27</playswithPhinn>
-		<playswithBlackfeather>11</playswithBlackfeather>
-		<playswithKestrel>9</playswithKestrel>
-		<playswithReim>3</playswithReim>
-		<playswithOzo>3</playswithOzo>
-		<playswithAlpha>5</playswithAlpha>
-		<playswithLance>38</playswithLance>
-		<playswithLyra>32</playswithLyra>
-		<playswithSamuel>14</playswithSamuel>
-		<playswithBaron>5</playswithBaron>
-		<playswithGwen>11</playswithGwen>
-		<playswithFlicker>6</playswithFlicker>
-		<playswithIdris>5</playswithIdris>
-		<playswithGrumpjaw>7</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Kestrel</heroName>
-		<winswithRingo>28</winswithRingo>
-		<winswithKoshka>9</winswithKoshka>
-		<winswithCatherine>17</winswithCatherine>
-		<winswithSaw>11</winswithSaw>
-		<winswithAdagio>18</winswithAdagio>
-		<winswithPetal>4</winswithPetal>
-		<winswithGlaive>30</winswithGlaive>
-		<winswithJoule>5</winswithJoule>
-		<winswithKrul>3</winswithKrul>
-		<winswithTaka>16</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>32</winswithArdan>
-		<winswithCeleste>5</winswithCeleste>
-		<winswithVox>30</winswithVox>
-		<winswithFortress>4</winswithFortress>
-		<winswithRona>3</winswithRona>
-		<winswithSkye>6</winswithSkye>
-		<winswithPhinn>31</winswithPhinn>
-		<winswithBlackfeather>11</winswithBlackfeather>
-		<winswithKestrel>NULL</winswithKestrel>
-		<winswithReim>3</winswithReim>
-		<winswithOzo>3</winswithOzo>
-		<winswithAlpha>9</winswithAlpha>
-		<winswithLance>56</winswithLance>
-		<winswithLyra>25</winswithLyra>
-		<winswithSamuel>3</winswithSamuel>
-		<winswithBaron>5</winswithBaron>
-		<winswithGwen>7</winswithGwen>
-		<winswithFlicker>5</winswithFlicker>
-		<winswithIdris>6</winswithIdris>
-		<winswithGrumpjaw>15</winswithGrumpjaw>
-		<playswithRingo>50</playswithRingo>
-		<playswithKoshka>21</playswithKoshka>
-		<playswithCatherine>41</playswithCatherine>
-		<playswithSaw>19</playswithSaw>
-		<playswithAdagio>43</playswithAdagio>
-		<playswithPetal>14</playswithPetal>
-		<playswithGlaive>50</playswithGlaive>
-		<playswithJoule>9</playswithJoule>
-		<playswithKrul>9</playswithKrul>
-		<playswithTaka>40</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>66</playswithArdan>
-		<playswithCeleste>6</playswithCeleste>
-		<playswithVox>62</playswithVox>
-		<playswithFortress>10</playswithFortress>
-		<playswithRona>8</playswithRona>
-		<playswithSkye>19</playswithSkye>
-		<playswithPhinn>57</playswithPhinn>
-		<playswithBlackfeather>23</playswithBlackfeather>
-		<playswithKestrel>NULL</playswithKestrel>
-		<playswithReim>8</playswithReim>
-		<playswithOzo>8</playswithOzo>
-		<playswithAlpha>20</playswithAlpha>
-		<playswithLance>122</playswithLance>
-		<playswithLyra>46</playswithLyra>
-		<playswithSamuel>6</playswithSamuel>
-		<playswithBaron>11</playswithBaron>
-		<playswithGwen>18</playswithGwen>
-		<playswithFlicker>12</playswithFlicker>
-		<playswithIdris>12</playswithIdris>
-		<playswithGrumpjaw>15</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Koshka</heroName>
-		<winswithRingo>86</winswithRingo>
-		<winswithKoshka>NULL</winswithKoshka>
-		<winswithCatherine>21</winswithCatherine>
-		<winswithSaw>15</winswithSaw>
-		<winswithAdagio>24</winswithAdagio>
-		<winswithPetal>3</winswithPetal>
-		<winswithGlaive>12</winswithGlaive>
-		<winswithJoule>1</winswithJoule>
-		<winswithKrul>3</winswithKrul>
-		<winswithTaka>1</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>58</winswithArdan>
-		<winswithCeleste>NULL</winswithCeleste>
-		<winswithVox>99</winswithVox>
-		<winswithFortress>24</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>1</winswithSkye>
-		<winswithPhinn>20</winswithPhinn>
-		<winswithBlackfeather>9</winswithBlackfeather>
-		<winswithKestrel>9</winswithKestrel>
-		<winswithReim>NULL</winswithReim>
-		<winswithOzo>0</winswithOzo>
-		<winswithAlpha>NULL</winswithAlpha>
-		<winswithLance>66</winswithLance>
-		<winswithLyra>28</winswithLyra>
-		<winswithSamuel>NULL</winswithSamuel>
-		<winswithBaron>9</winswithBaron>
-		<winswithGwen>29</winswithGwen>
-		<winswithFlicker>6</winswithFlicker>
-		<winswithIdris>5</winswithIdris>
-		<winswithGrumpjaw>5</winswithGrumpjaw>
-		<playswithRingo>158</playswithRingo>
-		<playswithKoshka>NULL</playswithKoshka>
-		<playswithCatherine>56</playswithCatherine>
-		<playswithSaw>29</playswithSaw>
-		<playswithAdagio>45</playswithAdagio>
-		<playswithPetal>4</playswithPetal>
-		<playswithGlaive>22</playswithGlaive>
-		<playswithJoule>3</playswithJoule>
-		<playswithKrul>8</playswithKrul>
-		<playswithTaka>2</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>105</playswithArdan>
-		<playswithCeleste>NULL</playswithCeleste>
-		<playswithVox>185</playswithVox>
-		<playswithFortress>36</playswithFortress>
-		<playswithRona>2</playswithRona>
-		<playswithSkye>11</playswithSkye>
-		<playswithPhinn>40</playswithPhinn>
-		<playswithBlackfeather>17</playswithBlackfeather>
-		<playswithKestrel>21</playswithKestrel>
-		<playswithReim>NULL</playswithReim>
-		<playswithOzo>1</playswithOzo>
-		<playswithAlpha>NULL</playswithAlpha>
-		<playswithLance>133</playswithLance>
-		<playswithLyra>53</playswithLyra>
-		<playswithSamuel>NULL</playswithSamuel>
-		<playswithBaron>18</playswithBaron>
-		<playswithGwen>51</playswithGwen>
-		<playswithFlicker>14</playswithFlicker>
-		<playswithIdris>9</playswithIdris>
-		<playswithGrumpjaw>5</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Krul</heroName>
-		<winswithRingo>21</winswithRingo>
-		<winswithKoshka>1</winswithKoshka>
-		<winswithCatherine>13</winswithCatherine>
-		<winswithSaw>5</winswithSaw>
-		<winswithAdagio>26</winswithAdagio>
-		<winswithPetal>1</winswithPetal>
-		<winswithGlaive>5</winswithGlaive>
-		<winswithJoule>NULL</winswithJoule>
-		<winswithKrul>1</winswithKrul>
-		<winswithTaka>0</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>23</winswithArdan>
-		<winswithCeleste>10</winswithCeleste>
-		<winswithVox>27</winswithVox>
-		<winswithFortress>2</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>6</winswithSkye>
-		<winswithPhinn>16</winswithPhinn>
-		<winswithBlackfeather>2</winswithBlackfeather>
-		<winswithKestrel>5</winswithKestrel>
-		<winswithReim>0</winswithReim>
-		<winswithOzo>2</winswithOzo>
-		<winswithAlpha>0</winswithAlpha>
-		<winswithLance>30</winswithLance>
-		<winswithLyra>12</winswithLyra>
-		<winswithSamuel>3</winswithSamuel>
-		<winswithBaron>1</winswithBaron>
-		<winswithGwen>2</winswithGwen>
-		<winswithFlicker>4</winswithFlicker>
-		<winswithIdris>NULL</winswithIdris>
-		<winswithGrumpjaw>7</winswithGrumpjaw>
-		<playswithRingo>42</playswithRingo>
-		<playswithKoshka>3</playswithKoshka>
-		<playswithCatherine>28</playswithCatherine>
-		<playswithSaw>14</playswithSaw>
-		<playswithAdagio>40</playswithAdagio>
-		<playswithPetal>5</playswithPetal>
-		<playswithGlaive>13</playswithGlaive>
-		<playswithJoule>NULL</playswithJoule>
-		<playswithKrul>1</playswithKrul>
-		<playswithTaka>3</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>44</playswithArdan>
-		<playswithCeleste>13</playswithCeleste>
-		<playswithVox>64</playswithVox>
-		<playswithFortress>6</playswithFortress>
-		<playswithRona>1</playswithRona>
-		<playswithSkye>12</playswithSkye>
-		<playswithPhinn>24</playswithPhinn>
-		<playswithBlackfeather>5</playswithBlackfeather>
-		<playswithKestrel>9</playswithKestrel>
-		<playswithReim>1</playswithReim>
-		<playswithOzo>2</playswithOzo>
-		<playswithAlpha>1</playswithAlpha>
-		<playswithLance>50</playswithLance>
-		<playswithLyra>30</playswithLyra>
-		<playswithSamuel>9</playswithSamuel>
-		<playswithBaron>4</playswithBaron>
-		<playswithGwen>7</playswithGwen>
-		<playswithFlicker>7</playswithFlicker>
-		<playswithIdris>NULL</playswithIdris>
-		<playswithGrumpjaw>7</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Lance</heroName>
-		<winswithRingo>188</winswithRingo>
-		<winswithKoshka>66</winswithKoshka>
-		<winswithCatherine>8</winswithCatherine>
-		<winswithSaw>18</winswithSaw>
-		<winswithAdagio>46</winswithAdagio>
-		<winswithPetal>36</winswithPetal>
-		<winswithGlaive>98</winswithGlaive>
-		<winswithJoule>30</winswithJoule>
-		<winswithKrul>15</winswithKrul>
-		<winswithTaka>87</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>6</winswithArdan>
-		<winswithCeleste>19</winswithCeleste>
-		<winswithVox>181</winswithVox>
-		<winswithFortress>24</winswithFortress>
-		<winswithRona>13</winswithRona>
-		<winswithSkye>36</winswithSkye>
-		<winswithPhinn>5</winswithPhinn>
-		<winswithBlackfeather>46</winswithBlackfeather>
-		<winswithKestrel>56</winswithKestrel>
-		<winswithReim>10</winswithReim>
-		<winswithOzo>14</winswithOzo>
-		<winswithAlpha>69</winswithAlpha>
-		<winswithLance>NULL</winswithLance>
-		<winswithLyra>7</winswithLyra>
-		<winswithSamuel>19</winswithSamuel>
-		<winswithBaron>18</winswithBaron>
-		<winswithGwen>36</winswithGwen>
-		<winswithFlicker>1</winswithFlicker>
-		<winswithIdris>13</winswithIdris>
-		<winswithGrumpjaw>13</winswithGrumpjaw>
-		<playswithRingo>382</playswithRingo>
-		<playswithKoshka>133</playswithKoshka>
-		<playswithCatherine>14</playswithCatherine>
-		<playswithSaw>35</playswithSaw>
-		<playswithAdagio>80</playswithAdagio>
-		<playswithPetal>68</playswithPetal>
-		<playswithGlaive>210</playswithGlaive>
-		<playswithJoule>50</playswithJoule>
-		<playswithKrul>38</playswithKrul>
-		<playswithTaka>167</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>15</playswithArdan>
-		<playswithCeleste>37</playswithCeleste>
-		<playswithVox>384</playswithVox>
-		<playswithFortress>34</playswithFortress>
-		<playswithRona>25</playswithRona>
-		<playswithSkye>112</playswithSkye>
-		<playswithPhinn>11</playswithPhinn>
-		<playswithBlackfeather>108</playswithBlackfeather>
-		<playswithKestrel>122</playswithKestrel>
-		<playswithReim>24</playswithReim>
-		<playswithOzo>33</playswithOzo>
-		<playswithAlpha>136</playswithAlpha>
-		<playswithLance>NULL</playswithLance>
-		<playswithLyra>12</playswithLyra>
-		<playswithSamuel>39</playswithSamuel>
-		<playswithBaron>42</playswithBaron>
-		<playswithGwen>82</playswithGwen>
-		<playswithFlicker>3</playswithFlicker>
-		<playswithIdris>34</playswithIdris>
-		<playswithGrumpjaw>13</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Lyra</heroName>
-		<winswithRingo>66</winswithRingo>
-		<winswithKoshka>28</winswithKoshka>
-		<winswithCatherine>6</winswithCatherine>
-		<winswithSaw>26</winswithSaw>
-		<winswithAdagio>25</winswithAdagio>
-		<winswithPetal>14</winswithPetal>
-		<winswithGlaive>57</winswithGlaive>
-		<winswithJoule>12</winswithJoule>
-		<winswithKrul>13</winswithKrul>
-		<winswithTaka>43</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>1</winswithArdan>
-		<winswithCeleste>9</winswithCeleste>
-		<winswithVox>75</winswithVox>
-		<winswithFortress>10</winswithFortress>
-		<winswithRona>5</winswithRona>
-		<winswithSkye>35</winswithSkye>
-		<winswithPhinn>3</winswithPhinn>
-		<winswithBlackfeather>34</winswithBlackfeather>
-		<winswithKestrel>25</winswithKestrel>
-		<winswithReim>7</winswithReim>
-		<winswithOzo>6</winswithOzo>
-		<winswithAlpha>30</winswithAlpha>
-		<winswithLance>7</winswithLance>
-		<winswithLyra>NULL</winswithLyra>
-		<winswithSamuel>14</winswithSamuel>
-		<winswithBaron>15</winswithBaron>
-		<winswithGwen>24</winswithGwen>
-		<winswithFlicker>0</winswithFlicker>
-		<winswithIdris>14</winswithIdris>
-		<winswithGrumpjaw>11</winswithGrumpjaw>
-		<playswithRingo>123</playswithRingo>
-		<playswithKoshka>53</playswithKoshka>
-		<playswithCatherine>13</playswithCatherine>
-		<playswithSaw>45</playswithSaw>
-		<playswithAdagio>58</playswithAdagio>
-		<playswithPetal>22</playswithPetal>
-		<playswithGlaive>93</playswithGlaive>
-		<playswithJoule>30</playswithJoule>
-		<playswithKrul>32</playswithKrul>
-		<playswithTaka>72</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>5</playswithArdan>
-		<playswithCeleste>21</playswithCeleste>
-		<playswithVox>153</playswithVox>
-		<playswithFortress>15</playswithFortress>
-		<playswithRona>16</playswithRona>
-		<playswithSkye>78</playswithSkye>
-		<playswithPhinn>6</playswithPhinn>
-		<playswithBlackfeather>66</playswithBlackfeather>
-		<playswithKestrel>46</playswithKestrel>
-		<playswithReim>10</playswithReim>
-		<playswithOzo>22</playswithOzo>
-		<playswithAlpha>52</playswithAlpha>
-		<playswithLance>12</playswithLance>
-		<playswithLyra>NULL</playswithLyra>
-		<playswithSamuel>26</playswithSamuel>
-		<playswithBaron>20</playswithBaron>
-		<playswithGwen>46</playswithGwen>
-		<playswithFlicker>3</playswithFlicker>
-		<playswithIdris>22</playswithIdris>
-		<playswithGrumpjaw>11</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Ozo</heroName>
-		<winswithRingo>14</winswithRingo>
-		<winswithKoshka>0</winswithKoshka>
-		<winswithCatherine>5</winswithCatherine>
-		<winswithSaw>1</winswithSaw>
-		<winswithAdagio>9</winswithAdagio>
-		<winswithPetal>NULL</winswithPetal>
-		<winswithGlaive>1</winswithGlaive>
-		<winswithJoule>2</winswithJoule>
-		<winswithKrul>3</winswithKrul>
-		<winswithTaka>0</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>15</winswithArdan>
-		<winswithCeleste>2</winswithCeleste>
-		<winswithVox>22</winswithVox>
-		<winswithFortress>1</winswithFortress>
-		<winswithRona>0</winswithRona>
-		<winswithSkye>1</winswithSkye>
-		<winswithPhinn>7</winswithPhinn>
-		<winswithBlackfeather>3</winswithBlackfeather>
-		<winswithKestrel>3</winswithKestrel>
-		<winswithReim>NULL</winswithReim>
-		<winswithOzo>NULL</winswithOzo>
-		<winswithAlpha>NULL</winswithAlpha>
-		<winswithLance>14</winswithLance>
-		<winswithLyra>6</winswithLyra>
-		<winswithSamuel>NULL</winswithSamuel>
-		<winswithBaron>8</winswithBaron>
-		<winswithGwen>1</winswithGwen>
-		<winswithFlicker>NULL</winswithFlicker>
-		<winswithIdris>2</winswithIdris>
-		<winswithGrumpjaw>1</winswithGrumpjaw>
-		<playswithRingo>34</playswithRingo>
-		<playswithKoshka>1</playswithKoshka>
-		<playswithCatherine>14</playswithCatherine>
-		<playswithSaw>6</playswithSaw>
-		<playswithAdagio>18</playswithAdagio>
-		<playswithPetal>NULL</playswithPetal>
-		<playswithGlaive>3</playswithGlaive>
-		<playswithJoule>2</playswithJoule>
-		<playswithKrul>3</playswithKrul>
-		<playswithTaka>1</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>28</playswithArdan>
-		<playswithCeleste>2</playswithCeleste>
-		<playswithVox>50</playswithVox>
-		<playswithFortress>5</playswithFortress>
-		<playswithRona>1</playswithRona>
-		<playswithSkye>5</playswithSkye>
-		<playswithPhinn>14</playswithPhinn>
-		<playswithBlackfeather>3</playswithBlackfeather>
-		<playswithKestrel>8</playswithKestrel>
-		<playswithReim>NULL</playswithReim>
-		<playswithOzo>NULL</playswithOzo>
-		<playswithAlpha>NULL</playswithAlpha>
-		<playswithLance>33</playswithLance>
-		<playswithLyra>22</playswithLyra>
-		<playswithSamuel>NULL</playswithSamuel>
-		<playswithBaron>10</playswithBaron>
-		<playswithGwen>12</playswithGwen>
-		<playswithFlicker>NULL</playswithFlicker>
-		<playswithIdris>2</playswithIdris>
-		<playswithGrumpjaw>1</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Petal</heroName>
-		<winswithRingo>47</winswithRingo>
-		<winswithKoshka>3</winswithKoshka>
-		<winswithCatherine>26</winswithCatherine>
-		<winswithSaw>14</winswithSaw>
-		<winswithAdagio>13</winswithAdagio>
-		<winswithPetal>NULL</winswithPetal>
-		<winswithGlaive>7</winswithGlaive>
-		<winswithJoule>1</winswithJoule>
-		<winswithKrul>2</winswithKrul>
-		<winswithTaka>5</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>41</winswithArdan>
-		<winswithCeleste>3</winswithCeleste>
-		<winswithVox>50</winswithVox>
-		<winswithFortress>8</winswithFortress>
-		<winswithRona>1</winswithRona>
-		<winswithSkye>5</winswithSkye>
-		<winswithPhinn>22</winswithPhinn>
-		<winswithBlackfeather>3</winswithBlackfeather>
-		<winswithKestrel>4</winswithKestrel>
-		<winswithReim>NULL</winswithReim>
-		<winswithOzo>NULL</winswithOzo>
-		<winswithAlpha>1</winswithAlpha>
-		<winswithLance>36</winswithLance>
-		<winswithLyra>14</winswithLyra>
-		<winswithSamuel>0</winswithSamuel>
-		<winswithBaron>11</winswithBaron>
-		<winswithGwen>17</winswithGwen>
-		<winswithFlicker>3</winswithFlicker>
-		<winswithIdris>4</winswithIdris>
-		<winswithGrumpjaw>2</winswithGrumpjaw>
-		<playswithRingo>82</playswithRingo>
-		<playswithKoshka>4</playswithKoshka>
-		<playswithCatherine>44</playswithCatherine>
-		<playswithSaw>25</playswithSaw>
-		<playswithAdagio>26</playswithAdagio>
-		<playswithPetal>NULL</playswithPetal>
-		<playswithGlaive>8</playswithGlaive>
-		<playswithJoule>5</playswithJoule>
-		<playswithKrul>6</playswithKrul>
-		<playswithTaka>5</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>70</playswithArdan>
-		<playswithCeleste>4</playswithCeleste>
-		<playswithVox>100</playswithVox>
-		<playswithFortress>13</playswithFortress>
-		<playswithRona>2</playswithRona>
-		<playswithSkye>7</playswithSkye>
-		<playswithPhinn>41</playswithPhinn>
-		<playswithBlackfeather>10</playswithBlackfeather>
-		<playswithKestrel>14</playswithKestrel>
-		<playswithReim>NULL</playswithReim>
-		<playswithOzo>NULL</playswithOzo>
-		<playswithAlpha>2</playswithAlpha>
-		<playswithLance>68</playswithLance>
-		<playswithLyra>22</playswithLyra>
-		<playswithSamuel>1</playswithSamuel>
-		<playswithBaron>14</playswithBaron>
-		<playswithGwen>28</playswithGwen>
-		<playswithFlicker>5</playswithFlicker>
-		<playswithIdris>9</playswithIdris>
-		<playswithGrumpjaw>2</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Phinn</heroName>
-		<winswithRingo>118</winswithRingo>
-		<winswithKoshka>20</winswithKoshka>
-		<winswithCatherine>NULL</winswithCatherine>
-		<winswithSaw>11</winswithSaw>
-		<winswithAdagio>27</winswithAdagio>
-		<winswithPetal>22</winswithPetal>
-		<winswithGlaive>74</winswithGlaive>
-		<winswithJoule>16</winswithJoule>
-		<winswithKrul>15</winswithKrul>
-		<winswithTaka>62</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>1</winswithArdan>
-		<winswithCeleste>4</winswithCeleste>
-		<winswithVox>132</winswithVox>
-		<winswithFortress>13</winswithFortress>
-		<winswithRona>9</winswithRona>
-		<winswithSkye>22</winswithSkye>
-		<winswithPhinn>NULL</winswithPhinn>
-		<winswithBlackfeather>44</winswithBlackfeather>
-		<winswithKestrel>31</winswithKestrel>
-		<winswithReim>9</winswithReim>
-		<winswithOzo>7</winswithOzo>
-		<winswithAlpha>38</winswithAlpha>
-		<winswithLance>5</winswithLance>
-		<winswithLyra>3</winswithLyra>
-		<winswithSamuel>9</winswithSamuel>
-		<winswithBaron>12</winswithBaron>
-		<winswithGwen>23</winswithGwen>
-		<winswithFlicker>0</winswithFlicker>
-		<winswithIdris>6</winswithIdris>
-		<winswithGrumpjaw>12</winswithGrumpjaw>
-		<playswithRingo>210</playswithRingo>
-		<playswithKoshka>40</playswithKoshka>
-		<playswithCatherine>NULL</playswithCatherine>
-		<playswithSaw>20</playswithSaw>
-		<playswithAdagio>50</playswithAdagio>
-		<playswithPetal>41</playswithPetal>
-		<playswithGlaive>140</playswithGlaive>
-		<playswithJoule>24</playswithJoule>
-		<playswithKrul>27</playswithKrul>
-		<playswithTaka>103</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>1</playswithArdan>
-		<playswithCeleste>11</playswithCeleste>
-		<playswithVox>248</playswithVox>
-		<playswithFortress>22</playswithFortress>
-		<playswithRona>21</playswithRona>
-		<playswithSkye>61</playswithSkye>
-		<playswithPhinn>NULL</playswithPhinn>
-		<playswithBlackfeather>81</playswithBlackfeather>
-		<playswithKestrel>57</playswithKestrel>
-		<playswithReim>23</playswithReim>
-		<playswithOzo>14</playswithOzo>
-		<playswithAlpha>81</playswithAlpha>
-		<playswithLance>11</playswithLance>
-		<playswithLyra>6</playswithLyra>
-		<playswithSamuel>20</playswithSamuel>
-		<playswithBaron>22</playswithBaron>
-		<playswithGwen>43</playswithGwen>
-		<playswithFlicker>1</playswithFlicker>
-		<playswithIdris>21</playswithIdris>
-		<playswithGrumpjaw>12</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Reim</heroName>
-		<winswithRingo>24</winswithRingo>
-		<winswithKoshka>NULL</winswithKoshka>
-		<winswithCatherine>10</winswithCatherine>
-		<winswithSaw>4</winswithSaw>
-		<winswithAdagio>5</winswithAdagio>
-		<winswithPetal>NULL</winswithPetal>
-		<winswithGlaive>0</winswithGlaive>
-		<winswithJoule>0</winswithJoule>
-		<winswithKrul>1</winswithKrul>
-		<winswithTaka>1</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>15</winswithArdan>
-		<winswithCeleste>1</winswithCeleste>
-		<winswithVox>17</winswithVox>
-		<winswithFortress>5</winswithFortress>
-		<winswithRona>0</winswithRona>
-		<winswithSkye>2</winswithSkye>
-		<winswithPhinn>9</winswithPhinn>
-		<winswithBlackfeather>3</winswithBlackfeather>
-		<winswithKestrel>3</winswithKestrel>
-		<winswithReim>NULL</winswithReim>
-		<winswithOzo>NULL</winswithOzo>
-		<winswithAlpha>0</winswithAlpha>
-		<winswithLance>10</winswithLance>
-		<winswithLyra>7</winswithLyra>
-		<winswithSamuel>NULL</winswithSamuel>
-		<winswithBaron>0</winswithBaron>
-		<winswithGwen>6</winswithGwen>
-		<winswithFlicker>5</winswithFlicker>
-		<winswithIdris>2</winswithIdris>
-		<winswithGrumpjaw>3</winswithGrumpjaw>
-		<playswithRingo>42</playswithRingo>
-		<playswithKoshka>NULL</playswithKoshka>
-		<playswithCatherine>22</playswithCatherine>
-		<playswithSaw>7</playswithSaw>
-		<playswithAdagio>13</playswithAdagio>
-		<playswithPetal>NULL</playswithPetal>
-		<playswithGlaive>1</playswithGlaive>
-		<playswithJoule>1</playswithJoule>
-		<playswithKrul>3</playswithKrul>
-		<playswithTaka>1</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>26</playswithArdan>
-		<playswithCeleste>2</playswithCeleste>
-		<playswithVox>44</playswithVox>
-		<playswithFortress>8</playswithFortress>
-		<playswithRona>1</playswithRona>
-		<playswithSkye>5</playswithSkye>
-		<playswithPhinn>23</playswithPhinn>
-		<playswithBlackfeather>4</playswithBlackfeather>
-		<playswithKestrel>8</playswithKestrel>
-		<playswithReim>NULL</playswithReim>
-		<playswithOzo>NULL</playswithOzo>
-		<playswithAlpha>1</playswithAlpha>
-		<playswithLance>24</playswithLance>
-		<playswithLyra>10</playswithLyra>
-		<playswithSamuel>NULL</playswithSamuel>
-		<playswithBaron>4</playswithBaron>
-		<playswithGwen>13</playswithGwen>
-		<playswithFlicker>5</playswithFlicker>
-		<playswithIdris>2</playswithIdris>
-		<playswithGrumpjaw>3</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Ringo</heroName>
-		<winswithRingo>NULL</winswithRingo>
-		<winswithKoshka>86</winswithKoshka>
-		<winswithCatherine>101</winswithCatherine>
-		<winswithSaw>5</winswithSaw>
-		<winswithAdagio>56</winswithAdagio>
-		<winswithPetal>47</winswithPetal>
-		<winswithGlaive>127</winswithGlaive>
-		<winswithJoule>21</winswithJoule>
-		<winswithKrul>17</winswithKrul>
-		<winswithTaka>127</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>144</winswithArdan>
-		<winswithCeleste>3</winswithCeleste>
-		<winswithVox>5</winswithVox>
-		<winswithFortress>67</winswithFortress>
-		<winswithRona>11</winswithRona>
-		<winswithSkye>47</winswithSkye>
-		<winswithPhinn>118</winswithPhinn>
-		<winswithBlackfeather>54</winswithBlackfeather>
-		<winswithKestrel>28</winswithKestrel>
-		<winswithReim>24</winswithReim>
-		<winswithOzo>14</winswithOzo>
-		<winswithAlpha>71</winswithAlpha>
-		<winswithLance>188</winswithLance>
-		<winswithLyra>66</winswithLyra>
-		<winswithSamuel>19</winswithSamuel>
-		<winswithBaron>0</winswithBaron>
-		<winswithGwen>NULL</winswithGwen>
-		<winswithFlicker>11</winswithFlicker>
-		<winswithIdris>5</winswithIdris>
-		<winswithGrumpjaw>37</winswithGrumpjaw>
-		<playswithRingo>NULL</playswithRingo>
-		<playswithKoshka>158</playswithKoshka>
-		<playswithCatherine>197</playswithCatherine>
-		<playswithSaw>11</playswithSaw>
-		<playswithAdagio>111</playswithAdagio>
-		<playswithPetal>82</playswithPetal>
-		<playswithGlaive>245</playswithGlaive>
-		<playswithJoule>42</playswithJoule>
-		<playswithKrul>44</playswithKrul>
-		<playswithTaka>237</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>281</playswithArdan>
-		<playswithCeleste>6</playswithCeleste>
-		<playswithVox>10</playswithVox>
-		<playswithFortress>114</playswithFortress>
-		<playswithRona>24</playswithRona>
-		<playswithSkye>96</playswithSkye>
-		<playswithPhinn>210</playswithPhinn>
-		<playswithBlackfeather>109</playswithBlackfeather>
-		<playswithKestrel>50</playswithKestrel>
-		<playswithReim>42</playswithReim>
-		<playswithOzo>34</playswithOzo>
-		<playswithAlpha>169</playswithAlpha>
-		<playswithLance>382</playswithLance>
-		<playswithLyra>123</playswithLyra>
-		<playswithSamuel>37</playswithSamuel>
-		<playswithBaron>1</playswithBaron>
-		<playswithGwen>NULL</playswithGwen>
-		<playswithFlicker>25</playswithFlicker>
-		<playswithIdris>17</playswithIdris>
-		<playswithGrumpjaw>37</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Rona</heroName>
-		<winswithRingo>11</winswithRingo>
-		<winswithKoshka>1</winswithKoshka>
-		<winswithCatherine>11</winswithCatherine>
-		<winswithSaw>3</winswithSaw>
-		<winswithAdagio>11</winswithAdagio>
-		<winswithPetal>1</winswithPetal>
-		<winswithGlaive>1</winswithGlaive>
-		<winswithJoule>1</winswithJoule>
-		<winswithKrul>1</winswithKrul>
-		<winswithTaka>0</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>9</winswithArdan>
-		<winswithCeleste>5</winswithCeleste>
-		<winswithVox>10</winswithVox>
-		<winswithFortress>3</winswithFortress>
-		<winswithRona>NULL</winswithRona>
-		<winswithSkye>4</winswithSkye>
-		<winswithPhinn>9</winswithPhinn>
-		<winswithBlackfeather>1</winswithBlackfeather>
-		<winswithKestrel>3</winswithKestrel>
-		<winswithReim>0</winswithReim>
-		<winswithOzo>0</winswithOzo>
-		<winswithAlpha>1</winswithAlpha>
-		<winswithLance>13</winswithLance>
-		<winswithLyra>5</winswithLyra>
-		<winswithSamuel>3</winswithSamuel>
-		<winswithBaron>2</winswithBaron>
-		<winswithGwen>0</winswithGwen>
-		<winswithFlicker>5</winswithFlicker>
-		<winswithIdris>1</winswithIdris>
-		<winswithGrumpjaw>1</winswithGrumpjaw>
-		<playswithRingo>24</playswithRingo>
-		<playswithKoshka>2</playswithKoshka>
-		<playswithCatherine>24</playswithCatherine>
-		<playswithSaw>8</playswithSaw>
-		<playswithAdagio>27</playswithAdagio>
-		<playswithPetal>2</playswithPetal>
-		<playswithGlaive>2</playswithGlaive>
-		<playswithJoule>1</playswithJoule>
-		<playswithKrul>2</playswithKrul>
-		<playswithTaka>1</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>20</playswithArdan>
-		<playswithCeleste>14</playswithCeleste>
-		<playswithVox>21</playswithVox>
-		<playswithFortress>5</playswithFortress>
-		<playswithRona>NULL</playswithRona>
-		<playswithSkye>11</playswithSkye>
-		<playswithPhinn>21</playswithPhinn>
-		<playswithBlackfeather>2</playswithBlackfeather>
-		<playswithKestrel>8</playswithKestrel>
-		<playswithReim>1</playswithReim>
-		<playswithOzo>1</playswithOzo>
-		<playswithAlpha>1</playswithAlpha>
-		<playswithLance>25</playswithLance>
-		<playswithLyra>16</playswithLyra>
-		<playswithSamuel>5</playswithSamuel>
-		<playswithBaron>3</playswithBaron>
-		<playswithGwen>2</playswithGwen>
-		<playswithFlicker>5</playswithFlicker>
-		<playswithIdris>4</playswithIdris>
-		<playswithGrumpjaw>1</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Samuel</heroName>
-		<winswithRingo>19</winswithRingo>
-		<winswithKoshka>NULL</winswithKoshka>
-		<winswithCatherine>17</winswithCatherine>
-		<winswithSaw>1</winswithSaw>
-		<winswithAdagio>5</winswithAdagio>
-		<winswithPetal>0</winswithPetal>
-		<winswithGlaive>3</winswithGlaive>
-		<winswithJoule>3</winswithJoule>
-		<winswithKrul>10</winswithKrul>
-		<winswithTaka>3</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>12</winswithArdan>
-		<winswithCeleste>0</winswithCeleste>
-		<winswithVox>19</winswithVox>
-		<winswithFortress>2</winswithFortress>
-		<winswithRona>3</winswithRona>
-		<winswithSkye>1</winswithSkye>
-		<winswithPhinn>9</winswithPhinn>
-		<winswithBlackfeather>2</winswithBlackfeather>
-		<winswithKestrel>3</winswithKestrel>
-		<winswithReim>NULL</winswithReim>
-		<winswithOzo>NULL</winswithOzo>
-		<winswithAlpha>0</winswithAlpha>
-		<winswithLance>19</winswithLance>
-		<winswithLyra>14</winswithLyra>
-		<winswithSamuel>NULL</winswithSamuel>
-		<winswithBaron>2</winswithBaron>
-		<winswithGwen>9</winswithGwen>
-		<winswithFlicker>3</winswithFlicker>
-		<winswithIdris>6</winswithIdris>
-		<winswithGrumpjaw>2</winswithGrumpjaw>
-		<playswithRingo>37</playswithRingo>
-		<playswithKoshka>NULL</playswithKoshka>
-		<playswithCatherine>29</playswithCatherine>
-		<playswithSaw>4</playswithSaw>
-		<playswithAdagio>8</playswithAdagio>
-		<playswithPetal>1</playswithPetal>
-		<playswithGlaive>17</playswithGlaive>
-		<playswithJoule>9</playswithJoule>
-		<playswithKrul>14</playswithKrul>
-		<playswithTaka>7</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>37</playswithArdan>
-		<playswithCeleste>1</playswithCeleste>
-		<playswithVox>41</playswithVox>
-		<playswithFortress>2</playswithFortress>
-		<playswithRona>5</playswithRona>
-		<playswithSkye>4</playswithSkye>
-		<playswithPhinn>20</playswithPhinn>
-		<playswithBlackfeather>10</playswithBlackfeather>
-		<playswithKestrel>6</playswithKestrel>
-		<playswithReim>NULL</playswithReim>
-		<playswithOzo>NULL</playswithOzo>
-		<playswithAlpha>2</playswithAlpha>
-		<playswithLance>39</playswithLance>
-		<playswithLyra>26</playswithLyra>
-		<playswithSamuel>NULL</playswithSamuel>
-		<playswithBaron>4</playswithBaron>
-		<playswithGwen>19</playswithGwen>
-		<playswithFlicker>4</playswithFlicker>
-		<playswithIdris>8</playswithIdris>
-		<playswithGrumpjaw>2</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Saw</heroName>
-		<winswithRingo>5</winswithRingo>
-		<winswithKoshka>15</winswithKoshka>
-		<winswithCatherine>19</winswithCatherine>
-		<winswithSaw>NULL</winswithSaw>
-		<winswithAdagio>14</winswithAdagio>
-		<winswithPetal>14</winswithPetal>
-		<winswithGlaive>14</winswithGlaive>
-		<winswithJoule>5</winswithJoule>
-		<winswithKrul>4</winswithKrul>
-		<winswithTaka>22</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>15</winswithArdan>
-		<winswithCeleste>1</winswithCeleste>
-		<winswithVox>2</winswithVox>
-		<winswithFortress>12</winswithFortress>
-		<winswithRona>3</winswithRona>
-		<winswithSkye>4</winswithSkye>
-		<winswithPhinn>11</winswithPhinn>
-		<winswithBlackfeather>9</winswithBlackfeather>
-		<winswithKestrel>11</winswithKestrel>
-		<winswithReim>4</winswithReim>
-		<winswithOzo>1</winswithOzo>
-		<winswithAlpha>10</winswithAlpha>
-		<winswithLance>18</winswithLance>
-		<winswithLyra>26</winswithLyra>
-		<winswithSamuel>1</winswithSamuel>
-		<winswithBaron>NULL</winswithBaron>
-		<winswithGwen>1</winswithGwen>
-		<winswithFlicker>8</winswithFlicker>
-		<winswithIdris>3</winswithIdris>
-		<winswithGrumpjaw>6</winswithGrumpjaw>
-		<playswithRingo>11</playswithRingo>
-		<playswithKoshka>29</playswithKoshka>
-		<playswithCatherine>37</playswithCatherine>
-		<playswithSaw>NULL</playswithSaw>
-		<playswithAdagio>27</playswithAdagio>
-		<playswithPetal>25</playswithPetal>
-		<playswithGlaive>22</playswithGlaive>
-		<playswithJoule>14</playswithJoule>
-		<playswithKrul>9</playswithKrul>
-		<playswithTaka>35</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>36</playswithArdan>
-		<playswithCeleste>1</playswithCeleste>
-		<playswithVox>6</playswithVox>
-		<playswithFortress>19</playswithFortress>
-		<playswithRona>8</playswithRona>
-		<playswithSkye>12</playswithSkye>
-		<playswithPhinn>20</playswithPhinn>
-		<playswithBlackfeather>18</playswithBlackfeather>
-		<playswithKestrel>19</playswithKestrel>
-		<playswithReim>7</playswithReim>
-		<playswithOzo>6</playswithOzo>
-		<playswithAlpha>18</playswithAlpha>
-		<playswithLance>35</playswithLance>
-		<playswithLyra>45</playswithLyra>
-		<playswithSamuel>4</playswithSamuel>
-		<playswithBaron>NULL</playswithBaron>
-		<playswithGwen>1</playswithGwen>
-		<playswithFlicker>10</playswithFlicker>
-		<playswithIdris>5</playswithIdris>
-		<playswithGrumpjaw>6</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Skaarf</heroName>
-		<winswithRingo>NULL</winswithRingo>
-		<winswithKoshka>NULL</winswithKoshka>
-		<winswithCatherine>NULL</winswithCatherine>
-		<winswithSaw>NULL</winswithSaw>
-		<winswithAdagio>NULL</winswithAdagio>
-		<winswithPetal>NULL</winswithPetal>
-		<winswithGlaive>NULL</winswithGlaive>
-		<winswithJoule>NULL</winswithJoule>
-		<winswithKrul>NULL</winswithKrul>
-		<winswithTaka>NULL</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>NULL</winswithArdan>
-		<winswithCeleste>NULL</winswithCeleste>
-		<winswithVox>NULL</winswithVox>
-		<winswithFortress>NULL</winswithFortress>
-		<winswithRona>NULL</winswithRona>
-		<winswithSkye>NULL</winswithSkye>
-		<winswithPhinn>NULL</winswithPhinn>
-		<winswithBlackfeather>NULL</winswithBlackfeather>
-		<winswithKestrel>NULL</winswithKestrel>
-		<winswithReim>NULL</winswithReim>
-		<winswithOzo>NULL</winswithOzo>
-		<winswithAlpha>NULL</winswithAlpha>
-		<winswithLance>NULL</winswithLance>
-		<winswithLyra>NULL</winswithLyra>
-		<winswithSamuel>NULL</winswithSamuel>
-		<winswithBaron>NULL</winswithBaron>
-		<winswithGwen>NULL</winswithGwen>
-		<winswithFlicker>NULL</winswithFlicker>
-		<winswithIdris>NULL</winswithIdris>
-		<winswithGrumpjaw>NULL</winswithGrumpjaw>
-		<playswithRingo>NULL</playswithRingo>
-		<playswithKoshka>NULL</playswithKoshka>
-		<playswithCatherine>NULL</playswithCatherine>
-		<playswithSaw>NULL</playswithSaw>
-		<playswithAdagio>NULL</playswithAdagio>
-		<playswithPetal>NULL</playswithPetal>
-		<playswithGlaive>NULL</playswithGlaive>
-		<playswithJoule>NULL</playswithJoule>
-		<playswithKrul>NULL</playswithKrul>
-		<playswithTaka>NULL</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>NULL</playswithArdan>
-		<playswithCeleste>NULL</playswithCeleste>
-		<playswithVox>NULL</playswithVox>
-		<playswithFortress>NULL</playswithFortress>
-		<playswithRona>NULL</playswithRona>
-		<playswithSkye>NULL</playswithSkye>
-		<playswithPhinn>NULL</playswithPhinn>
-		<playswithBlackfeather>NULL</playswithBlackfeather>
-		<playswithKestrel>NULL</playswithKestrel>
-		<playswithReim>NULL</playswithReim>
-		<playswithOzo>NULL</playswithOzo>
-		<playswithAlpha>NULL</playswithAlpha>
-		<playswithLance>NULL</playswithLance>
-		<playswithLyra>NULL</playswithLyra>
-		<playswithSamuel>NULL</playswithSamuel>
-		<playswithBaron>NULL</playswithBaron>
-		<playswithGwen>NULL</playswithGwen>
-		<playswithFlicker>NULL</playswithFlicker>
-		<playswithIdris>NULL</playswithIdris>
-		<playswithGrumpjaw>NULL</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Skye</heroName>
-		<winswithRingo>47</winswithRingo>
-		<winswithKoshka>1</winswithKoshka>
-		<winswithCatherine>35</winswithCatherine>
-		<winswithSaw>4</winswithSaw>
-		<winswithAdagio>18</winswithAdagio>
-		<winswithPetal>5</winswithPetal>
-		<winswithGlaive>23</winswithGlaive>
-		<winswithJoule>6</winswithJoule>
-		<winswithKrul>5</winswithKrul>
-		<winswithTaka>3</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>40</winswithArdan>
-		<winswithCeleste>1</winswithCeleste>
-		<winswithVox>46</winswithVox>
-		<winswithFortress>5</winswithFortress>
-		<winswithRona>4</winswithRona>
-		<winswithSkye>NULL</winswithSkye>
-		<winswithPhinn>22</winswithPhinn>
-		<winswithBlackfeather>11</winswithBlackfeather>
-		<winswithKestrel>6</winswithKestrel>
-		<winswithReim>2</winswithReim>
-		<winswithOzo>1</winswithOzo>
-		<winswithAlpha>5</winswithAlpha>
-		<winswithLance>36</winswithLance>
-		<winswithLyra>35</winswithLyra>
-		<winswithSamuel>1</winswithSamuel>
-		<winswithBaron>4</winswithBaron>
-		<winswithGwen>16</winswithGwen>
-		<winswithFlicker>3</winswithFlicker>
-		<winswithIdris>6</winswithIdris>
-		<winswithGrumpjaw>7</winswithGrumpjaw>
-		<playswithRingo>96</playswithRingo>
-		<playswithKoshka>11</playswithKoshka>
-		<playswithCatherine>67</playswithCatherine>
-		<playswithSaw>12</playswithSaw>
-		<playswithAdagio>39</playswithAdagio>
-		<playswithPetal>7</playswithPetal>
-		<playswithGlaive>48</playswithGlaive>
-		<playswithJoule>12</playswithJoule>
-		<playswithKrul>16</playswithKrul>
-		<playswithTaka>16</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>94</playswithArdan>
-		<playswithCeleste>4</playswithCeleste>
-		<playswithVox>129</playswithVox>
-		<playswithFortress>20</playswithFortress>
-		<playswithRona>11</playswithRona>
-		<playswithSkye>NULL</playswithSkye>
-		<playswithPhinn>61</playswithPhinn>
-		<playswithBlackfeather>30</playswithBlackfeather>
-		<playswithKestrel>19</playswithKestrel>
-		<playswithReim>5</playswithReim>
-		<playswithOzo>5</playswithOzo>
-		<playswithAlpha>12</playswithAlpha>
-		<playswithLance>112</playswithLance>
-		<playswithLyra>78</playswithLyra>
-		<playswithSamuel>4</playswithSamuel>
-		<playswithBaron>14</playswithBaron>
-		<playswithGwen>26</playswithGwen>
-		<playswithFlicker>6</playswithFlicker>
-		<playswithIdris>15</playswithIdris>
-		<playswithGrumpjaw>7</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Taka</heroName>
-		<winswithRingo>127</winswithRingo>
-		<winswithKoshka>1</winswithKoshka>
-		<winswithCatherine>46</winswithCatherine>
-		<winswithSaw>22</winswithSaw>
-		<winswithAdagio>34</winswithAdagio>
-		<winswithPetal>5</winswithPetal>
-		<winswithGlaive>10</winswithGlaive>
-		<winswithJoule>0</winswithJoule>
-		<winswithKrul>8</winswithKrul>
-		<winswithTaka>NULL</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>82</winswithArdan>
-		<winswithCeleste>4</winswithCeleste>
-		<winswithVox>140</winswithVox>
-		<winswithFortress>14</winswithFortress>
-		<winswithRona>0</winswithRona>
-		<winswithSkye>3</winswithSkye>
-		<winswithPhinn>62</winswithPhinn>
-		<winswithBlackfeather>7</winswithBlackfeather>
-		<winswithKestrel>16</winswithKestrel>
-		<winswithReim>1</winswithReim>
-		<winswithOzo>0</winswithOzo>
-		<winswithAlpha>0</winswithAlpha>
-		<winswithLance>87</winswithLance>
-		<winswithLyra>43</winswithLyra>
-		<winswithSamuel>3</winswithSamuel>
-		<winswithBaron>13</winswithBaron>
-		<winswithGwen>26</winswithGwen>
-		<winswithFlicker>8</winswithFlicker>
-		<winswithIdris>10</winswithIdris>
-		<winswithGrumpjaw>11</winswithGrumpjaw>
-		<playswithRingo>237</playswithRingo>
-		<playswithKoshka>2</playswithKoshka>
-		<playswithCatherine>99</playswithCatherine>
-		<playswithSaw>35</playswithSaw>
-		<playswithAdagio>79</playswithAdagio>
-		<playswithPetal>5</playswithPetal>
-		<playswithGlaive>26</playswithGlaive>
-		<playswithJoule>3</playswithJoule>
-		<playswithKrul>15</playswithKrul>
-		<playswithTaka>NULL</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>163</playswithArdan>
-		<playswithCeleste>9</playswithCeleste>
-		<playswithVox>254</playswithVox>
-		<playswithFortress>29</playswithFortress>
-		<playswithRona>1</playswithRona>
-		<playswithSkye>16</playswithSkye>
-		<playswithPhinn>103</playswithPhinn>
-		<playswithBlackfeather>24</playswithBlackfeather>
-		<playswithKestrel>40</playswithKestrel>
-		<playswithReim>1</playswithReim>
-		<playswithOzo>1</playswithOzo>
-		<playswithAlpha>2</playswithAlpha>
-		<playswithLance>167</playswithLance>
-		<playswithLyra>72</playswithLyra>
-		<playswithSamuel>7</playswithSamuel>
-		<playswithBaron>22</playswithBaron>
-		<playswithGwen>64</playswithGwen>
-		<playswithFlicker>17</playswithFlicker>
-		<playswithIdris>16</playswithIdris>
-		<playswithGrumpjaw>11</playswithGrumpjaw>
-	</ROW>
-
-	<ROW>
-		<heroName>Vox</heroName>
-		<winswithRingo>5</winswithRingo>
-		<winswithKoshka>99</winswithKoshka>
-		<winswithCatherine>112</winswithCatherine>
-		<winswithSaw>2</winswithSaw>
-		<winswithAdagio>65</winswithAdagio>
-		<winswithPetal>50</winswithPetal>
-		<winswithGlaive>169</winswithGlaive>
-		<winswithJoule>27</winswithJoule>
-		<winswithKrul>12</winswithKrul>
-		<winswithTaka>140</winswithTaka>
-		<winswithSkaarf>NULL</winswithSkaarf>
-		<winswithArdan>196</winswithArdan>
-		<winswithCeleste>4</winswithCeleste>
-		<winswithVox>NULL</winswithVox>
-		<winswithFortress>75</winswithFortress>
-		<winswithRona>10</winswithRona>
-		<winswithSkye>46</winswithSkye>
-		<winswithPhinn>132</winswithPhinn>
-		<winswithBlackfeather>49</winswithBlackfeather>
-		<winswithKestrel>30</winswithKestrel>
-		<winswithReim>17</winswithReim>
-		<winswithOzo>22</winswithOzo>
-		<winswithAlpha>103</winswithAlpha>
-		<winswithLance>181</winswithLance>
-		<winswithLyra>75</winswithLyra>
-		<winswithSamuel>19</winswithSamuel>
-		<winswithBaron>1</winswithBaron>
-		<winswithGwen>1</winswithGwen>
-		<winswithFlicker>17</winswithFlicker>
-		<winswithIdris>4</winswithIdris>
-		<winswithGrumpjaw>38</winswithGrumpjaw>
-		<playswithRingo>10</playswithRingo>
-		<playswithKoshka>185</playswithKoshka>
-		<playswithCatherine>224</playswithCatherine>
-		<playswithSaw>6</playswithSaw>
-		<playswithAdagio>120</playswithAdagio>
-		<playswithPetal>100</playswithPetal>
-		<playswithGlaive>307</playswithGlaive>
-		<playswithJoule>64</playswithJoule>
-		<playswithKrul>22</playswithKrul>
-		<playswithTaka>254</playswithTaka>
-		<playswithSkaarf>NULL</playswithSkaarf>
-		<playswithArdan>378</playswithArdan>
-		<playswithCeleste>12</playswithCeleste>
-		<playswithVox>NULL</playswithVox>
-		<playswithFortress>118</playswithFortress>
-		<playswithRona>21</playswithRona>
-		<playswithSkye>129</playswithSkye>
-		<playswithPhinn>248</playswithPhinn>
-		<playswithBlackfeather>94</playswithBlackfeather>
-		<playswithKestrel>62</playswithKestrel>
-		<playswithReim>44</playswithReim>
-		<playswithOzo>50</playswithOzo>
-		<playswithAlpha>195</playswithAlpha>
-		<playswithLance>384</playswithLance>
-		<playswithLyra>153</playswithLyra>
-		<playswithSamuel>41</playswithSamuel>
-		<playswithBaron>2</playswithBaron>
-		<playswithGwen>1</playswithGwen>
-		<playswithFlicker>29</playswithFlicker>
-		<playswithIdris>9</playswithIdris>
-		<playswithGrumpjaw>38</playswithGrumpjaw>
-	</ROW>
-</DATA>
+		<Row>
+			<Cell><Data ss:Type="String">Adagio</Data></Cell>
+			<Cell><Data ss:Type="Number">71</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">73</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">136</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">116</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">87</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">81</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">137</Data></Cell>
+			<Cell><Data ss:Type="Number">37</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">127</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">65</Data></Cell>
+			<Cell><Data ss:Type="Number">97</Data></Cell>
+			<Cell><Data ss:Type="Number">63</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Alpha</Data></Cell>
+			<Cell><Data ss:Type="Number">89</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">86</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">131</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">76</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">213</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">65</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">161</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">253</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">102</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">165</Data></Cell>
+			<Cell><Data ss:Type="Number">68</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Ardan</Data></Cell>
+			<Cell><Data ss:Type="Number">185</Data></Cell>
+			<Cell><Data ss:Type="Number">67</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">110</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">115</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">259</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">56</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">42</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">86</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">360</Data></Cell>
+			<Cell><Data ss:Type="Number">132</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">81</Data></Cell>
+			<Cell><Data ss:Type="Number">88</Data></Cell>
+			<Cell><Data ss:Type="Number">213</Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">64</Data></Cell>
+			<Cell><Data ss:Type="Number">210</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">42</Data></Cell>
+			<Cell><Data ss:Type="Number">490</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">125</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">143</Data></Cell>
+			<Cell><Data ss:Type="Number">88</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">41</Data></Cell>
+			<Cell><Data ss:Type="Number">161</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Baron</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Blackfeather</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">61</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">126</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">84</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">127</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">143</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">121</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">92</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">136</Data></Cell>
+			<Cell><Data ss:Type="Number">83</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Catherine</Data></Cell>
+			<Cell><Data ss:Type="Number">124</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">61</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">133</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">258</Data></Cell>
+			<Cell><Data ss:Type="Number">85</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">125</Data></Cell>
+			<Cell><Data ss:Type="Number">37</Data></Cell>
+			<Cell><Data ss:Type="Number">71</Data></Cell>
+			<Cell><Data ss:Type="Number">123</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">264</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">80</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">84</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">93</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Celeste</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">42</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">52</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Flicker</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">41</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Fortress</Data></Cell>
+			<Cell><Data ss:Type="Number">90</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">97</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">152</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">37</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">148</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Glaive</Data></Cell>
+			<Cell><Data ss:Type="Number">146</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">110</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">196</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">80</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">109</Data></Cell>
+			<Cell><Data ss:Type="Number">70</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">302</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">125</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">116</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">213</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">357</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">163</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">246</Data></Cell>
+			<Cell><Data ss:Type="Number">117</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">64</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Grumpjaw</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">45</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Gwen</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">93</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">64</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">82</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">47</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">106</Data></Cell>
+			<Cell><Data ss:Type="Number">55</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Idris</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Joule</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">55</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">71</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">64</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">45</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Kestrel</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">42</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">63</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">88</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">74</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">68</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">136</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Koshka</Data></Cell>
+			<Cell><Data ss:Type="Number">109</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">67</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">118</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">75</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">213</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">85</Data></Cell>
+			<Cell><Data ss:Type="Number">42</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">132</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">227</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">52</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">162</Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Krul</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">37</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">37</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">80</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">64</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Lance</Data></Cell>
+			<Cell><Data ss:Type="Number">218</Data></Cell>
+			<Cell><Data ss:Type="Number">75</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">109</Data></Cell>
+			<Cell><Data ss:Type="Number">37</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">110</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">217</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">63</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">76</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">459</Data></Cell>
+			<Cell><Data ss:Type="Number">162</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">97</Data></Cell>
+			<Cell><Data ss:Type="Number">84</Data></Cell>
+			<Cell><Data ss:Type="Number">246</Data></Cell>
+			<Cell><Data ss:Type="Number">64</Data></Cell>
+			<Cell><Data ss:Type="Number">45</Data></Cell>
+			<Cell><Data ss:Type="Number">202</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">52</Data></Cell>
+			<Cell><Data ss:Type="Number">455</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">135</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">136</Data></Cell>
+			<Cell><Data ss:Type="Number">136</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">165</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">106</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Lyra</Data></Cell>
+			<Cell><Data ss:Type="Number">83</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">70</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">49</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">89</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">45</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">148</Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">63</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">117</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">90</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">188</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">94</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">83</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">68</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">55</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Ozo</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">41</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">61</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Petal</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">56</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">98</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">88</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">112</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">47</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">84</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Phinn</Data></Cell>
+			<Cell><Data ss:Type="Number">139</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">80</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">70</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">159</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">245</Data></Cell>
+			<Cell><Data ss:Type="Number">52</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">58</Data></Cell>
+			<Cell><Data ss:Type="Number">47</Data></Cell>
+			<Cell><Data ss:Type="Number">163</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">122</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">306</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">72</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">92</Data></Cell>
+			<Cell><Data ss:Type="Number">68</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">102</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">47</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Reim</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">57</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Ringo</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">109</Data></Cell>
+			<Cell><Data ss:Type="Number">124</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">71</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">146</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">155</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">185</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">90</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">139</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">89</Data></Cell>
+			<Cell><Data ss:Type="Number">218</Data></Cell>
+			<Cell><Data ss:Type="Number">83</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">213</Data></Cell>
+			<Cell><Data ss:Type="Number">258</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">136</Data></Cell>
+			<Cell><Data ss:Type="Number">98</Data></Cell>
+			<Cell><Data ss:Type="Number">302</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">55</Data></Cell>
+			<Cell><Data ss:Type="Number">288</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">360</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">152</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">120</Data></Cell>
+			<Cell><Data ss:Type="Number">245</Data></Cell>
+			<Cell><Data ss:Type="Number">126</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">57</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">213</Data></Cell>
+			<Cell><Data ss:Type="Number">459</Data></Cell>
+			<Cell><Data ss:Type="Number">148</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">45</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Rona</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Samuel</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">21</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">51</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Saw</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">18</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">42</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">30</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">13</Data></Cell>
+			<Cell><Data ss:Type="Number">47</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">29</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Skye</Data></Cell>
+			<Cell><Data ss:Type="Number">62</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">40</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">56</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">28</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">45</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">120</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number">80</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">48</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">16</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">125</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">153</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">72</Data></Cell>
+			<Cell><Data ss:Type="Number">39</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">135</Data></Cell>
+			<Cell><Data ss:Type="Number">94</Data></Cell>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Taka</Data></Cell>
+			<Cell><Data ss:Type="Number">155</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">61</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">38</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">115</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">180</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">70</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">0</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">110</Data></Cell>
+			<Cell><Data ss:Type="Number">49</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">288</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">123</Data></Cell>
+			<Cell><Data ss:Type="Number">47</Data></Cell>
+			<Cell><Data ss:Type="Number">87</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">22</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">210</Data></Cell>
+			<Cell><Data ss:Type="Number">10</Data></Cell>
+			<Cell><Data ss:Type="Number">319</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">122</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">202</Data></Cell>
+			<Cell><Data ss:Type="Number">90</Data></Cell>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="Number">32</Data></Cell>
+			<Cell><Data ss:Type="Number">82</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">20</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">Vox</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number">118</Data></Cell>
+			<Cell><Data ss:Type="Number">133</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">73</Data></Cell>
+			<Cell><Data ss:Type="Number">56</Data></Cell>
+			<Cell><Data ss:Type="Number">196</Data></Cell>
+			<Cell><Data ss:Type="Number">35</Data></Cell>
+			<Cell><Data ss:Type="Number">19</Data></Cell>
+			<Cell><Data ss:Type="Number">180</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">259</Data></Cell>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">97</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">53</Data></Cell>
+			<Cell><Data ss:Type="Number">159</Data></Cell>
+			<Cell><Data ss:Type="Number">61</Data></Cell>
+			<Cell><Data ss:Type="Number">36</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">27</Data></Cell>
+			<Cell><Data ss:Type="Number">131</Data></Cell>
+			<Cell><Data ss:Type="Number">217</Data></Cell>
+			<Cell><Data ss:Type="Number">89</Data></Cell>
+			<Cell><Data ss:Type="Number">26</Data></Cell>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="Number">23</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">227</Data></Cell>
+			<Cell><Data ss:Type="Number">264</Data></Cell>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="Number">137</Data></Cell>
+			<Cell><Data ss:Type="Number">112</Data></Cell>
+			<Cell><Data ss:Type="Number">357</Data></Cell>
+			<Cell><Data ss:Type="Number">80</Data></Cell>
+			<Cell><Data ss:Type="Number">33</Data></Cell>
+			<Cell><Data ss:Type="Number">319</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">490</Data></Cell>
+			<Cell><Data ss:Type="Number">15</Data></Cell>
+			<Cell><Data ss:Type="Number"></Data></Cell>
+			<Cell><Data ss:Type="Number">148</Data></Cell>
+			<Cell><Data ss:Type="Number">24</Data></Cell>
+			<Cell><Data ss:Type="Number">153</Data></Cell>
+			<Cell><Data ss:Type="Number">306</Data></Cell>
+			<Cell><Data ss:Type="Number">121</Data></Cell>
+			<Cell><Data ss:Type="Number">74</Data></Cell>
+			<Cell><Data ss:Type="Number">59</Data></Cell>
+			<Cell><Data ss:Type="Number">61</Data></Cell>
+			<Cell><Data ss:Type="Number">253</Data></Cell>
+			<Cell><Data ss:Type="Number">455</Data></Cell>
+			<Cell><Data ss:Type="Number">188</Data></Cell>
+			<Cell><Data ss:Type="Number">54</Data></Cell>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="Number">41</Data></Cell>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">46</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>
