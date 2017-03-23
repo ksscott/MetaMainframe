@@ -101,9 +101,10 @@ public class Calculator {
 		Collections.sort(optimalAvenues);
 		optimalAvenues = current.bestPicks();
 		
-		int first = state.getFormat().size();
-		int phase = state.currentPhaseNo();
-		int avenuesToExplore = (first - phase) * 2 / 3;
+		double first = state.getFormat().size();
+		double phase = state.currentPhaseNo();
+//		int avenuesToExplore = (first - phase) * 2 / 3;
+		int avenuesToExplore = phase/first < 0.5 ? 3 : 2; // 3 branches and reduce to 2 halfway
 		
 		for (int i = 0; i < optimalAvenues.size(); i++) {
 			TreeNode avenue = optimalAvenues.get(i);
