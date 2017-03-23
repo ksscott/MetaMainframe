@@ -457,6 +457,20 @@ public class Calculator {
 	}
 	
 	/**
+	 * I plan to use this later for optimization purposes (passing around data points)
+	 */
+	@SuppressWarnings("unused")
+	private Double geoMean(Collection<Double> scores) {
+		if (scores.size() < 1)
+			return fiftyFifty;
+		
+		double result = 1.0;
+		for (Double score : scores)
+			result *= score;
+		return Math.pow(result, (1 / (double) scores.size()));
+	}
+
+	/**
 	 * Essentially a container for a particular {@link DraftSession} state. 
 	 * Used to build a tree for the pruning algorithm: {@link Calculator#pruningAlgorithm(DraftSession)}.
 	 */
