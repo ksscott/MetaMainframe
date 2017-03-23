@@ -1783,6 +1783,72 @@
 	</ROW>
 
 	<ROW>
+		<heroName>Skaarf</heroName>
+		<winswithRingo>NULL</winswithRingo>
+		<winswithKoshka>NULL</winswithKoshka>
+		<winswithCatherine>NULL</winswithCatherine>
+		<winswithSAW>NULL</winswithSAW>
+		<winswithAdagio>NULL</winswithAdagio>
+		<winswithPetal>NULL</winswithPetal>
+		<winswithGlaive>NULL</winswithGlaive>
+		<winswithKrul>NULL</winswithKrul>
+		<winswithJoule>NULL</winswithJoule>
+		<winswithTaka>NULL</winswithTaka>
+		<winswithSkaarf>NULL</winswithSkaarf>
+		<winswithArdan>NULL</winswithArdan>
+		<winswithCeleste>NULL</winswithCeleste>
+		<winswithVox>NULL</winswithVox>
+		<winswithFortress>NULL</winswithFortress>
+		<winswithRona>NULL</winswithRona>
+		<winswithSkye>NULL</winswithSkye>
+		<winswithPhinn>NULL</winswithPhinn>
+		<winswithBlackfeather>NULL</winswithBlackfeather>
+		<winswithKestrel>NULL</winswithKestrel>
+		<winswithReim>NULL</winswithReim>
+		<winswithOzo>NULL</winswithOzo>
+		<winswithAlpha>NULL</winswithAlpha>
+		<winswithLance>NULL</winswithLance>
+		<winswithLyra>NULL</winswithLyra>
+		<winswithSamuel>NULL</winswithSamuel>
+		<winswithBaron>NULL</winswithBaron>
+		<winswithGwen>NULL</winswithGwen>
+		<winswithFlicker>NULL</winswithFlicker>
+		<winswithIdris>NULL</winswithIdris>
+		<winswithGrumpjaw>NULL</winswithGrumpjaw>
+		<playswithRingo>NULL</playswithRingo>
+		<playswithKoshka>NULL</playswithKoshka>
+		<playswithCatherine>NULL</playswithCatherine>
+		<playswithSAW>NULL</playswithSAW>
+		<playswithAdagio>NULL</playswithAdagio>
+		<playswithPetal>NULL</playswithPetal>
+		<playswithGlaive>NULL</playswithGlaive>
+		<playswithKrul>NULL</playswithKrul>
+		<playswithJoule>NULL</playswithJoule>
+		<playswithTaka>NULL</playswithTaka>
+		<playswithSkaarf>NULL</playswithSkaarf>
+		<playswithArdan>NULL</playswithArdan>
+		<playswithCeleste>NULL</playswithCeleste>
+		<playswithVox>NULL</playswithVox>
+		<playswithFortress>NULL</playswithFortress>
+		<playswithRona>NULL</playswithRona>
+		<playswithSkye>NULL</playswithSkye>
+		<playswithPhinn>NULL</playswithPhinn>
+		<playswithBlackfeather>NULL</playswithBlackfeather>
+		<playswithKestrel>NULL</playswithKestrel>
+		<playswithReim>NULL</playswithReim>
+		<playswithOzo>NULL</playswithOzo>
+		<playswithAlpha>NULL</playswithAlpha>
+		<playswithLance>NULL</playswithLance>
+		<playswithLyra>NULL</playswithLyra>
+		<playswithSamuel>NULL</playswithSamuel>
+		<playswithBaron>NULL</playswithBaron>
+		<playswithGwen>NULL</playswithGwen>
+		<playswithFlicker>NULL</playswithFlicker>
+		<playswithIdris>NULL</playswithIdris>
+		<playswithGrumpjaw>NULL</playswithGrumpjaw>
+	</ROW>
+
+	<ROW>
 		<heroName>Skye</heroName>
 		<winswithRingo>62</winswithRingo>
 		<winswithKoshka>3</winswithKoshka>
