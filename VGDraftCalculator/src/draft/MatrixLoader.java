@@ -112,7 +112,7 @@ public class MatrixLoader {
 					if (columnName.startsWith("winswith")) {
 						Hero partner = Hero.fromName(columnName.substring(8));
 						String textContent = column.getTextContent();
-						int value = textContent.equals("NULL") ? 0 : Integer.parseInt(textContent);;
+						int value = textContent.equals("NULL") ? 0 : Integer.parseInt(textContent);
 //						 System.out.println(partner + " wins:\t" + value);
 						// WEIGHTING WIN-RATES:
 						value += 5;
@@ -120,7 +120,7 @@ public class MatrixLoader {
 					} else if (columnName.startsWith("playswith")) {
 						Hero partner = Hero.fromName(columnName.substring(9));
 						String textContent = column.getTextContent();
-						int value = textContent.equals("NULL") ? 0 : Integer.parseInt(textContent);;
+						int value = textContent.equals("NULL") ? 0 : Integer.parseInt(textContent);
 //						 System.out.println(partner + " plays:\t" + value);
 						// WEIGHTING WIN-RATES:
 						value += 10;
