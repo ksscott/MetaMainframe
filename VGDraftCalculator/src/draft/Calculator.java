@@ -205,8 +205,8 @@ public class Calculator {
 	}
 	
 	private Double synergy(Hero hero, Roster team) {
-		if (team.isFull())
-			throw new IllegalArgumentException("Roster is already full");
+//		if (team.isFull())
+//			throw new IllegalArgumentException("Roster is already full");
 		
 		return geoMean(team.getPicked(), partner -> synergy(hero, partner));
 	}
@@ -224,7 +224,7 @@ public class Calculator {
 		
 		// assuming independent probabilities blue and red, this equation gives P(blue | blue xor red)
 		return new Double((usSyn * (1 - themSyn)) 
-				/ (usSyn * (1 - themSyn) + (themSyn) * (1 - usSyn)));
+				/ (double) (usSyn * (1 - themSyn) + (themSyn) * (1 - usSyn)));
 	}
 	
 	/**
