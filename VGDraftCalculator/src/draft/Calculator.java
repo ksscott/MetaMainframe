@@ -1,12 +1,14 @@
 package draft;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 
 import static draft.Strategy.*;
@@ -187,34 +189,14 @@ public class Calculator {
 	}
 	
 	private Double score(Hero hero, Roster enemyTeam) {
-		if (enemyTeam.size() < 1)
-			return new Double(.5);
-		
-		double score = 0.0;
-		for (Hero enemy : enemyTeam)
-			score += score(hero, enemy);
-		return score / (double) enemyTeam.size();
-		
-		// equivalent:
-//		return enemyTeam.getPicked().stream()
-//				.mapToDouble((enemy) -> score(hero, enemy))
-//				.average()
-//				.getAsDouble();
+		return geoMean(enemyTeam.getPicked(), enemy -> score(hero, enemy));
 	}
 	
 	/**
-	 * intended for full rosters only // TODO
-	 * does not fill rosters
+	 * only a simple scoring; does not fill rosters
 	 */
 	private Double score(Roster us, Roster them) {
-		double score = 0.0;
-		for (Hero hero : us.getPicked()) {
-			for (Hero enemy : them.getPicked()) {
-				score += score(hero, enemy);
-			}
-		}
-		score /= (double) (us.size() * them.size());
-		return score;
+		return geoMean(us.getPicked(), h -> score(h, them));
 	}
 
 	private Double synergy(Hero hero, Hero partner) {
@@ -222,31 +204,14 @@ public class Calculator {
 	}
 	
 	private Double synergy(Hero hero, Roster team) {
-		if (team.size() < 1)
-			return new Double(.5);
 		if (team.isFull())
 			throw new IllegalArgumentException("Roster is already full");
 		
-		// logic effectively identical to synergy(Roster)
-		double synergy = 0.0;
-		for (Hero partner : team.getPicked())
-			synergy += synergy(hero, partner);
-		return synergy / (double) team.size();
+		return geoMean(team.getPicked(), partner -> synergy(hero, partner));
 	}
 	
 	private Double synergy(Roster team) {
-		if (team.size() <= 1)
-			new Double(.5);
-		
-		double synergy = 0.0;
-		for (Hero hero : team.getPicked()) {
-			for (Hero partner : team.getPicked()) {
-				if (hero != partner)
-					synergy += synergy(hero, partner); // TODO optimize by removing double access
-			}
-		}
-		synergy /= (double) (team.size() * (team.size() - 1)); // nP2 should be the number of reads we did
-		return synergy;
+		return geoMean(team.getPicked(), hero -> synergy(hero, team));
 	}
 	
 	/**
@@ -256,6 +221,7 @@ public class Calculator {
 		Double usSyn = synergy(us);
 		Double themSyn = synergy(them);
 		
+		// assuming independent probabilities blue and red, this equation gives P(blue | blue xor red)
 		return new Double((usSyn * (1 - themSyn)) 
 				/ (usSyn * (1 - themSyn) + (themSyn) * (1 - usSyn)));
 	}
@@ -288,8 +254,8 @@ public class Calculator {
 		double themPairs = (double) (them.size() * (them.size() - 1));
 		double synergyWeight = usPairs+themPairs; // can be adjusted
 		
-		return ((fightWeight*score) + (synergyWeight*usSynergy)) 
-				/ ((double) (fightWeight + synergyWeight));
+		return Math.pow(((Math.pow(score, fightWeight)) * (Math.pow(usSynergy, synergyWeight))),
+				1 / ((double) (fightWeight + synergyWeight)));
 	}
 	
 	/////////////////////////
@@ -456,6 +422,43 @@ public class Calculator {
 	}
 
 	/**
+	 * Arithmetic Mean
+	 * 
+	 * @param heroes to be measured
+	 * @param scorer a means to measure each hero
+	 * @return average score, or 0.5 if given an empty list
+	 */
+	@SuppressWarnings("unused")
+	private Double arithMean(Collection<Hero> heroes, ToDoubleFunction<Hero> scorer) {
+		if (heroes.size() < 1)
+			return new Double(.5);
+		
+		double score = 0.0;
+		for (Hero hero : heroes)
+			score += scorer.applyAsDouble(hero);
+		return score / (double) heroes.size();
+	}
+	
+	/**
+	 * Geometric Mean
+	 * <p>
+	 * This averaging method should be chosen for averaging probabilities
+	 * 
+	 * @param heroes to be measured
+	 * @param scorer a means to measure each hero
+	 * @return geometric average of the scores, or 0.5 if given an empty list
+	 */
+	private Double geoMean(Collection<Hero> heroes, ToDoubleFunction<Hero> scorer) {
+		if (heroes.size() < 1)
+			return new Double(.5);
+		
+		double score = 1.0;
+		for (Hero hero : heroes)
+			score *= scorer.applyAsDouble(hero);
+		return Math.pow(score, (1 / (double) heroes.size()));
+	}
+	
+	/**
 	 * Essentially a container for a particular {@link DraftSession} state. 
 	 * Used to build a tree for the pruning algorithm: {@link Calculator#pruningAlgorithm(DraftSession)}.
 	 */
@@ -499,10 +502,4 @@ public class Calculator {
 				return o.odds().compareTo(odds());
 			}
 		}
-	
-	///////////////////////////
-	//   WORK IN PROGRESS   ///
-	///////////////////////////
-	
-	
 }
