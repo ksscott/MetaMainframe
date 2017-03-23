@@ -184,6 +184,10 @@ public class Calculator {
 	//   Scoring Tools   //
 	///////////////////////
 	
+	// NOTE:
+	// All scoring tools herein are simple and score AS-IS
+	// That means no predictive algorithms or roster-filling are employed
+	
 	Double score(Hero hero, Hero adversary) {
 		return meta.get(hero, adversary, false);
 	}
@@ -192,9 +196,6 @@ public class Calculator {
 		return geoMean(enemyTeam.getPicked(), enemy -> score(hero, enemy));
 	}
 	
-	/**
-	 * only a simple scoring; does not fill rosters
-	 */
 	private Double score(Roster us, Roster them) {
 		return geoMean(us.getPicked(), h -> score(h, them));
 	}
@@ -234,13 +235,7 @@ public class Calculator {
 		return scorePlusSynergy(session.getBlue(), session.getRed());
 	}
 	
-	/**
-	 * Does not fill rosters.
-	 * <p>
-	 * // TODO could add special weighting for a fight or a synergy
-	 * 
-	 * @return a simplistic, non-predictive scoring
-	 */
+	 // TODO could add special weighting for a fight or a synergy
 	private Double scorePlusSynergy(Roster us, Roster them) {
 		if (us.isEmpty() || them.isEmpty())
 			return new Double(.5);
