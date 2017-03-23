@@ -16,6 +16,7 @@ import static draft.Strategy.*;
 public class Calculator {
 
 	private final HeroMatrix meta;
+	private static final Double fiftyFifty = new Double(.5);
 	
 	public Calculator(HeroMatrix meta) {
 		this.meta = meta;
@@ -164,21 +165,21 @@ public class Calculator {
 	/**
 	 * NOTE: intended to be identical to {@link #bruteForce(Roster, Roster, Set, Format, int)}, but more efficient
 	 */
-	@SuppressWarnings("unused")
-	private List<Pick> bruteForce(MatchupSpecial matchup, Set<Hero> pool, Format format, int phase) {
-		//		System.out.println("Listing options for Phase " + phase + ": " + format.get(phase == format.size() ? format.size() - 1 : phase));
-		return pool.stream().map((hero) -> {
-			if (matchup.isFull())
-				return new Pick(hero, matchup.oddsForBlue());
-
-			MatchupSpecial newMatchup = matchup;
-			if (format.get(phase).isPick())
-				newMatchup = newMatchup.whatIf(hero, format.get(phase).isBlue());
-			return bruteForce(newMatchup, subPool(pool, hero), format, phase+1).get(0);
-		})
-		.sorted()
-		.collect(Collectors.toList());
-	}
+//	@SuppressWarnings("unused")
+//	private List<Pick> bruteForce(MatchupSpecial matchup, Set<Hero> pool, Format format, int phase) {
+//		//		System.out.println("Listing options for Phase " + phase + ": " + format.get(phase == format.size() ? format.size() - 1 : phase));
+//		return pool.stream().map((hero) -> {
+//			if (matchup.isFull())
+//				return new Pick(hero, matchup.oddsForBlue());
+//
+//			MatchupSpecial newMatchup = matchup;
+//			if (format.get(phase).isPick())
+//				newMatchup = newMatchup.whatIf(hero, format.get(phase).isBlue());
+//			return bruteForce(newMatchup, subPool(pool, hero), format, phase+1).get(0);
+//		})
+//		.sorted()
+//		.collect(Collectors.toList());
+//	}
 
 	///////////////////////
 	//   Scoring Tools   //
@@ -188,7 +189,7 @@ public class Calculator {
 	// All scoring tools herein are simple and score AS-IS
 	// That means no predictive algorithms or roster-filling are employed
 	
-	Double score(Hero hero, Hero adversary) {
+	private Double score(Hero hero, Hero adversary) {
 		return meta.get(hero, adversary, false);
 	}
 	
@@ -231,14 +232,14 @@ public class Calculator {
 	 * @return score for blue 
 	 * @see #scorePlusSynergy(Roster, Roster)
 	 */
-	public Double scorePlusSynergy(DraftSession session) {
+	private Double scorePlusSynergy(DraftSession session) {
 		return scorePlusSynergy(session.getBlue(), session.getRed());
 	}
 	
 	 // TODO could add special weighting for a fight or a synergy
 	private Double scorePlusSynergy(Roster us, Roster them) {
 		if (us.isEmpty() || them.isEmpty())
-			return new Double(.5);
+			return fiftyFifty;
 		
 		Double score = score(us, them);
 		double fights = (double) (us.size() + them.size());
@@ -327,11 +328,13 @@ public class Calculator {
 	/**
 	 * Pick the {@code Hero} with the greatest combination of score against the enemy team
 	 * and synergy with the ally team. No other calculation or prediction is involved.
+	 * <p>
+	 * This looks a bit messy currently. I will consider cleaning it in the future.
 	 */
 	private Pick greedyPick(Roster us, Roster them, Set<Hero> pool) {
 		return pool.stream()
-				.map(hero -> new Pick(hero, (synergy(hero, us)*us.size() + score(hero, them)*them.size()) 
-											/ (double) (us.size() + them.size())))
+				.map(hero -> new Pick(hero, Math.pow(Math.pow(synergy(hero, us), us.size()) * Math.pow(score(hero, them), them.size()) 
+											, 1 / (double) (us.size() + them.size()))))
 				.sorted()
 				.collect(Collectors.toList())
 				.get(0);
@@ -426,7 +429,7 @@ public class Calculator {
 	@SuppressWarnings("unused")
 	private Double arithMean(Collection<Hero> heroes, ToDoubleFunction<Hero> scorer) {
 		if (heroes.size() < 1)
-			return new Double(.5);
+			return fiftyFifty;
 		
 		double score = 0.0;
 		for (Hero hero : heroes)
@@ -445,7 +448,7 @@ public class Calculator {
 	 */
 	private Double geoMean(Collection<Hero> heroes, ToDoubleFunction<Hero> scorer) {
 		if (heroes.size() < 1)
-			return new Double(.5);
+			return fiftyFifty;
 		
 		double score = 1.0;
 		for (Hero hero : heroes)
