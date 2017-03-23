@@ -110,8 +110,8 @@ public class Calculator {
 			TreeNode avenue = optimalAvenues.get(i);
 			if (i < avenuesToExplore)
 				iterate(avenue);
-			else // greedy fill
-				avenue = new TreeNode(avenue.getLastPick(), greedyFill(avenue.getState()));
+//			else // greedy fill
+//				avenue = new TreeNode(avenue.getLastPick(), greedyFill(avenue.getState()));
 		}
 	}
 
@@ -337,6 +337,17 @@ public class Calculator {
 		return scorePlusSynergy(futureAllies, futureEnemyRoster);
 	}
 	
+	/**
+	 * uses greedy fill
+	 * <p>
+	 * does not modify given object instances
+	 */
+	private Double scoreAndFill(DraftSession session) {
+		DraftSession newSession = session.clone();
+		newSession = greedyFill(newSession);
+		return scorePlusSynergy(newSession);
+	}
+	
 	private DraftSession greedyFill(DraftSession sesh) {
 		while (!sesh.isFull()) {
 			// pick or defensive ban:
@@ -457,7 +468,8 @@ public class Calculator {
 			public TreeNode(Hero lastPick, DraftSession state) {
 				this.lastPick = lastPick;
 				this.state = state;
-				this.currentOdds = scoreAndFill(state.getBlue(), state.getRed(), state.currentPool());
+//				this.currentOdds = scoreAndFill(state.getBlue(), state.getRed(), state.currentPool());
+				this.currentOdds = scoreAndFill(state);
 				this.children = new ArrayList<>();
 			}
 			
