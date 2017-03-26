@@ -68,8 +68,8 @@ public class Calculator {
 	 * @return all possible picks, with resulting odds that blue wins
 	 */
 	public List<Pick> suggestions(DraftSession session) {
-//		return pruningAlgorithm(session);
-		return priorityAlgorithm(session);
+		return pruningAlgorithm(session);
+//		return priorityAlgorithm(session);
 	}
 
 	/**
@@ -83,6 +83,7 @@ public class Calculator {
 	//   Picking Algorithms   //
 	////////////////////////////
 	
+	@SuppressWarnings("unused")
 	private List<Pick> priorityAlgorithm(DraftSession sesh) {
 		// picks or defensive bans:
 		Roster teamWithNextPickPhase = sesh.getStrategy() == PICK ? sesh.pickingTeam() : sesh.enemyTeam();
@@ -162,7 +163,7 @@ public class Calculator {
 //		double phase = state.currentPhaseNo();
 //		int avenuesToExplore = (first - phase) * 2 / 3;
 //		int avenuesToExplore = phase/first < 0.5 ? 3 : 2; // 3 branches and reduce to 2 halfway
-		int avenuesToExplore = 0;
+		int avenuesToExplore = 2;
 		
 		for (int i = 0; i < optimalAvenues.size(); i++) {
 			TreeNode avenue = optimalAvenues.get(i);
@@ -680,8 +681,8 @@ public class Calculator {
 			public TreeNode(Hero lastPick, DraftSession state) {
 				this.lastPick = lastPick;
 				this.state = state;
-//				this.currentOdds = scoreAndFill(state.getBlue(), state.getRed(), state.currentPool());
-				this.currentOdds = scoreAndFill(state);
+				this.currentOdds = scoreAndFill(state.getBlue(), state.getRed(), state.currentPool());
+//				this.currentOdds = scoreAndFill(state);
 				this.children = new ArrayList<>();
 			}
 			

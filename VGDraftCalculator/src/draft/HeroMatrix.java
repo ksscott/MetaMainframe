@@ -3,6 +3,7 @@ package draft;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 public class HeroMatrix {
 
@@ -10,8 +11,8 @@ public class HeroMatrix {
 	private HashMap<Hero, HashMap<Hero,Double>> versus;
 	private HashMap<Hero, HashMap<Hero,Double>> synergy;
 	// for a pre-sorted list // TODO write protect
-	private HashMap<Hero, ArrayList<Pick>> versusPicks;
-	private HashMap<Hero, ArrayList<Pick>> synergyPicks;
+	private HashMap<Hero, List<Pick>> versusPicks;
+	private HashMap<Hero, List<Pick>> synergyPicks;
 	
 	public HeroMatrix() {
 		versus = new HashMap<>();
@@ -30,15 +31,23 @@ public class HeroMatrix {
 	public void put(Hero one, Hero other, double odds, boolean withOrAgainst) {
 		if (withOrAgainst) {
 			synergy.get(one).put(other, odds);
-			ArrayList<Pick> list = synergyPicks.get(one);
+			List<Pick> list = synergyPicks.get(one);
 			list.add(new Pick(other, odds));
-			Collections.sort(list); // ends up being > O(N^2); find a smarter way
+			if (list.size() == Hero.values().length) {
+				// assuming proper use, time to lock up
+				Collections.sort(list); // ends up being > O(N^2); find a smarter way
+				synergyPicks.put(one, Collections.unmodifiableList(list));
+			}
 		}
 		else {
 			versus.get(one).put(other, odds);
-			ArrayList<Pick> list = versusPicks.get(one);
+			List<Pick> list = versusPicks.get(one);
 			list.add(new Pick(other, odds));
-			Collections.sort(list); // ends up being > O(N^2); find a smarter way
+			if (list.size() == Hero.values().length) {
+				// assuming proper use, time to lock up
+				Collections.sort(list); // ends up being > O(N^2); find a smarter way
+				versusPicks.put(one, Collections.unmodifiableList(list));
+			}
 		}
 	}
 	
@@ -49,10 +58,10 @@ public class HeroMatrix {
 			return versus.get(one).get(other);
 	}
 	
-	public ArrayList<Pick> get(Hero hero, boolean withOrAgainst) {
+	public List<Pick> get(Hero hero, boolean withOrAgainst) {
 		if (withOrAgainst)
-			return synergyPicks.get(hero);
+			return new ArrayList<>(synergyPicks.get(hero));
 		else
-			return versusPicks.get(hero);
+			return new ArrayList<>(versusPicks.get(hero));
 	}
 }
