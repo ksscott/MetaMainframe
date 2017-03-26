@@ -132,7 +132,7 @@ public class Calculator {
 		TreeNode current = new TreeNode(null, session);
 		
 		// fill out tree:
-		iterate(current);
+		iterate(current, 0);
 		
 		List<Pick> picks = current.bestPicks().stream()
 				.map(node -> new Pick(node.getLastPick(), node.odds()))
@@ -143,32 +143,32 @@ public class Calculator {
 		return picks;
 	}
 
-	private void iterate(TreeNode current) {
+	private void iterate(TreeNode current, int iterations) {
 		if (current.isFull())
 			return; // all done!
 		
-		ArrayList<TreeNode> optimalAvenues = new ArrayList<>();
 		
 		DraftSession state = current.getState();
 		for (Hero hero : state.currentPool()) {
 			TreeNode node = new TreeNode(hero, state.whatIf(hero));
 			current.addChild(node);
-			optimalAvenues.add(node);
 		}
 		
-		Collections.sort(optimalAvenues);
-		optimalAvenues = current.bestPicks();
+		List<TreeNode> optimalAvenues = current.bestPicks();
+		if (!state.currentPhase().isBlue())
+			Collections.reverse(optimalAvenues);
 		
-//		double first = state.getFormat().size();
-//		double phase = state.currentPhaseNo();
-//		int avenuesToExplore = (first - phase) * 2 / 3;
+		int phases = state.getFormat().size();
+		int phase = state.currentPhaseNo();
+		int remaining = phases - phase - 1;
+		int avenuesToExplore = iterations < 2 ? optimalAvenues.size() : (phases - iterations) / 3;
 //		int avenuesToExplore = phase/first < 0.5 ? 3 : 2; // 3 branches and reduce to 2 halfway
-		int avenuesToExplore = 2;
+//		int avenuesToExplore = 4;
 		
 		for (int i = 0; i < optimalAvenues.size(); i++) {
 			TreeNode avenue = optimalAvenues.get(i);
 			if (i < avenuesToExplore)
-				iterate(avenue);
+				iterate(avenue, iterations+1);
 //			else // greedy fill
 //				avenue = new TreeNode(avenue.getLastPick(), greedyFill(avenue.getState()));
 		}
@@ -339,17 +339,23 @@ public class Calculator {
 		// fill our roster with best synergies
 		Roster futureAllies = us;
 		if (!us.isFull()) {
-			List<Pick> bestPartners = bestPartners(us, us.fullSize() - us.size(), pool);
-			futureAllies = us.clone().fill(bestPartners);
+			List<List<Pick>> lists = new ArrayList<>();
+			lists.add(bestPartners(us, us.room(), pool));
+			lists.add(bestCounters(them, us, us.room(), pool));
+			futureAllies = us.clone().fill(blend(lists));
 		}
 		
-		// TODO subPool-out allied picks
+		Set<Hero> subPool = new HashSet<>(pool);
+		for (Hero hero : us)
+			subPool = subPool(subPool, hero);
 		
 		// fill enemy roster with best counters to our roster
 		Roster futureEnemyRoster = them;
 		if (!them.isFull()) {
-			List<Pick> bestCounters = bestCounters(futureAllies, them, them.fullSize() - them.size(), pool);
-			futureEnemyRoster = them.clone().fill(bestCounters);
+			List<List<Pick>> lists = new ArrayList<>();
+			lists.add(bestPartners(them, them.room(), subPool));
+			lists.add(bestCounters(futureAllies, them, them.room(), subPool));
+			futureEnemyRoster = them.clone().fill(blend(lists));
 		}
 		
 		return scorePlusSynergy(futureAllies, futureEnemyRoster);
