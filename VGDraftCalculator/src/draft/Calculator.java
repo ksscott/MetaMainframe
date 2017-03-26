@@ -36,18 +36,31 @@ public class Calculator {
 			session.pickOrBan(Hero.fromName(hero));
 		}
 		Map<String, Integer> map = new HashMap<>();
-		List<Pick> picks = suggestions(session);
-		for (int i = 0; i < picks.size(); i++) {
-			int rating = 0;
-			double topXPercent = (i+1) / (double) picks.size();
-			if (topXPercent < .1)
-				rating = 1;
-			else if (topXPercent < .25)
-				rating = 2;
-			else if (topXPercent > .85)
-				rating = 3;
-			map.put(picks.get(i).getCandidate().getName(), new Integer(rating));
+		List<Pick> suggestions = suggestions(session);
+		// old "percentiles" values:
+//		List<Pick> picks = suggestions;
+//		for (int i = 0; i < picks.size(); i++) {
+//			int rating = 0;
+//			double topXPercent = (i+1) / (double) picks.size();
+//			if (topXPercent < .1)
+//				rating = 1;
+//			else if (topXPercent < .25)
+//				rating = 2;
+//			else if (topXPercent > .85)
+//				rating = 3;
+//			map.put(picks.get(i).getCandidate().getName(), new Integer(rating));
+//		}
+		// new "percent from worst to best" rank (1-10)
+		Double max = suggestions.get(0).getScore();
+		Double min = suggestions.get(suggestions.size()-1).getScore();
+		Double inc = (max - min) / 10.0;
+		for (Pick pick : suggestions) {
+			Double score = pick.getScore();
+			int rank = (int) (10 - ((max - score) / inc));
+			rank = rank == 0 ? 1 : rank;
+			map.put(pick.getCandidate().getName(), rank);
 		}
+		map.put("odds", (int) (suggestions.get(0).getScore()*100) + 1);
 		return map;
 	}
 	
@@ -55,7 +68,8 @@ public class Calculator {
 	 * @return all possible picks, with resulting odds that blue wins
 	 */
 	public List<Pick> suggestions(DraftSession session) {
-		return pruningAlgorithm(session);
+//		return pruningAlgorithm(session);
+		return priorityAlgorithm(session);
 	}
 
 	/**
@@ -68,6 +82,46 @@ public class Calculator {
 	////////////////////////////
 	//   Picking Algorithms   //
 	////////////////////////////
+	
+	private List<Pick> priorityAlgorithm(DraftSession sesh) {
+		// picks or defensive bans:
+		Roster teamWithNextPickPhase = sesh.getStrategy() == PICK ? sesh.pickingTeam() : sesh.enemyTeam();
+		Roster otherTeam = sesh.getStrategy() == PICK ? sesh.enemyTeam() : sesh.pickingTeam();
+		Set<Hero> pool = sesh.currentPool();
+		
+		Set<Node> pickingPriorities = priorities(teamWithNextPickPhase, otherTeam, pool);
+		Set<Node> enemyPriorities = priorities(otherTeam, teamWithNextPickPhase, pool);
+		
+		// FIXME this algorithm is half baked, and I'm not sure if it's going anywhere in its current form
+		
+		List<Pick> list = new ArrayList<Pick>();
+		
+		for (Node node : pickingPriorities)
+			list.add(new Pick(node.hero(), node.score()));
+		
+		return list;
+	}
+	
+	private Set<Node> priorities(Roster pickingTeam, Roster enemyTeam, Set<Hero> pool) {
+		Set<Node> partners = partners(pickingTeam, pool);
+		Set<Node> counters = counters(enemyTeam, pickingTeam, pool);
+		Set<Node> nodes = blendNodes(partners, counters);
+		
+		return nodes;
+		
+		// XXX I don't really like this algorithm right now; it doesn't pay attention to draft format at all
+//		List<List<Pick>> lists = new ArrayList<>();
+		
+//		// rank each potential partner for synergy
+//		lists.add(bestPartners(pickingTeam, pool.size() / 2, pool)); // XXX what if ban?
+//		// rank each potential partner for versus
+//		lists.add(bestCounters(enemyTeam, pickingTeam, pool.size() / 2, pool)); // XXX what if ban?
+//		// rank each potential partner for future strength
+//		lists.add(leastCounterable(pool));
+//		lists.add(mostSynergizable(pool));
+//		
+//		return blend(lists);
+	}
 	
 	/**
 	 * A tree-search algorithm. Attempts to coarsely evaluate all options 
@@ -104,10 +158,11 @@ public class Calculator {
 		Collections.sort(optimalAvenues);
 		optimalAvenues = current.bestPicks();
 		
-		double first = state.getFormat().size();
-		double phase = state.currentPhaseNo();
+//		double first = state.getFormat().size();
+//		double phase = state.currentPhaseNo();
 //		int avenuesToExplore = (first - phase) * 2 / 3;
-		int avenuesToExplore = phase/first < 0.5 ? 3 : 2; // 3 branches and reduce to 2 halfway
+//		int avenuesToExplore = phase/first < 0.5 ? 3 : 2; // 3 branches and reduce to 2 halfway
+		int avenuesToExplore = 0;
 		
 		for (int i = 0; i < optimalAvenues.size(); i++) {
 			TreeNode avenue = optimalAvenues.get(i);
@@ -332,12 +387,15 @@ public class Calculator {
 	 * This looks a bit messy currently. I will consider cleaning it in the future.
 	 */
 	private Pick greedyPick(Roster us, Roster them, Set<Hero> pool) {
+		return greedyPicks(us, them, pool).get(0);
+	}
+	
+	private List<Pick> greedyPicks(Roster us, Roster them, Set<Hero> pool) {
 		return pool.stream()
 				.map(hero -> new Pick(hero, Math.pow(Math.pow(synergy(hero, us), us.size()) * Math.pow(score(hero, them), them.size()) 
 											, 1 / (double) (us.size() + them.size()))))
 				.sorted()
-				.collect(Collectors.toList())
-				.get(0);
+				.collect(Collectors.toList());
 	}
 	
 	/**
@@ -372,13 +430,18 @@ public class Calculator {
 	 */
 	private List<Pick> bestCounters(Hero hero, int nBest, Set<Hero> pool) {
 		// list ordered decreasing by hero's strength against other heroes
-		List<Pick> counters = meta.get(hero, false).subList(0, nBest);
+		List<Pick> counters = meta.get(hero, false);
 		
 		// reverse to prioritize other heroes' strength against the given hero
-		Collections.reverse(counters);
+		Collections.reverse(counters.subList(0, nBest));
 		
 		// remove heroes not in the current pool
-		counters.retainAll(pool);
+		Set<Pick> toRemove = new HashSet<>();
+		for (Pick pick : counters) {
+			if (!pool.contains(pick.getCandidate()))
+				toRemove.add(pick);
+		}
+		counters.removeAll(toRemove);
 		
 		return counters;
 	}
@@ -387,26 +450,69 @@ public class Calculator {
 	 * @return list of N best counters to a roster, decreasing in strength
 	 */
 	private List<Pick> bestCounters(Roster countered, Roster countering, int nBest, Set<Hero> pool) {
+		List<List<Pick>> lists = new ArrayList<>();
+		for (Hero enemy : countered)
+			lists.add(bestCounters(enemy, pool.size(), pool));
+		return blend(lists);
+		
 		// TODO use countering roster in calculation
-		return pool.stream()
-				.map(counter -> new Pick(counter, scoreAndFill(counter, countered, subPool(pool, counter))))
-				.sorted()
-				.collect(Collectors.toList());
+//		return pool.stream()
+//				.map(counter -> new Pick(counter, scoreAndFill(counter, countered, subPool(pool, counter))))
+//				.sorted()
+//				.collect(Collectors.toList());
 	}
 	
-	@SuppressWarnings("unused")
+	private Set<Node> counters(Roster countered, Roster countering, Set<Hero> pool) {
+		Set<Node> options = new HashSet<>();
+		for (Hero enemy : countered) {
+			Node to = new Node(enemy);
+			for (Hero hero : pool) {
+				Node node = new Node(hero);
+				Edge edge = new Edge(node, to, score(hero, enemy), false);
+				node.addEdge(edge, true);
+				options.add(node);
+			}
+		}
+		return options;
+	}
+	
 	private List<Pick> bestPartners(Hero hero, int nBest, Set<Hero> pool) {
 		List<Pick> partners = meta.get(hero, true).subList(0, nBest);
-		partners.retainAll(pool);
+		Set<Pick> toRemove = new HashSet<>();
+		for (Pick pick : partners) {
+			if (!pool.contains(pick.getCandidate()))
+				toRemove.add(pick);
+		}
+		partners.removeAll(toRemove);
 		return partners;
 	}
 	
 	private List<Pick> bestPartners(Roster allies, int nBest, Set<Hero> pool) {
-		return pool.stream()
-				.map(partner -> new Pick(partner, synergy(allies.whatIf(partner))))
-				.sorted()
-				.collect(Collectors.toList())
-				.subList(0, nBest);
+		List<List<Pick>> lists = new ArrayList<>();
+		for (Hero ally : allies) {
+			lists.add(bestPartners(ally, pool.size(), pool));
+		}
+		return blend(lists);
+		
+//		return pool.stream()
+//				.map(partner -> new Pick(partner, synergy(allies.whatIf(partner))))
+//				.sorted()
+//				.collect(Collectors.toList())
+//				.subList(0, nBest);
+	}
+	
+	private Set<Node> partners(Roster allies, Set<Hero> pool) {
+		Set<Node> options = new HashSet<>();
+		for (Hero ally : allies) {
+			Node to = new Node(ally);
+			for (Hero hero : pool) {
+				Node node = new Node(hero);
+				Edge edge = new Edge(node, to, synergy(hero, ally), true);
+				node.addEdge(edge, true);
+				options.add(node);
+			}
+		}
+		return options;
 	}
 	
 	////////////////
@@ -417,6 +523,97 @@ public class Calculator {
 		Set<Hero> subPool = new HashSet<Hero>(pool);
 		subPool.remove(toRemove);
 		return subPool;
+	}
+	
+	/**
+	 * @return all lists merged into the first, with each pick of the same hero blended with {@link Pick#blend(Pick)}
+	 */
+	private List<Pick> blend(List<List<Pick>> options) {
+		List<Pick> result = new ArrayList<>();
+		if (options == null || options.isEmpty())
+			return result;
+		if (options.size() == 1) {
+			result.addAll(options.get(0));
+			return result;
+		}
+		
+		// ok, let's try this a dumb way, and maybe a better solution will occur to me later
+		for (Pick pick : options.get(0)) {
+			// for each pick in the first list,
+			for (int i=1; i<options.size(); i++) {
+				// iterate through the other lists,
+				for (Pick other : options.get(i)) {
+					// and check if they contain a pick matching ours
+					if (pick.getCandidate() == other.getCandidate()) {
+						result.add(pick.blend(other));
+						break;
+					}
+				}
+			}
+		}
+		Collections.sort(result);
+		return result;
+	}
+	
+	/**
+	 * @return all lists merged into the first, with each node of the same hero absorbed with {@link Node#absorb(Node)}
+	 */
+	private Set<Node> blendNodes(Set<Node>... options) {
+		Set<Node> result = new HashSet<>();
+		if (options == null || options.length == 0)
+			return result;
+		result.addAll(options[0]);
+		if (options.length == 1) {
+			return result;
+		}
+		
+		// again, the dumb way. I'll fix it later
+		for (Node node : result) {
+			// for each node in the first list,
+			for (int i=1; i<options.length; i++) {
+				// iterate through the other lists,
+				for (Node other : options[i]) {
+					// and check if they contain a node matching ours
+					if (node.hero() == other.hero()) {
+						node.absorb(other);
+						break;
+					}
+				}
+			}
+		}
+		return result;
+	}
+	
+	/**
+	 * measured by the given hero's strength against their <b>single</b> best counter
+	 */
+	private List<Pick> leastCounterable(Set<Hero> pool) {
+		List<Pick> picks = new ArrayList<>();
+		
+		for (Hero hero : pool) {
+			List<Pick> counters = bestCounters(hero, pool.size() - 1, subPool(pool, hero));
+			picks.add(new Pick(hero, 1 - counters.get(0).getScore()));
+			// TODO pick some dynamic number of counters to average together
+		}
+		Collections.sort(picks);
+		
+		return picks;
+	}
+	
+	/**
+	 * measured by the given hero's strength with their <b>single</b> best partner
+	 */
+	private List<Pick> mostSynergizable(Set<Hero> pool) {
+		List<Pick> picks = new ArrayList<>();
+		
+		for (Hero hero : pool) {
+			List<Pick> counters = bestPartners(hero, pool.size() - 1, subPool(pool, hero));
+			picks.add(new Pick(hero, 1 - counters.get(0).getScore()));
+			// TODO pick some dynamic number of partners to average together
+		}
+		Collections.sort(picks);
+		
+		return picks;
 	}
 
 	/**

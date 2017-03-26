@@ -23,6 +23,15 @@ public class Pick implements Comparable<Pick> {
 		// "higher" scores come "first" -> (.70, .65, .55, ...)
 		return o.score.compareTo(score);
 	}
+	
+	/**
+	 * @return a {@code Pick} of this hero with a combined score of this and the given picks
+	 */
+	public Pick blend(Pick other) {
+		if (this.candidate != other.candidate)
+			throw new IllegalArgumentException("What does it mean to blend scores with a different Hero?");
+		return new Pick(candidate, Math.pow((this.score * other.score), .5));
+	}
 
 	@Override
 	public String toString() {

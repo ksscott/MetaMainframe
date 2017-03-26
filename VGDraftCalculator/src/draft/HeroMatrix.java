@@ -9,7 +9,7 @@ public class HeroMatrix {
 	// for direct access by hero
 	private HashMap<Hero, HashMap<Hero,Double>> versus;
 	private HashMap<Hero, HashMap<Hero,Double>> synergy;
-	// for a pre-sorted list
+	// for a pre-sorted list // TODO write protect
 	private HashMap<Hero, ArrayList<Pick>> versusPicks;
 	private HashMap<Hero, ArrayList<Pick>> synergyPicks;
 	
