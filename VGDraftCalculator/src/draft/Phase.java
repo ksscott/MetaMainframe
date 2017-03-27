@@ -1,6 +1,6 @@
 package draft;
 
-enum Phase {
+public enum Phase {
 	BLUE_PICK(true,true), RED_PICK(true,false), BLUE_BAN(false,true), RED_BAN(false,false);
 
 	private final boolean isPick;

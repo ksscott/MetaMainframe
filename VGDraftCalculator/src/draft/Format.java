@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-enum Format {
+public enum Format {
 	SINGLE_BAN(BLUE_BAN,
 			   RED_BAN,
 			   BLUE_PICK,

@@ -1,4 +1,7 @@
-package draft;
+package model;
+
+import draft.Hero;
+
 
 public class Edge implements Comparable<Edge> {
 	

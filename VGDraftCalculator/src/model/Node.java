@@ -1,7 +1,9 @@
-package draft;
+package model;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import draft.Hero;
 
 public class Node implements Comparable<Node> {
 	
@@ -60,6 +62,35 @@ public class Node implements Comparable<Node> {
 			throw new IllegalArgumentException("Cannot blend with a different hero Node");
 		synergies.addAll(other.synergies);
 		versus.addAll(other.versus);
+	}
+	
+	/**
+	 * @return all lists merged into the first, with each node of the same hero absorbed with {@link Node#absorb(Node)}
+	 */
+	public static Set<Node> blendNodes(Set<Node>... options) {
+		Set<Node> result = new HashSet<>();
+		if (options == null || options.length == 0)
+			return result;
+		result.addAll(options[0]);
+		if (options.length == 1) {
+			return result;
+		}
+		
+		// again, the dumb way. I'll fix it later
+		for (Node node : result) {
+			// for each node in the first list,
+			for (int i=1; i<options.length; i++) {
+				// iterate through the other lists,
+				for (Node other : options[i]) {
+					// and check if they contain a node matching ours
+					if (node.hero() == other.hero()) {
+						node.absorb(other);
+						break;
+					}
+				}
+			}
+		}
+		return result;
 	}
 
 	@Override

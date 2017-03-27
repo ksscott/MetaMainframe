@@ -8,8 +8,18 @@ import java.util.Scanner;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import model.Pick;
+
 import org.xml.sax.SAXException;
 
+import algorithm.Engine;
+import data.Calculator;
+import data.HeroMatrix;
+import data.MatrixLoader;
+
+/**
+ * Entrance to the Meta Mainframe
+ */
 public class MetaMainframe {
 
 	private static final Format FORMAT = Format.SINGLE_BAN;
@@ -25,8 +35,11 @@ public class MetaMainframe {
 			matrix = MatrixLoader.loadRandom();
 		}
 	}
-	private static Calculator scorer = new Calculator(matrix);
+	private static Engine engine = new Engine(new Calculator(matrix));
 	
+	/**
+	 * Command line use of the application
+	 */
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		DraftSession sesh = new DraftSession(FORMAT);
@@ -37,9 +50,10 @@ public class MetaMainframe {
 		for (int phase = 0; phase < FORMAT.size(); phase++) {
 			
 			// PROVIDE ADVICE
-			List<Pick> optimalNextPicks = scorer.suggestions(sesh);
+			List<Pick> optimalNextPicks = engine.suggestions(sesh);
 			Double score = optimalNextPicks.get(0).getScore();
-			System.out.println(String.format("Current odds blue wins: %.3f", score));
+			System.out.println(String.format("Current odds blue wins: %.3f   %s vs. %s", 
+					score, sesh.getBlue(), sesh.getRed()));
 			String advice = "Optimal next picks: ";
 			for (Pick p : optimalNextPicks)
 				advice += p + " ";
@@ -79,12 +93,15 @@ public class MetaMainframe {
 			
 			sesh.pickOrBan(hero);
 		}
-		System.out.println(String.format("Final odds blue wins: %.3f", 
-				scorer.currentOddsForBlue(sesh)));
+		System.out.println(String.format("Final odds blue wins: %.3f   %s vs. %s", 
+				engine.currentOddsForBlue(sesh), sesh.getBlue(), sesh.getRed()));
 		scanner.close();
 	}
 	
+	/**
+	 * Stateless entrance into the application
+	 */
 	public static Map<String, Integer> coachMeSenpai (String draftFormat, final List<String> selected) {
-		return scorer.coachMeSenpai(draftFormat, selected);
+		return engine.coachMeSenpai(draftFormat, selected);
 	}
 }
