@@ -122,7 +122,7 @@ public class Engine {
 		int phases = state.getFormat().size();
 		int phase = state.currentPhaseNo();
 //		int remaining = phases - phase - 1;
-		int avenuesToExplore = (heroes*1/2 - phases*1 + phase*4) / (1 + iterations*4);
+		int avenuesToExplore = (heroes*1/2 - phases*1 + phase*3) / (1 + iterations*iterations*3/2);
 		
 		for (int i = 0; i < optimalAvenues.size(); i++) {
 			TreeNode avenue = optimalAvenues.get(i);
