@@ -1,6 +1,6 @@
 package model;
 
-import draft.Hero;
+import data.Hero;
 
 
 public class Edge implements Comparable<Edge> {

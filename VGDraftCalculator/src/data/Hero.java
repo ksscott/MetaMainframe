@@ -1,4 +1,4 @@
-package draft;
+package data;
 
 public enum Hero {
 

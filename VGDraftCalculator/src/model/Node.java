@@ -3,7 +3,7 @@ package model;
 import java.util.HashSet;
 import java.util.Set;
 
-import draft.Hero;
+import data.Hero;
 
 public class Node implements Comparable<Node> {
 	

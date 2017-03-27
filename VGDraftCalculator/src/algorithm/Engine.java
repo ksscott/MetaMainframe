@@ -11,20 +11,20 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import model.Node;
-import model.Pick;
 import data.Calculator;
+import data.Hero;
+import data.Pick;
 import draft.DraftSession;
 import draft.Format;
-import draft.Hero;
 import draft.Roster;
 import draft.Strategy;
 
 public class Engine {
 	
-	private Calculator calculator;
+	private Calculator scorer;
 	
 	public Engine(Calculator calculator) {
-		this.calculator = calculator;
+		this.scorer = calculator;
 	}
 	
 	///////////////////
@@ -57,7 +57,7 @@ public class Engine {
 			}
 			currentOdds = suggestions.get(0).getScore();
 		} else {
-			currentOdds = calculator.scorePlusSynergy(session);
+			currentOdds = scorer.scorePlusSynergy(session);
 		}
 		map.put("odds", (int) (currentOdds * 100));
 		return map;
@@ -76,7 +76,7 @@ public class Engine {
 	* @return a simplistic, non-predictive scoring
 	*/
 	public Double currentOddsForBlue(DraftSession session) {
-		return calculator.scorePlusSynergy(session);
+		return scorer.scorePlusSynergy(session);
 	}
 		
 	////////////////////////////
@@ -171,8 +171,8 @@ public class Engine {
 	}
 	
 	private Set<Node> priorities(Roster pickingTeam, Roster enemyTeam, Set<Hero> pool) {
-		Set<Node> partners = calculator.partners(pickingTeam, pool);
-		Set<Node> counters = calculator.counters(enemyTeam, pickingTeam, pool);
+		Set<Node> partners = scorer.partners(pickingTeam, pool);
+		Set<Node> counters = scorer.counters(enemyTeam, pickingTeam, pool);
 		Set<Node> nodes = Node.blendNodes(partners, counters);
 		
 		return nodes;
@@ -201,7 +201,7 @@ public class Engine {
 	private List<Pick> bruteForce(Roster blue, Roster red, Set<Hero> pool, Format format, int phase) {
 		return pool.stream().map((hero) -> {
 			if (blue.isFull() && red.isFull())
-				return new Pick(hero, calculator.scorePlusSynergy(blue, red));
+				return new Pick(hero, scorer.scorePlusSynergy(blue, red));
 			
 			Roster newBlue = blue;
 			Roster newRed = red;
@@ -263,7 +263,7 @@ public class Engine {
 		
 		// for each possibility, evaluate the marginal value added to our team
 		return pool.stream()
-				.map(hero -> new Pick(hero, calculator.marginalScore(hero, pickingTeam, enemyTeam, pool)))
+				.map(hero -> new Pick(hero, scorer.marginalScore(hero, pickingTeam, enemyTeam, pool)))
 				.sorted()
 				.collect(Collectors.toList());
 		
@@ -304,7 +304,7 @@ public class Engine {
 	public Double fillAndScore(DraftSession session) {
 		DraftSession newSession = session.clone();
 		newSession = greedyFill(newSession);
-		return calculator.scorePlusSynergy(newSession);
+		return scorer.scorePlusSynergy(newSession);
 	}
 	
 	private DraftSession greedyFill(DraftSession sesh) {

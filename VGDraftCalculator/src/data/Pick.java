@@ -1,7 +1,4 @@
-package model;
-
-import draft.Hero;
-
+package data;
 
 public class Pick implements Comparable<Pick> {
 

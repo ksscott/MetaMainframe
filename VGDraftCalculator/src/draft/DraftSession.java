@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import data.Hero;
+
 public class DraftSession implements Cloneable {
 
 	private Format phases;

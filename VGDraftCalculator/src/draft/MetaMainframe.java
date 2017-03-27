@@ -8,14 +8,14 @@ import java.util.Scanner;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import model.Pick;
-
 import org.xml.sax.SAXException;
 
 import algorithm.Engine;
 import data.Calculator;
+import data.Hero;
 import data.HeroMatrix;
 import data.MatrixLoader;
+import data.Pick;
 
 /**
  * Entrance to the Meta Mainframe

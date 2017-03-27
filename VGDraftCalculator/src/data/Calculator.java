@@ -3,23 +3,15 @@ package data;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.function.ToDoubleFunction;
-import java.util.stream.Collectors;
 
 import model.Edge;
 import model.Node;
-import model.Pick;
 import draft.DraftSession;
-import draft.Format;
-import draft.Hero;
 import draft.Roster;
-import draft.Strategy;
-import static draft.Strategy.*;
 
 public class Calculator {
 
