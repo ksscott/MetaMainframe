@@ -89,7 +89,7 @@ public class Calculator {
 		Double usSynergy = synergyWar(us, them);
 		double usPairs = (double) (us.size() * (us.size() - 1));
 		double themPairs = (double) (them.size() * (them.size() - 1));
-		double synergyWeight = 2*(usPairs+themPairs); // can be adjusted
+		double synergyWeight = 3*(usPairs+themPairs); // can be adjusted
 		
 		return Math.pow(((Math.pow(score, fightWeight)) * (Math.pow(usSynergy, synergyWeight))),
 				1 / ((double) (fightWeight + synergyWeight)));
@@ -101,8 +101,8 @@ public class Calculator {
 	public Double marginalScore(Hero heroForUs, Roster us, Roster them, Set<Hero> pool) {
 		Double synergy = synergy(heroForUs, us);
 		Double score = score(heroForUs, them);
-		return Math.pow(Math.pow(synergy, us.size()) * Math.pow(score, 2*them.size()) 
-				, 1 / (double) (us.size() + them.size()));
+		return Math.pow(Math.pow(synergy, us.size()) * Math.pow(score, 3*them.size()) 
+				, 1 / (double) (us.size() + 3*them.size()));
 	}
 
 	/////////////////////////
