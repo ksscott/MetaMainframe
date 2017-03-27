@@ -117,12 +117,12 @@ public class Engine {
 		if (!state.currentPhase().isBlue())
 			Collections.reverse(optimalAvenues);
 		
+		// some magic to approximate a feasible runtime
+		int heroes = Hero.values().length;
 		int phases = state.getFormat().size();
 		int phase = state.currentPhaseNo();
 //		int remaining = phases - phase - 1;
-		int avenuesToExplore = (1*phases - 12*iterations + 4*phase);
-//		int avenuesToExplore = phase/first < 0.5 ? 3 : 2; // 3 branches and reduce to 2 halfway
-//		int avenuesToExplore = 4;
+		int avenuesToExplore = (heroes*1/2 - phases*1 + phase*4) / (1 + iterations*4);
 		
 		for (int i = 0; i < optimalAvenues.size(); i++) {
 			TreeNode avenue = optimalAvenues.get(i);

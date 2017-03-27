@@ -22,7 +22,7 @@ import data.Pick;
  */
 public class MetaMainframe {
 
-	private static final Format FORMAT = Format.SINGLE_BAN;
+	private static final Format FORMAT = Format.DOUBLE_BAN;
 	private static final String VS_FILE_PATH = "VG8Matrix.xml";
 	private static final String SYNERGY_FILE_PATH = "VG8SynergyMatrix.xml";
 	private static HeroMatrix matrix;
